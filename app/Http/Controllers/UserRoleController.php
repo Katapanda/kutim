@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Datatables;
 
-use App\UserRole;
+use App\Models\UserRole;
 
 class UserRoleController extends Controller
 {
@@ -16,7 +16,7 @@ class UserRoleController extends Controller
      */
     public function index()
     {
-        return view('modules/user_role/index');
+        return view('admin.modules.user_role.index');
     }
 
     /**
