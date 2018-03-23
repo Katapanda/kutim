@@ -16,7 +16,7 @@
         <link rel="icon" href="{{ asset('assets_frontend/images/favicon.ico') }}" type="image/x-icon">
 
         {{-- include style css --}}
-        @include('includes.frontend.style')
+        @include('includes.style')
 
     </head>
     <body>
@@ -26,19 +26,19 @@
         <!-- End Pre-Loader -->
 
         {{-- include topbar --}}
-        @include('includes.frontend.topbar')
+        @include('includes.topbar')
 
         {{-- include menu --}}
-        @include('includes.frontend.menu')
+        @include('includes.menu')
 
         {{-- content --}}
         @yield('content')
 
         {{-- include footer --}}
-        @include('includes.frontend.footer')
+        @include('includes.footer')
 
         {{-- include script --}}
-        @include('includes.frontend.script')
+        @include('includes.script')
 
     </body>
 </html>      

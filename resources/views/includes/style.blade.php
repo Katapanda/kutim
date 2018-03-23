@@ -1,38 +1,25 @@
-<!-- Favicon icon -->
-<link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
-<link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-<!-- Google font-->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/bootstrap.min.css') }}">
 
-<!-- iconfont -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/icon/icofont/css/icofont.css') }}">
+<!-- Fontawesome Icon -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/font-awesome.min.css') }}">
 
-<!-- simple line icon -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/icon/simple-line-icons/css/simple-line-icons.css') }}">
+<!-- Animate CSS -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/animate.css') }}">
 
-<!-- Required Fremwork -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+<!-- Mean Menu -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/meanmenu.min.css') }}">
 
-<!-- dataTables -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/dataTables/css/dataTables.bootstrap.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/dataTables/css/jquery.dataTables.min.css') }}">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/owl.carousel.min.css') }}">
 
-<!-- Select 2 css -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/select2/css/select2.min.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/select2/css/s2-docs.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/magnific-popup.css') }}">
 
-<!-- Weather css -->
-<link href="{{ asset('assets/css/svg-weather.css') }}" rel="stylesheet">
-
-<!-- Echart js -->
-<script src="{{ asset('assets/plugins/charts/echarts/js/echarts-all.js') }}"></script>
-
-<!-- Style.css -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
-
-<!-- Responsive.css-->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
-
-<!--color css-->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color/color-1.min.css') }}" id="color"/>
+<!-- Custom Style -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/normalize.css') }}">
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/responsive.css') }}">
