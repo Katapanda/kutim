@@ -12,13 +12,17 @@
 */
 
 
-Route::get('/', function () {
-    return view('modules.home');
-});
+// Route::get('/', function () {
+//     return view('modules.home');
+// });
+
+
+Route::get('/', 'Frontend\HomeController@index')->name('home');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('dashboard', 'DashboardController@admin_index')->name('dashboard');
@@ -64,3 +68,6 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::get('api/so', 'StrukturOrganisasiController@apiSO')->name('admin.api.so');
 	Route::get('api/sodetail/{id}', 'SoDetailController@apiSODetail')->name('admin.api.sodetail');
 });
+
+// API FRONTEND
+Route::get('api/home', 'Frontend\HomeController@index')->name('api.home');
