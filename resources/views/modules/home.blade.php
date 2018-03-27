@@ -8,8 +8,119 @@
 @endsection
 
 @section('content')
+
+    <!-- Web Ticker -->
+    <section class="top-news">
+        <div class="container">
+            <div class="news-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ticker d-flex justify-content-between">
+                            <div class="news-head">
+                                <span>BERITA TERBARU<i class="fa fa-caret-right"></i></span>
+                            </div>
+                            <ul id="webTicker">
+
+                                @foreach($breaking_news as $breaking_new)
+
+                                    <li><a href=""><i class="fa fa-dot-circle-o"></i>{{ $breaking_new->judul_berita }}</a></li>
+
+                                @endforeach
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Web Ticker -->
+
+    <!-- Slider Area -->
+    <section class="slider-area">
+        <div class="container">
+            <div class="row">
+                {{-- <div class="col-lg-8 col-md-12">
+                    <div class="" style="font-size: 22px;
+                        color: #222;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #ddd;
+                        margin-bottom: 35px;
+                        position: relative;">
+
+                        <h4>BERITA UTAMA</h4>
+                    </div>
+                </div> --}}    
+                <div class="col-lg-8 col-md-12 padding-fix-r">
+                    <div class="owl-carousel owl-slider">
+                        @foreach($sliders as $slider)
+                            <div class="slider-content">
+                            {{-- <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid"> --}}
+                            <img src="{{ asset($slider->foto_berita) }}" alt="" class="img-fluid" style="height: 470px" width="100%">
+                            <div class="slider-layer" style="width: 100%;">
+                                <p>
+                                    <a href="" style="color: #ffffff; text-align: left;">
+                                        
+                                        {!! substr($slider->isi_berita, 0, 200) . '...' !!}   
+                                        
+                                    </a>
+                                </p>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">{!! substr($slider->judul_berita, 0, 20) . '...' !!} </li>
+                                    <li class="list-inline-item">{{ tanggal_indo($slider->tanggal_publish) }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        @endforeach
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 slider-fix">
+
+                    @foreach($slider_sides as $slider_side)
+
+                        @if(strlen($slider_side->isi_berita) > 100)
+
+                            <div class="slider-sidebar sidebar-o">
+                                <img src="{{ asset($slider_side->foto_berita) }}" alt="" class="img-fluid" style="height: 230px" width="100%">
+                                <div class="sidebar-layer">
+                                    <p>
+                                        <a href="">
+                                            {!! substr($slider_side->isi_berita, 0, 100) . '...' !!} 
+                                        </a>
+                                    </p>
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list-inline-item">
+                                            @if(strlen($slider_side->judul_berita) > 10)
+                                            
+                                                {!! substr($slider_side->judul_berita, 0, 10) . '...' !!}   
+                                            
+                                            @else
+
+                                               {!! $slider_side->judul_berita !!}
+
+                                            @endif
+                                        </li>
+                                        <li class="list-inline-item">{{ tanggal_indo($slider_side->tanggal_publish) }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                                                
+                        @else
+
+                           {!! $slider_side->isi_berita !!}
+
+                        @endif
+
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider Area -->
     
-    <section class="carousel-area">
+    {{-- <section class="carousel-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -59,7 +170,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- All News -->
     <section class="allnews">
@@ -539,118 +650,6 @@
         </div>
     </section>
     <!-- End All News -->
-
-
-    <!-- Web Ticker -->
-    <section class="top-news">
-        <div class="container">
-            <div class="news-content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="ticker d-flex justify-content-between">
-                            <div class="news-head">
-                                <span>BERITA TERBARU<i class="fa fa-caret-right"></i></span>
-                            </div>
-                            <ul id="webTicker">
-
-                                @foreach($breaking_news as $breaking_new)
-
-                                    <li><a href=""><i class="fa fa-dot-circle-o"></i>{{ $breaking_new->judul_berita }}</a></li>
-
-                                @endforeach
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Web Ticker -->
-
-    <!-- Slider Area -->
-    <section class="slider-area">
-        <div class="container">
-            <div class="row">
-                {{-- <div class="col-lg-8 col-md-12">
-                    <div class="" style="font-size: 22px;
-                        color: #222;
-                        padding-bottom: 8px;
-                        border-bottom: 1px solid #ddd;
-                        margin-bottom: 35px;
-                        position: relative;">
-
-                        <h4>BERITA UTAMA</h4>
-                    </div>
-                </div> --}}    
-                <div class="col-lg-8 col-md-12 padding-fix-r">
-                    <div class="owl-carousel owl-slider">
-                        @foreach($sliders as $slider)
-                            <div class="slider-content">
-                            {{-- <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid"> --}}
-                            <img src="{{ asset($slider->foto_berita) }}" alt="" class="img-fluid" style="height: 470px" width="100%">
-                            <div class="slider-layer" style="width: 100%;">
-                                <p>
-                                    <a href="" style="color: #ffffff; text-align: left;">
-                                        
-                                        {!! substr($slider->isi_berita, 0, 200) . '...' !!}   
-                                        
-                                    </a>
-                                </p>
-                                <ul class="list-unstyled list-inline">
-                                    <li class="list-inline-item">{!! substr($slider->judul_berita, 0, 20) . '...' !!} </li>
-                                    <li class="list-inline-item">{{ tanggal_indo($slider->tanggal_publish) }}</li>
-                                </ul>
-                            </div>
-                        </div>
-                        @endforeach
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 slider-fix">
-
-                    @foreach($slider_sides as $slider_side)
-
-                        @if(strlen($slider_side->isi_berita) > 100)
-
-                            <div class="slider-sidebar sidebar-o">
-                                <img src="{{ asset($slider_side->foto_berita) }}" alt="" class="img-fluid" style="height: 230px" width="100%">
-                                <div class="sidebar-layer">
-                                    <p>
-                                        <a href="">
-                                            {!! substr($slider_side->isi_berita, 0, 100) . '...' !!} 
-                                        </a>
-                                    </p>
-                                    <ul class="list-unstyled list-inline">
-                                        <li class="list-inline-item">
-                                            @if(strlen($slider_side->judul_berita) > 10)
-                                            
-                                                {!! substr($slider_side->judul_berita, 0, 10) . '...' !!}   
-                                            
-                                            @else
-
-                                               {!! $slider_side->judul_berita !!}
-
-                                            @endif
-                                        </li>
-                                        <li class="list-inline-item">{{ tanggal_indo($slider_side->tanggal_publish) }}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                                                
-                        @else
-
-                           {!! $slider_side->isi_berita !!}
-
-                        @endif
-
-                    @endforeach
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Slider Area -->
 
     <!-- Latest Videos -->
     <section class="videos">
