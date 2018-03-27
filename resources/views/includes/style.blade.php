@@ -23,3 +23,10 @@
 <link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/normalize.css') }}">
 <link rel="stylesheet" href="{{ asset('assets_frontend/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/responsive.css') }}">
+
+<script>
+	
+     $(window).load(function(){        
+   $('#sambutan-modal').modal('show');
+    }); 
+</script>

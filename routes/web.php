@@ -99,3 +99,6 @@ Route::group(['prefix' => 'admin'], function() {
 
 // API FRONTEND
 Route::get('api/home', 'Frontend\HomeController@index')->name('api.home');
+
+
+Route::get('api/tes', 'Frontend\HomeController@tes')->name('api.tes');

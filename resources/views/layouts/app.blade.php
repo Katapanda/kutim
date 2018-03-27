@@ -19,7 +19,7 @@
         @include('includes.style')
 
     </head>
-    <body style="background-color: rgba(220, 134, 46, 0.12)">
+    <body style="background-color: #ffffff">
 
         <!-- Pre-Loader -->
         <div id="page-preloader"><span class="spinner"></span></div>

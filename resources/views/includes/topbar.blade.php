@@ -35,7 +35,7 @@
 <!-- End Top Bar -->
 
 <!-- Logo Area -->
-<section class="logo-area">
+<section class="logo-area" style="padding-bottom: 10px">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -46,7 +46,7 @@
             <div class="col-md-6">
                 <div class="searchbar text-right">
                     <form action="#">
-                        <input placeholder="Search Here" type="text" required="">
+                        <input placeholder="Pencarian..." type="text" required="">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>

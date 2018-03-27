@@ -4,7 +4,7 @@
 @include('includes.function')
 
 @section('title')
-	Home
+	Beranda
 @endsection
 
 @section('content')
@@ -173,64 +173,63 @@
     </section> --}}
 
     <!-- All News -->
-    <section class="allnews">
+    {{-- <section class="allnews">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="latest-top">
-                        <h4>HOME</h4>
+                        <h4>ARTIKEL TERBARU</h4>
                     </div>
                     <div class="owl-carousel latest-slider">
                         <div class="latest-item">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="latest-content">
-                                        <img src="{{ asset('assets_frontend/images/latest-1.jpg') }}" alt="" class="img-fluid">
-                                        <h6><a href="">These sentences are selected from various online news.</a></h6>
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">TECHNOLOGY</li>
-                                            <li class="list-inline-item">September 24, 2017</li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore, quam voluptatibus ipsum. Ex tenetur, quasi, provident animi magni voluptas fugit quae ad........</p>
+                                        @foreach($artikel_paling_terbaru as $apt)
+
+                                            <img src="{{ asset($apt->foto_artikel) }}" alt="" class="img-fluid" width="100%" height="">
+                                            <h6>
+                                                <a href="">
+                                                    {!! substr($apt->judul_artikel, 0, 30) . '...' !!} 
+                                                </a>
+                                            </h6>
+                                            <ul class="list-unstyled list-inline">
+                                                <li class="list-inline-item">
+                                                    {!! substr($apt->judul_artikel, 0, 10) . '...' !!}
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    {{ tanggal_indo($apt->created_at) }}
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                {!! substr($apt->isi_artikel, 0, 150) . '...' !!}
+                                            </p>
+
+                                        @endforeach
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="slider-content">
-                                        <div class="slider-img">
-                                            <a href=""><img src="{{ asset('assets_frontend/images/latest-3.jpg') }}" alt="" class="img-fluid"></a>
+                                    @foreach($artikel_page_1 as $artikel_p1)
+
+                                        <div class="slider-content">
+                                            <div class="slider-img">
+                                                <a href="">
+                                                    <img src="{{ asset($artikel_p1->foto_artikel) }}" alt="" class="img-responsive"  height="100px" width="81px">
+                                                </a>
+                                            </div>
+                                            <div class="img-content">
+                                                <p>
+                                                    <a href="">
+                                                        {!! substr($artikel_p1->judul_artikel, 0, 30) . '...' !!} 
+                                                    </a>
+                                                </p>
+                                                <span>{{ tanggal_indo($artikel_p1->created_at) }}</span>
+                                            </div>
                                         </div>
-                                        <div class="img-content">
-                                            <p><a href="">These sentences are selected from various online news.</a></p>
-                                            <span>September 24, 2017</span>
-                                        </div>
-                                    </div>
-                                    <div class="slider-content">
-                                        <div class="slider-img">
-                                            <a href=""><img src="{{ asset('assets_frontend/images/latest-4.jpg') }}" alt="" class="img-fluid"></a>
-                                        </div>
-                                        <div class="img-content">
-                                            <p><a href="">These sentences are selected from various online news.</a></p>
-                                            <span>September 24, 2017</span>
-                                        </div>
-                                    </div>
-                                    <div class="slider-content">
-                                        <div class="slider-img">
-                                            <a href=""><img src="{{ asset('assets_frontend/images/latest-5.jpg') }}" alt="" class="img-fluid"></a>
-                                        </div>
-                                        <div class="img-content">
-                                            <p><a href="">These sentences are selected from various online news.</a></p>
-                                            <span>September 24, 2017</span>
-                                        </div>
-                                    </div>
-                                    <div class="slider-content">
-                                        <div class="slider-img">
-                                            <a href=""><img src="{{ asset('assets_frontend/images/latest-6.jpg') }}" alt="" class="img-fluid"></a>
-                                        </div>
-                                        <div class="img-content">
-                                            <p><a href="">These sentences are selected from various online news.</a></p>
-                                            <span>September 24, 2017</span>
-                                        </div>
-                                    </div>
+
+                                    @endforeach
+                                    
                                 </div>
                             </div>
                         </div>
@@ -289,7 +288,7 @@
                         </div>
                     </div>
                     <div class="popular-top">
-                        <h4>POPULAR NEWS</h4>
+                        <h4>FOTO KEGIATAN</h4>
                     </div>
                     <div class="owl-carousel popular-slider">
                         <div class="popular-item">
@@ -477,7 +476,7 @@
                     </div>
 
                     <div class="follow-widget">
-                        <h4>FOLLOW US</h4>
+                        <h4>Follow Kami</h4>
                         <ul class="list-unstyled clearfix">
                             <li>
                                 <a href="">
@@ -495,24 +494,6 @@
                                 <a href="">
                                     <i class="fa fa-rss"></i>
                                     <p><span>11,209</span>subscriber</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-linkedin"></i>
-                                    <p><span>19,323</span>follower</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-google-plus"></i>
-                                    <p><span>29,559</span>follower</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-youtube"></i>
-                                    <p><span>56,717</span>subscriber</p>
                                 </a>
                             </li>
                         </ul>
@@ -648,8 +629,81 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End All News -->
+
+    <section class="oth-news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="more-top">
+                        <h4>ARTIKEL</h4>
+                    </div>
+                    <div class="more-content">
+                        <div class="more-img">
+                            <a href=""><img src="{{ asset('upload/foto_berita/diprotes-pembangunan-2-gedung-sekolah-dikerjakan-malam-malam.jpg') }}" alt="" class="img-responsive" width="260px" height="169px"></a>
+                        </div>
+                        <div class="img-content">
+                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">FAMILY</li>
+                                <li class="list-inline-item">September 24, 2017</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
+                        </div>
+                    </div>
+                    <div class="more-content">
+                        <div class="more-img">
+                            <a href=""><img src="{{ asset('upload/foto_berita/pemerintah-kutai-timur-fokus-bangun-infrastruktur-jalan.jpg') }}" alt="" class="img-responsive" width="260px" height="169px"></a>
+                        </div>
+                        <div class="img-content">
+                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">LIFESTYLE</li>
+                                <li class="list-inline-item">September 24, 2017</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
+                        </div>
+                    </div>
+                    <div class="more-content">
+                        <div class="more-img">
+                            <a href=""><img src="{{ asset('upload/foto_berita/jemaah-umrah-indonesia-kini-tak-bisa-transit-ke-banyak-negara.jpg') }}" alt="" class="img-responsive" width="260px" height="169px"></a>
+                        </div>
+                        <div class="img-content">
+                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">WORLD</li>
+                                <li class="list-inline-item">September 24, 2017</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
+                        </div>
+                    </div>
+                    <div class="more-content">
+                        <div class="more-img">
+                            <a href=""><img src="{{ asset('upload/foto_berita/kutai-timur-raih-lpse-terbaik-2014.jpg') }}" alt="" class="img-responsive" width="260px" height="169px"></a>
+                        </div>
+                        <div class="img-content">
+                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">TECHNOLOGY</li>
+                                <li class="list-inline-item">September 24, 2017</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                   <div class="more-top">
+                        <h4>Kepala Dinas</h4>
+                    </div>
+                    <div class="add-widget">
+                        <a href=""><img src="{{ asset('upload/foto_struktur_organisasi/10112378.JPG') }}" alt="" class="img-fluid" width="50%" height="300px"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Latest Videos -->
     <section class="videos">
@@ -658,7 +712,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="video-top">
-                            <h4>LATEST VIDEOS</h4>
+                            <h4>VIDEO KEGIATAN</h4>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12">
@@ -693,7 +747,7 @@
     <!-- End Latest Videos -->
     
     <!-- Other News -->
-    <section class="oth-news">
+    {{-- <section class="oth-news">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -895,7 +949,28 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End Other News -->
+
+
+
+    <!-- Modal Sambutan-->
+    <div class="modal fade" id="sambutan-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="{{ asset('assets_frontend/images/logo.png') }}" class="img-responsive" alt="">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @foreach($sambutans as $sambutan)
+                        {!! $sambutan->isi_sambutan !!}
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
