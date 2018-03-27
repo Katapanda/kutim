@@ -29,10 +29,10 @@
                             <h6>Filter</h6>
                             <form id="search-form" class="form-inline" role="form">
                                 <div class="form-group">
-                                    <input type="text" id="jenis_kegiatan" name="jenis_kegiatan" class="form-control" placeholder="Role Name">
+                                    <input type="text" id="judul_artikel_" name="judul_artikel_" class="form-control" placeholder="Role Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" id="nama_kegiatan" name="nama_kegiatan" class="form-control" placeholder="Description">
+                                    <input type="text" id="isi_artikel_" name="isi_artikel_" class="form-control" placeholder="Description">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-sm btn-primary">Filter</button>
@@ -98,8 +98,8 @@
             ajax: {
                 url: "{{ route('admin.api.artikel') }}",
                 data: function (d) {
-                    d.judul_artikel = $('input[name=judul_artikel]').val();
-                    d.isi_artikel = $('input[name=isi_artikel]').val();
+                    d.judul_artikel = $('input[name=judul_artikel_]').val();
+                    d.isi_artikel = $('input[name=isi_artikel_]').val();
                 }
             },
             columns: [

@@ -127,27 +127,6 @@
         $('#modal-form form')[0].reset();
         $('.modal-title').text('Tambah Berita');
     }
-    function editForm(id) {
-        save_method = 'edit';
-        $('input[name=_method]').val('PATCH');
-        $('#modal-form form')[0].reset();
-        $.ajax({
-          url: "{{ url('admin/berita') }}" + '/' + id + "/edit",
-          type: "GET",
-          dataType: "JSON",
-          success: function(data) {
-            $('#modal-form').modal('show');
-            $('.modal-title').text('Edit Berita');
-            console.log(data.isi_berita);
-            $('#id').val(data.id);
-            $('[name=judul_berita]').html(data.judul_berita);
-            $('[name=sumber_berita]').val(data.sumber_berita);
-          },
-          error : function() {
-              alert("Nothing Data");
-          }
-        });
-    }
     function deleteData(id){
         var popup = confirm("Apakah anda yakin akan menghapus data ini?");
         var csrf_token = "{{ csrf_token() }}";
@@ -171,52 +150,52 @@
             });
         }
     }
-    $(function(){
-        $('#modal-form form').validator().on('submit', function (e) {
-            if (!e.isDefaultPrevented()){
-                var id = $('#id').val();
-                if (save_method == 'add') {
-                    url = "{{ route('berita.store') }}";
-                }else{
-                    url = "{{ url('admin/berita') . '/' }}" + id;
-                }
+    // $(function(){
+    //     $('#modal-form form').validator().on('submit', function (e) {
+    //         if (!e.isDefaultPrevented()){
+    //             var id = $('#id').val();
+    //             if (save_method == 'add') {
+    //                 url = "{{ route('berita.store') }}";
+    //             }else{
+    //                 url = "{{ url('admin/berita') . '/' }}" + id;
+    //             }
 
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
+    //             $.ajaxSetup({
+    //                 headers: {
+    //                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //                 }
+    //             });
 
-                $.ajax({
-                    url: url,
-                    type: 'POST',
-                    // data: $('#modal-form form').serialize(),
-                    data: new FormData($("#modal-form form")[0]),
-                    contentType: false,
-                    processData: false,
-                    success: function(data){
-                        $('#modal-form').modal('hide');
-                        oTable.ajax.reload();
+    //             $.ajax({
+    //                 url: url,
+    //                 type: 'POST',
+    //                 // data: $('#modal-form form').serialize(),
+    //                 data: new FormData($("#modal-form form")[0]),
+    //                 contentType: false,
+    //                 processData: false,
+    //                 success: function(data){
+    //                     $('#modal-form').modal('hide');
+    //                     oTable.ajax.reload();
 
-                        if (save_method == 'add') {
-                                show_notification('save', 'success');
-                        }else{
-                                show_notification('update', 'success');
-                        }
-                    },
-                    error: function(){
+    //                     if (save_method == 'add') {
+    //                             show_notification('save', 'success');
+    //                     }else{
+    //                             show_notification('update', 'success');
+    //                     }
+    //                 },
+    //                 error: function(){
 
-                        if (save_method == 'add') {
-                                show_notification('save', 'failed');
-                        }else{
-                                show_notification('update', 'failed');
-                        }
-                    }
-                });
-                // console.log(data);
-                return false;
-            }
-        });
-    });
+    //                     if (save_method == 'add') {
+    //                             show_notification('save', 'failed');
+    //                     }else{
+    //                             show_notification('update', 'failed');
+    //                     }
+    //                 }
+    //             });
+    //             // console.log(data);
+    //             return false;
+    //         }
+    //     });
+    // });
 </script>
 @endpush

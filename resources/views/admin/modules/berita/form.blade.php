@@ -9,7 +9,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="edit_editor">
           <input type="hidden" name="id" id="id">
           <div class="md-input-wrapper">
             <input type="text" class="md-form-control md-static" name="judul_berita" required placeholder="Judul">

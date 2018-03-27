@@ -191,54 +191,54 @@
             }
         }
 
-        $(function(){
-            $('#modal-form form').validator().on('submit', function(e){
-                if (!e.isDefaultPrevented()) {
-                    var id = $('#id').val();
+        // $(function(){
+        //     $('#modal-form form').validator().on('submit', function(e){
+        //         if (!e.isDefaultPrevented()) {
+        //             var id = $('#id').val();
 
-                    if (save_method == 'add') {
-                        url = "{{ route('agenda.store') }}";
-                    }else{
-                        url = "{{ url('admin/agenda') . '/' }}" + id;
-                    }
+        //             if (save_method == 'add') {
+        //                 url = "{{ route('agenda.store') }}";
+        //             }else{
+        //                 url = "{{ url('admin/agenda') . '/' }}" + id;
+        //             }
 
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
+        //             $.ajaxSetup({
+        //                 headers: {
+        //                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //                 }
+        //             });
 
-                    $.ajax({
-                        url: url,
-                        type: 'POST',
-                        data: $('#modal-form form').serialize(),
-                        // data: new FormData($("#modal-form form")[0]),
-                        // contentType: false,
-                        // processData: false,
-                        success: function(data){
-                            $('#modal-form').modal('hide');
-                            oTable.ajax.reload();
+        //             $.ajax({
+        //                 url: url,
+        //                 type: 'POST',
+        //                 data: $('#modal-form form').serialize(),
+        //                 // data: new FormData($("#modal-form form")[0]),
+        //                 // contentType: false,
+        //                 // processData: false,
+        //                 success: function(data){
+        //                     $('#modal-form').modal('hide');
+        //                     oTable.ajax.reload();
 
-                            if (save_method == 'add') {
-                                    show_notification('save', 'success');
-                            }else{
-                                    show_notification('update', 'success');
-                            }
-                        },
-                        error: function(){
+        //                     if (save_method == 'add') {
+        //                             show_notification('save', 'success');
+        //                     }else{
+        //                             show_notification('update', 'success');
+        //                     }
+        //                 },
+        //                 error: function(){
 
-                            if (save_method == 'add') {
-                                    show_notification('save', 'failed');
-                            }else{
-                                    show_notification('update', 'failed');
-                            }
-                        }
-                    });
+        //                     if (save_method == 'add') {
+        //                             show_notification('save', 'failed');
+        //                     }else{
+        //                             show_notification('update', 'failed');
+        //                     }
+        //                 }
+        //             });
 
-                    return false;
-                }
-            });
-        });
+        //             return false;
+        //         }
+        //     });
+        // });
     </script>
 
     {{-- <script src="{{ asset('assets/plugins/ckeditor/ckeditor-custom.js') }}"></script> --}}

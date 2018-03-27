@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Mockery\Exception;
 use yajra\DataTables\Datatables;
 
-use App\Http\Requests;
 use App\Models\StrukturOrganisasi;
 
 class StrukturOrganisasiController extends Controller
@@ -75,7 +72,7 @@ class StrukturOrganisasiController extends Controller
     public function apiSO(Request $request)
     {
         // $so = StrukturOrganisasi::all();
-        $so = StrukturOrganisasi::select(['id', 'nama', 'nip', 'email', 'jabatan', 'bidang', 'sub_bidang']);
+        $so = StrukturOrganisasi::select(['id', 'nama', 'nip', 'email', 'jabatan', 'bidang']);
         // print_r($agenda);
         return Datatables::of($so)
             ->filter(function ($query) use ($request) {

@@ -96,7 +96,7 @@
                 enter: animIn,
                 exit: animOut
             },
-            icon_type: 'class',
+            icon_type: 'image',
             template: '<div data-growl="container" class="alert" role="alert">' +
             '<button type="button" class="close" data-growl="dismiss">' +
             '<span aria-hidden="true">&times;</span>' +
@@ -170,34 +170,14 @@
       notify(title, message, from, align, icon, type, animIn, animOut);
     }
 
-    // function notify(message, type){
-    //     $.growl({
-    //         message: message
-    //     },{
-    //         type: type,
-    //         allow_dismiss: false,
-    //         label: 'Cancel',
-    //         className: 'btn-xs btn-inverse',
-    //         placement: {
-    //             from: 'top',
-    //             align: 'right'
-    //         },
-    //         delay: 2500,
-    //         animate: {
-    //                 enter: 'animated fadeInRight',
-    //                 exit: 'animated fadeOutRight'
-    //         },
-    //         offset: {
-    //             x: 30,
-    //             y: 30
-    //         }
-    //     });
-    // };
-
-
   </script>
   @if ($message = Session::get('success'))
     <script type="text/javascript">
-      show_notification('save', 'success');
+      notify('', "{{ $message }}", 'top', 'right', "{{ url('assets/images/avatar-1.png') }}", 'success', 'animated fadeInRight', 'animated fadeOutRight');
+    </script>
+  @endif
+  @if ($message = Session::get('error'))
+    <script type="text/javascript">
+      notify('', "{{ $message }}", 'top', 'right', "{{ url('assets/images/avatar-1.png') }}", 'danger', 'animated fadeInRight', 'animated fadeOutRight');
     </script>
   @endif

@@ -29,10 +29,10 @@
                             <h6>Filter</h6>
                             <form id="search-form" class="form-inline" role="form">
                                 <div class="form-group">
-                                    <input type="text" id="jenis_kegiatan" name="jenis_kegiatan" class="form-control" placeholder="Role Name">
+                                    <input type="text" id="nama" name="nama_" class="form-control" placeholder="Role Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" id="nama_kegiatan" name="nama_kegiatan" class="form-control" placeholder="Description">
+                                    <input type="text" id="email" name="email_" class="form-control" placeholder="Description">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-sm btn-primary">Filter</button>
@@ -79,16 +79,15 @@
             ajax: {
                 url: "{{ route('admin.api.so') }}",
                 data: function (d) {
-                    d.nama = $('input[name=nama]').val();
-                    d.email = $('input[name=email]').val();
+                    d.nama = $('input[name=nama_]').val();
+                    d.email = $('input[name=email_]').val();
                 }
             },
             columns: [
-                {data: 'nama', name: 'nama'},
+               {data: 'nama', name: 'nama'},
                 {data: 'email', name: 'email'},
                 {data: 'jabatan', name: 'jabatan'},
                 {data: 'bidang', name: 'bidang'},
-                // {data: 'sub_bidang', name: 'sub_bidang'},
                 {data: 'action', name: 'action', className: 'text-center', orderable: false, searchable: false}
             ]
         });
@@ -120,7 +119,7 @@
           success: function(data) {
             $('#modal-form').modal('show');
             $('.modal-title').text('Edit Struktur Organisasi');
-            
+            console.log(data.isi_artikel);
             $('#id').val(data.id);
             $('[name=email]').val(data.email);
             $('[name=nip]').val(data.nip);
@@ -176,7 +175,10 @@
                 $.ajax({
                     url: url,
                     type: 'POST',
-                    data: $('#modal-form form').serialize(),
+                    // data: $('#modal-form form').serialize(),
+                    data: new FormData($("#modal-form form")[0]),
+                    contentType: false,
+                    processData: false,
                     success: function(data){
                         $('#modal-form').modal('hide');
                         oTable.ajax.reload();

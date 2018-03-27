@@ -63,6 +63,21 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::get('api/tupoksi', 'TupoksiController@apiTupoksi')->name('admin.api.tupoksi');
 	Route::get('api/tupoksi/ajaxtampil/{id}', 'TupoksiController@ajax_tampil');
 
+	Route::resource('sambutan', 'SambutanController');
+	Route::get('api/sambutan', 'SambutanController@apiSambutan')->name('admin.api.sambutan');
+	Route::get('api/sambutan/ajaxtampil/{id}', 'SambutanController@ajax_tampil');
+
+	Route::resource('programkerja', 'ProgramKerjaController');
+	Route::get('api/programkerja', 'ProgramKerjaController@apiProgramKerja')->name('admin.api.programkerja');
+	Route::get('api/programkerja/ajaxtampil/{id}', 'ProgramKerjaController@ajax_tampil');
+
+	Route::resource('visimisi', 'VisiMisiController');
+	Route::get('api/visimisi', 'VisiMisiController@apiVisiMisi')->name('admin.api.visimisi');
+	Route::get('api/visimisi/ajaxtampil/{id}', 'VisiMisiController@ajax_tampil');
+
+	Route::resource('sejarah', 'SejarahController');
+	Route::get('api/sejarah', 'SejarahController@apiSejarah')->name('admin.api.sejarah');
+	Route::get('api/sejarah/ajaxtampil/{id}', 'SejarahController@ajax_tampil');
 
 	// Route::resource('sodetail', 'SoDetailController');
 	Route::resource('so', 'StrukturOrganisasiController');

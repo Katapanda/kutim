@@ -19,10 +19,7 @@ class AgendaController extends Controller
         $input = $request->all();
         Agenda::create($input);
         
-        return response()->json([
-            'success' => true,
-            'message' => 'Agenda Created'
-        ]);
+        return redirect()->action('AgendaController@index')->with(['success' => 'Berhasil Tambah Data']);
 
         // $data = [
         //     'jenis_kegiatan'     => $request['jenis_kegiatan'],
@@ -48,7 +45,7 @@ class AgendaController extends Controller
         $agenda = Agenda::find($id);
         $agenda->update($input);
 
-        return redirect()->action('AgendaController@index');
+        return redirect()->action('AgendaController@index')->with(['success' => 'Berhasil Tambah Data']);
     }
     public function edit($id)
     {
@@ -98,7 +95,7 @@ class AgendaController extends Controller
                 return $agenda->keterangan_kegiatan;
             })
             ->addColumn('action', function($agenda){
-                return '<a href="'.url("admin/agenda/editisi",$agenda->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a> <a onclick="editForm('. $agenda->id .')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
+                return '<a href="'.url("admin/agenda/editisi",$agenda->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
                     '<a onclick="deleteData('. $agenda->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
                             <i class="icofont icofont-delete-alt"></i> Delete</a>';
             })

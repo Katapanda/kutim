@@ -1,14 +1,14 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    Gambaran Umum
+    Sambutan
 @endsection
 
 @section('content')
     
     <div class="row">
         <div class="main-header">
-            <h4>Gambaran Umum</h4>
+            <h4>Sambutan</h4>
         </div>
     </div>
 
@@ -16,7 +16,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">Gambaran Umum List</h5>
+                    <h5 class="card-header-text">Sambutan List</h5>
                     {{-- button form modal --}}
                     <button type="button" onclick="addForm()" class="btn btn-inverse-primary waves-effect waves-light btn-sm" style="float: right">
                       <i class="icofont icofont-plus"></i> Tambah Data
@@ -29,7 +29,7 @@
                             <h6>Filter</h6>
                             <form id="search-form" class="form-inline" role="form">
                                 <div class="form-group">
-                                    <input type="text" id="gambaran_umum" name="gambaran_umum" class="form-control" placeholder="Role Name">
+                                    <input type="text" id="sambutan" name="sambutan" class="form-control" placeholder="Role Name">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-sm btn-primary">Filter</button>
@@ -41,10 +41,10 @@
                 <div class="card-block">
                     <div class="row">
                         <div class="col-sm-12 table-responsive">
-                            <table id="gambaranumum-table" class="table table-stripped">
+                            <table id="sambutan-table" class="table table-stripped">
                                 <thead>
                                     <tr>
-                                        <th>ISi Gambaran Umum</th>
+                                        <th>ISi Sambutan</th>
                                         <th style="min-width: 150px">Aksi</th>
                                     </tr>
                                 </thead>
@@ -58,7 +58,7 @@
         </div>
 
         {{-- include form modal --}}
-        @include('admin.modules.gambaranumum.form')
+        @include('admin.modules.sambutan.form')
 @endsection
 
 @push('scripts')
@@ -81,20 +81,20 @@
     </script>
 
 <script type="text/javascript">
-    var oTable = $('#gambaranumum-table').DataTable({
+    var oTable = $('#sambutan-table').DataTable({
             dom: "<'row'<'col-xs-12'<'col-xs-6'l><'col-xs-6'p>>r>"+
             "<'row'<'col-xs-12't>>"+
             "<'row'<'col-xs-12'<'col-xs-6'i><'col-xs-6'p>>>",
             processing: true,
             serverSide: true,
             ajax: {
-                url: "{{ route('admin.api.gambaranumum') }}",
+                url: "{{ route('admin.api.sambutan') }}",
                 data: function (d) {
-                    d.isi_gambaran_umum = $('input[name=isi_gambaran_umum]').val();
+                    d.isi_sambutan = $('input[name=isi_sambutan]').val();
                 }
             },
             columns: [
-                {data: 'isi_gambaran_umum', name: 'isi_gambaran_umum'},
+                {data: 'isi_sambutan', name: 'isi_sambutan'},
                 {data: 'action', name: 'action', className: 'text-center', orderable: false, searchable: false}
             ]
         });
@@ -113,20 +113,20 @@
         $('input[name=_method]').val('POST');
         $('#modal-form').modal('show');
         $('#modal-form form')[0].reset();
-        $('.modal-title').text('Tambah Gambaran Umum');
+        $('.modal-title').text('Tambah Sambutan');
     }
     function editForm(id) {
         save_method = 'edit';
         $('input[name=_method]').val('PATCH');
         $('#modal-form form')[0].reset();
-        $('form[action]').attr("action","{{ url('admin/gambaranumum') }}"+"/"+id);
+        $('form[action]').attr("action","{{ url('admin/sambutan') }}"+"/"+id);
         $.ajax({
-          url: "{{ url('admin/api/ajaxtampil') }}" + '/' + id,
+          url: "{{ url('admin/api/sambutan/ajaxtampil') }}" + '/' + id,
           type: "GET",
           // dataType: "JSON",
           success: function(data) {
             $('#modal-form').modal('show');
-            $('.modal-title').text('Edit Gambaran Umum');
+            $('.modal-title').text('Edit Sambutan');
             // $('#id').val(data.id);
             $('#edit_editor').html(data);
           },
@@ -145,7 +145,7 @@
                 }
             });
             $.ajax({
-                url: "{{ url('admin/gambaranumum') }}" + '/' + id,
+                url: "{{ url('admin/sambutan') }}" + '/' + id,
                 type: "POST",
                 data: {'_method' : 'DELETE', _token : csrf_token},
                 success: function(data){
@@ -163,9 +163,9 @@
     //         if (!e.isDefaultPrevented()){
     //             var id = $('#id').val();
     //             if (save_method == 'add') {
-    //                 url = "{{ route('gambaranumum.store') }}";
+    //                 url = "{{ route('sambutan.store') }}";
     //             }else{
-    //                 url = "{{ url('admin/gambaranumum') . '/' }}" + id;
+    //                 url = "{{ url('admin/sambutan') . '/' }}" + id;
     //             }
 
     //             $.ajaxSetup({

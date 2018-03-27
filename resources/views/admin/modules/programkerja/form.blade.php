@@ -1,7 +1,7 @@
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="formModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <form id="form-gambaran" action="{{ route('gambaranumum.store') }}" method="post"  data-toggle="validator" enctype="multipart/form-data">
+      <form id="form-gambaran" action="{{ route('programkerja.store') }}" method="post"  data-toggle="validator" enctype="multipart/form-data">
         {{ csrf_field() }} {{ method_field('POST') }}
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle"></h5>
@@ -17,8 +17,8 @@
             <span class="help-block with-errors"></span>
           </div> --}}
           <div class="md-input-wrapper" id="edit_editor">
-            {{ ($errors->has('isi_gambaran_umum')) ? $errors->first('isi_gambaran_umum') : '' }}
-            <textarea name="isi_gambaran_umum"></textarea>
+            {{ ($errors->has('isi_program_kerja')) ? $errors->first('isi_program_kerja') : '' }}
+            <textarea name="isi_program_kerja"></textarea>
             <span class="help-block with-errors"></span>
           </div>
         </div>

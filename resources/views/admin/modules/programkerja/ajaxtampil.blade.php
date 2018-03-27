@@ -1,5 +1,5 @@
-{{ ($errors->has('isi_gambaran_umum')) ? $errors->first('isi_gambaran_umum') : '' }}
-<textarea name="isi_gambaran_umum">{{ $isi['isi_gambaran_umum'] }}</textarea>
+{{ ($errors->has('isi_program_kerja')) ? $errors->first('isi_program_kerja') : '' }}
+<textarea name="isi_program_kerja">{{ $isi['isi_program_kerja'] }}</textarea>
 <span class="help-block with-errors"></span>
 
     <script src="{{ asset('assets/plugins/tinymce/tinymce.min.js') }}"></script>

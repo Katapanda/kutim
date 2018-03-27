@@ -76,10 +76,11 @@ class GambaranUmumController extends Controller
     {
         $input = $request->all();
         $gambaranumum = GambaranUmum::find($id);
-        $gambaranumum->update($input);
-
-        return redirect()->action('GambaranUmumController@index');
-        // return $gambaranumum;
+        if ($gambaranumum->update($input)) {
+            return redirect()->action('GambaranUmumController@index')->with(['success' => 'Berhasil Ubah Data']);
+        } else {
+            return redirect()->action('GambaranUmumController@index')->with(['error' => 'Mohon Maaf Terjad Kesalahan, Data Tidak Berhasil DI Ubah']);
+        }
     }
     public function destroy($id)
     {
@@ -108,7 +109,7 @@ class GambaranUmumController extends Controller
                 return $gambaranumum->isi_gambaran_umum;
             })
             ->addColumn('action', function($gambaranumum){
-                return '<a href="'.url("admin/gambaranumum/editisi",$gambaranumum->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a> <a onclick="editForm('. $gambaranumum->id .')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
+                return '<a onclick="editForm('. $gambaranumum->id .')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
                     '<a onclick="deleteData('. $gambaranumum->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
                             <i class="icofont icofont-delete-alt"></i> Delete</a>';
             })

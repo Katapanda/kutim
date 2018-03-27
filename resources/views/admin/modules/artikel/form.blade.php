@@ -1,7 +1,7 @@
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="formModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <form id="form-contact" method="post"  data-toggle="validator" enctype="multipart/form-data">
+      <form id="form-contact" action="{{ route('artikel.store') }}" method="post"  data-toggle="validator" enctype="multipart/form-data">
         {{ csrf_field() }} {{ method_field('POST') }}
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle"></h5>

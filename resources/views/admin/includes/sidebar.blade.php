@@ -76,6 +76,21 @@
           <i class="icon-user"></i><span> Tupoksi</span>
         </a>
       </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'sambutan.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('sambutan.index') }}">
+          <i class="icon-user"></i><span> Sambutan</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'programkerja.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('programkerja.index') }}">
+          <i class="icon-user"></i><span> Program Kerja</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'sejarah.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('sejarah.index') }}">
+          <i class="icon-user"></i><span> Sejarah</span>
+        </a>
+      </li>
       <li class="nav-level">Management</li>
       
       <li class="treeview">

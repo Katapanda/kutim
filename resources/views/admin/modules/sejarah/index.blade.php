@@ -1,14 +1,14 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    Program Kerja
+    Sejarah
 @endsection
 
 @section('content')
     
     <div class="row">
         <div class="main-header">
-            <h4>Program Kerja</h4>
+            <h4>Sejarah</h4>
         </div>
     </div>
 
@@ -16,7 +16,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">Program Kerja List</h5>
+                    <h5 class="card-header-text">Sejarah List</h5>
                     {{-- button form modal --}}
                     <button type="button" onclick="addForm()" class="btn btn-inverse-primary waves-effect waves-light btn-sm" style="float: right">
                       <i class="icofont icofont-plus"></i> Tambah Data
@@ -29,7 +29,7 @@
                             <h6>Filter</h6>
                             <form id="search-form" class="form-inline" role="form">
                                 <div class="form-group">
-                                    <input type="text" id="program_kerja" name="program_kerja" class="form-control" placeholder="Role Name">
+                                    <input type="text" id="sejarah" name="sejarah" class="form-control" placeholder="Role Name">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-sm btn-primary">Filter</button>
@@ -41,10 +41,10 @@
                 <div class="card-block">
                     <div class="row">
                         <div class="col-sm-12 table-responsive">
-                            <table id="programkerja-table" class="table table-stripped">
+                            <table id="sejarah-table" class="table table-stripped">
                                 <thead>
                                     <tr>
-                                        <th>ISi Program Kerja</th>
+                                        <th>ISi Sejarah</th>
                                         <th style="min-width: 150px">Aksi</th>
                                     </tr>
                                 </thead>
@@ -58,7 +58,7 @@
         </div>
 
         {{-- include form modal --}}
-        @include('admin.modules.programkerja.form')
+        @include('admin.modules.sejarah.form')
 @endsection
 
 @push('scripts')
@@ -81,20 +81,20 @@
     </script>
 
 <script type="text/javascript">
-    var oTable = $('#programkerja-table').DataTable({
+    var oTable = $('#sejarah-table').DataTable({
             dom: "<'row'<'col-xs-12'<'col-xs-6'l><'col-xs-6'p>>r>"+
             "<'row'<'col-xs-12't>>"+
             "<'row'<'col-xs-12'<'col-xs-6'i><'col-xs-6'p>>>",
             processing: true,
             serverSide: true,
             ajax: {
-                url: "{{ route('admin.api.programkerja') }}",
+                url: "{{ route('admin.api.sejarah') }}",
                 data: function (d) {
-                    d.isi_program_kerja = $('input[name=isi_program_kerja]').val();
+                    d.isi_sejarah = $('input[name=isi_sejarah]').val();
                 }
             },
             columns: [
-                {data: 'isi_program_kerja', name: 'isi_program_kerja'},
+                {data: 'isi_sejarah', name: 'isi_sejarah'},
                 {data: 'action', name: 'action', className: 'text-center', orderable: false, searchable: false}
             ]
         });
@@ -113,20 +113,20 @@
         $('input[name=_method]').val('POST');
         $('#modal-form').modal('show');
         $('#modal-form form')[0].reset();
-        $('.modal-title').text('Tambah Program Kerja');
+        $('.modal-title').text('Tambah Sejarah');
     }
     function editForm(id) {
         save_method = 'edit';
         $('input[name=_method]').val('PATCH');
         $('#modal-form form')[0].reset();
-        $('form[action]').attr("action","{{ url('admin/programkerja') }}"+"/"+id);
+        $('form[action]').attr("action","{{ url('admin/sejarah') }}"+"/"+id);
         $.ajax({
-          url: "{{ url('admin/api/programkerja/ajaxtampil') }}" + '/' + id,
+          url: "{{ url('admin/api/sejarah/ajaxtampil') }}" + '/' + id,
           type: "GET",
           // dataType: "JSON",
           success: function(data) {
             $('#modal-form').modal('show');
-            $('.modal-title').text('Edit Program Kerja');
+            $('.modal-title').text('Edit Sejarah');
             // $('#id').val(data.id);
             $('#edit_editor').html(data);
           },
@@ -145,7 +145,7 @@
                 }
             });
             $.ajax({
-                url: "{{ url('admin/programkerja') }}" + '/' + id,
+                url: "{{ url('admin/sejarah') }}" + '/' + id,
                 type: "POST",
                 data: {'_method' : 'DELETE', _token : csrf_token},
                 success: function(data){
@@ -163,9 +163,9 @@
     //         if (!e.isDefaultPrevented()){
     //             var id = $('#id').val();
     //             if (save_method == 'add') {
-    //                 url = "{{ route('programkerja.store') }}";
+    //                 url = "{{ route('sejarah.store') }}";
     //             }else{
-    //                 url = "{{ url('admin/programkerja') . '/' }}" + id;
+    //                 url = "{{ url('admin/sejarah') . '/' }}" + id;
     //             }
 
     //             $.ajaxSetup({

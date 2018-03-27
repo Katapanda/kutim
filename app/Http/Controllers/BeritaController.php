@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Mockery\Exception;
 use yajra\DataTables\Datatables;
 
 use App\Models\Berita;
@@ -18,7 +16,12 @@ class BeritaController extends Controller
     public function editisi($id)
     {
         $berita = Berita::find($id);
-        return view('admin.editberita', ['menu' => 'berita', 'isi' => $berita]);
+        return view('admin.modules.berita.editberita', ['isi' => $berita]);
+    }
+    public function ajax_tampil($id)
+    {
+        $berita = Berita::find($id);
+        return view('admin.modules.berita.ajaxtampil', ['isi' => $berita]);
     }
     public function store(Request $request)
     {
@@ -32,10 +35,7 @@ class BeritaController extends Controller
 
         Berita::create($input);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Contact Created'
-        ]);
+        return redirect()->action('BeritaController@index')->with(['success' => 'Berhasil Tambah Data']);
     }
     public function edit($id)
     {
@@ -57,12 +57,11 @@ class BeritaController extends Controller
             $request->foto_berita->move(public_path('/upload/foto_berita/'), $input['foto_berita']);
         }
 
-        $berita->update($input);
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Berita Updated'
-        ]);
+        if ($berita->update($input)) {
+            return redirect()->action('BeritaController@index')->with(['success' => 'Berhasil Ubah Data']);
+        } else {
+            return redirect()->action('BeritaController@index')->with(['error' => 'Mohon Maaf Terjad Kesalahan, Data Tidak Berhasil DI Ubah']);
+        }
         // return $berita;
     }
     public function ubah(Request $request, $id)
@@ -80,9 +79,11 @@ class BeritaController extends Controller
             $request->foto_berita->move(public_path('/upload/foto_berita/'), $input['foto_berita']);
         }
 
-        $berita->update($input);
-
-        return redirect()->action('BeritaController@index');
+        if ($berita->update($input)) {
+            return redirect()->action('BeritaController@index')->with(['success' => 'Berhasil Ubah Data']);
+        } else {
+            return redirect()->action('BeritaController@index')->with(['error' => 'Mohon Maaf Terjad Kesalahan, Data Tidak Berhasil DI Ubah']);
+        }
     }
     public function destroy($id)
     {
@@ -125,8 +126,7 @@ class BeritaController extends Controller
                 return '<img class="rounded-square" width="50" height="50" src="'. url($berita->foto_berita) .'" alt="">';
             })
             ->addColumn('action', function($berita){
-                return '<a href="'.url("admin/berita/editisi",$berita->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Detail</a>'.
-                    '<a onclick="editForm('. $berita->id .')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
+                return '<a href="'.url("admin/berita/editisi",$berita->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
                     '<a onclick="deleteData('. $berita->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
                             <i class="icofont icofont-delete-alt"></i> Delete</a>';
             })

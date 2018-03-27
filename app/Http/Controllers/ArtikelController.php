@@ -80,9 +80,11 @@ class ArtikelController extends Controller
             $request->foto_artikel->move(public_path('/upload/foto_artikel/'), $input['foto_artikel']);
         }
 
-        $artikel->update($input);
-
-        return redirect()->action('ArtikelController@index');
+        if ($artikel->update($input)) {
+            return redirect()->action('ArtikelController@index')->with(['success' => 'Berhasil Ubah Data']);
+        } else {
+            return redirect()->action('ArtikelController@index')->with(['error' => 'Mohon Maaf Terjad Kesalahan, Data Tidak Berhasil DI Ubah']);
+        }
     }
     public function destroy($id)
     {
@@ -127,7 +129,6 @@ class ArtikelController extends Controller
             })
             ->addColumn('action', function($artikel){
                 return '<a href="'.url("admin/artikel/editisi",$artikel->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
-                    '<a onclick="editForm('. $artikel->id .')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
                     '<a onclick="deleteData('. $artikel->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
                             <i class="icofont icofont-delete-alt"></i> Delete</a>';
             })
