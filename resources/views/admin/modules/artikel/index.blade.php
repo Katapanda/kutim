@@ -221,4 +221,70 @@
         });
     });
 </script>
+
+<script src="{{ asset('assets/plugins/cropper/cropper.js') }}"></script>
+<script type="text/javascript">
+    $(function() {
+        // Cropper Options set 
+        var cropper;
+        var options = {
+                aspectRatio: 1 / 1,
+                minContainerWidth: 570,
+                minContainerHeight: 350,
+                minCropBoxWidth: 145,
+                minCropBoxHeight: 145,
+                rotatable: true,
+                cropBoxResizable: false,
+                crop: function(e) {
+                    $("#cropped_value").val(parseInt(e.detail.width) + "," + parseInt(e.detail.height) + "," + parseInt(e.detail.x) + "," + parseInt(e.detail.y) + "," + parseInt(e.detail.rotate));
+            }
+        };
+        // Show cropper on existing Image
+        $("body").on("click", "#image_source", function() {
+            var src = $("#image_source").attr("src");
+            src = src.replace("/thumb", "");
+            $('#image_cropper').attr('src', src);
+            $('#image_edit').val("yes");
+        });
+        // Destroy Cropper on Model Hide
+        $(".modal").on("hide.bs.modal", function() {
+            $(".cropper-container").remove();
+            cropper.destroy();
+        });
+        // Show Cropper on Model Show
+         $(".modal").on("show.bs.modal", function() {
+            var image = document.getElementById('image_cropper');
+            cropper = new Cropper(image, options);
+        });
+        // Rotate Image 
+        $("body").on("click", ".rotate", function() {
+             var degree = $(this).attr("data-option");
+             cropper.rotate(degree);
+         });
+        ////// When user upload image 
+        $(document).on("change", "#cropper", function() {
+            var imagecheck = $(this).data('imagecheck'),
+            file = this.files[0],
+            imagefile = file.type,
+            _URL = window.URL || window.webkitURL;
+            img = new Image();
+            img.src = _URL.createObjectURL(file);
+            img.onload = function() {
+                var match = ["image/jpeg", "image/png", "image/jpg"];
+                if (!((imagefile == match[0]) || (imagefile == match[1]) || (imagefile == match[2]))) {
+                    alert('Please Select A valid Image File');
+                    return false;
+                } else {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onloadend = function() { // set image data as background of div
+                        $(document).find('#image_cropper').attr('src', "");
+                        $(document).find('#image_cropper').attr('src', this.result);
+                        $('#image_edit').val("")
+                    }
+                }
+            }
+        });
+    });
+</script>
 @endpush

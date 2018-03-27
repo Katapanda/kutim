@@ -22,9 +22,15 @@
             <span class="help-block with-errors"></span>
           </div>
           <div class="md-input-wrapper">
-            <input type="file" class="md-form-control md-static" name="foto_artikel">
+            <input type="file" class="md-form-control md-static" name="foto_artikel" id="cropper">
             <label>Perihal</label>
             <span class="help-block with-errors"></span>
+
+            <img width="100%"  src="" id="image_cropper">
+            <p class="text-center">   
+            <button type="button" class="btn btn-primary rotate" data-method="rotate" data-option="-30"><i class="fa fa-undo"></i></button>                      
+            <button type="button" class="btn btn-primary rotate" data-method="rotate" data-option="30"><i class="fa fa-repeat"></i></button> </p>
+             <input type="hidden" name="cropped_value" id="cropped_value" value=""> 
           </div>
           <div class="md-input-wrapper" id="isi_artikel">
             <textarea name="isi_artikel" id="editor"></textarea>
@@ -39,3 +45,20 @@
     </div>
   </div>
 </div>
+<div id="myModal" class="modal fade" role="dialog">  
+    <div class="modal-dialog">
+        <!-- Modal content-->    
+    <div class="modal-content">     
+      <div class="modal-header">       
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Image Upload</h4> 
+      </div>      
+      <div class="modal-body">
+                           
+      </div>      
+      <div class="modal-footer"> 
+          <input type="button" class="btn btn-primary" id="Save" value="Save">  </button>        
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>      
+      </div>    
+    </div>
+  </div>

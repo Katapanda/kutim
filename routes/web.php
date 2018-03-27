@@ -51,6 +51,14 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::resource('berita', 'BeritaController');
 	Route::get('api/berita', 'BeritaController@apiBerita')->name('admin.api.berita');
 
+	Route::resource('gambaranumum', 'GambaranUmumController');
+	Route::get('api/gambaranumum', 'GambaranUmumController@apiGambaranUmum')->name('admin.api.gambaranumum');
+	Route::get('api/ajaxtampil/{id}', 'GambaranUmumController@ajax_tampil');
+
+	Route::resource('tupoksi', 'TupoksiController');
+	Route::get('api/tupoksi', 'TupoksiController@apiTupoksi')->name('admin.api.tupoksi');
+	Route::get('api/tupoksi/ajaxtampil/{id}', 'TupoksiController@ajax_tampil');
+
 
 	// Route::resource('sodetail', 'SoDetailController');
 	Route::resource('so', 'StrukturOrganisasiController');

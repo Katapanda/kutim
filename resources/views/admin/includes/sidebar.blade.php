@@ -6,7 +6,7 @@
       <div class="f-left image"><img src="{{ asset('assets/images/avatar-1.png') }}" alt="User Image" class="img-circle">
       </div>
       <div class="f-left info">
-        <p>Mohamad Ihsan</p>
+        <p>Irfan Rangga Gumilar</p>
         <p class="designation">ADMIN <i class="icofont icofont-caret-down m-l-5"></i></p>
       </div>
     </div>
@@ -64,6 +64,16 @@
       <li class="treeview {{ (\Request::route()->getName() == 'user.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('user.index') }}">
           <i class="icon-user"></i><span> User Account</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'gambaranumum.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('gambaranumum.index') }}">
+          <i class="icon-user"></i><span> Gambaran Umum</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'tupoksi.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('tupoksi.index') }}">
+          <i class="icon-user"></i><span> Tupoksi</span>
         </a>
       </li>
       <li class="nav-level">Management</li>
