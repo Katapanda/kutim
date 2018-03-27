@@ -122,13 +122,13 @@
         if (status == 'success') {
           
           var message = 'Data telah berhasil disimpan'; 
-          var icon = "{{ URL::asset('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/avatar-1.png') }}";
           var type = 'success';
             
         }else if (status == 'failed') {
           
           var message = 'Oops! Terjadi kesalahan pada koneksi. Data gagal disimpan'; 
-          var icon = "{{ URL::asset('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/avatar-1.png') }}";
           var type = 'danger';
             
         }
@@ -138,13 +138,13 @@
         if (status == 'success') {
           
           var message = 'Data telah berhasil diperbaharui'; 
-          var icon = "{{ URL::asset('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/avatar-1.png') }}";
           var type = 'success';
             
         }else if (status == 'failed') {
           
           var message = 'Oops! Terjadi kesalahan pada koneksi. Data gagal diperbaharui'; 
-          var icon = "{{ URL::asset('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/avatar-1.png') }}";
           var type = 'danger';
             
         }
@@ -154,13 +154,13 @@
         if (status == 'success') {
           
           var message = 'Data telah berhasil dihapus';
-          var icon = "{{ URL::asset('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/avatar-1.png') }}";
           var type = 'success';
             
         }else if (status == 'failed') {
           
           var message = 'Oops! Terjadi kesalahan pada koneksi. Data gagal dihapus';
-          var icon = "{{ URL::asset('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/avatar-1.png') }}";
           var type = 'danger';
             
         }

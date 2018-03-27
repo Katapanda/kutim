@@ -36,7 +36,21 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12 padding-fix-r">
                     <div class="owl-carousel owl-slider">
-                        <div class="slider-content">
+                        @foreach($sliders as $slider)
+                            <div class="slider-content">
+                            {{-- <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid"> --}}
+                            <img src="{{ asset($slider->foto_berita) }}" alt="" class="img-fluid" style="height: 480px">
+                            <div class="slider-layer" style="width: 100%;">
+                                <p><a href="" style="color: #ffffff; text-align: left;">{!! $slider->isi_berita !!}</a></p>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">{{ $slider->judul_berita }}</li>
+                                    <li class="list-inline-item">{{ $slider->tanggal_publish }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        @endforeach
+
+                        {{-- <div class="slider-content">
                             <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid">
                             <div class="slider-layer">
                                 <p><a href="">This handout will help you understand how paragraphs are formed. It is usually composed of several sentences that together develop one.</a></p>
@@ -65,7 +79,7 @@
                                     <li class="list-inline-item">September 24, 2017</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 slider-fix">
