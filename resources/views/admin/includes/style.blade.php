@@ -25,7 +25,6 @@
 
 <!-- Weather css -->
 <link href="{{ asset('assets/css/svg-weather.css') }}" rel="stylesheet">
-
 <!-- Echart js -->
 <script src="{{ asset('assets/plugins/charts/echarts/js/echarts-all.js') }}"></script>
 
@@ -38,3 +37,4 @@
 
 <!--color css-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color/color-1.min.css') }}" id="color"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css">

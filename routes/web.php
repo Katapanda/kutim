@@ -79,6 +79,11 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::get('api/sejarah', 'SejarahController@apiSejarah')->name('admin.api.sejarah');
 	Route::get('api/sejarah/ajaxtampil/{id}', 'SejarahController@ajax_tampil');
 
+	Route::get('album/detail/{id}', 'AlbumController@detailalbum');
+	Route::post('api/imgalbum', 'AlbumController@uploadfoto');
+	Route::resource('album', 'AlbumController');
+	Route::get('api/album', 'AlbumController@apiAlbum')->name('admin.api.album');
+
 	// Route::resource('sodetail', 'SoDetailController');
 	Route::resource('so', 'StrukturOrganisasiController');
 	Route::group(['prefix' => 'so'], function() {

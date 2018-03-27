@@ -40,6 +40,11 @@
           <i class="icon-list"></i><span> User Role</span>
         </a>
       </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'album.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('album.index') }}">
+          <i class="icon-list"></i><span> Album</span>
+        </a>
+      </li>
       <li class="treeview {{ (\Request::route()->getName() == 'artikel.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('artikel.index') }}">
           <i class="icon-list"></i><span> Artikel</span>
