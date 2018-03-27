@@ -6,8 +6,8 @@
                 <div class="col-md-8">
                     <div class="bar-left">
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><i class="fa fa-calendar-check-o"></i>Sunday, Sep 24, 2017</li>
-                            <li class="list-inline-item"><i class="fa fa-cloud"></i>New York, 19°C</li>
+                            <li class="list-inline-item"><i class="fa fa-calendar-check-o"></i>{{ tanggal_indo($tanggal_sekarang) }}</li>
+                            <li class="list-inline-item"><i class="fa fa-cloud"></i>Indonesia</li>
                             <li class="list-inline-item"><a href="">Advertise</a></li>
                             <li class="list-inline-item"><a href="">Write Us</a></li>
                             <li class="list-inline-item"><a href="">About</a></li>

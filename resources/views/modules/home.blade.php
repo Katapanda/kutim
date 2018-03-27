@@ -1,113 +1,65 @@
 @extends('layouts.app')
 
+{{-- include function --}}
+@include('includes.function')
+
 @section('title')
 	Home
 @endsection
 
 @section('content')
-
-	<!-- Web Ticker -->
-    <section class="top-news">
-        <div class="container">
-            <div class="news-content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="ticker d-flex justify-content-between">
-                            <div class="news-head">
-                                <span>BREAKING NEWS<i class="fa fa-caret-right"></i></span>
-                            </div>
-                            <ul id="webTicker">
-                                <li><a href=""><i class="fa fa-dot-circle-o"></i>These sentences are selected from various online news.</a></li>
-                                <li><a href=""><i class="fa fa-dot-circle-o"></i>This handout will help you understand how paragraphs are formed.</a></li>
-                                <li><a href=""><i class="fa fa-dot-circle-o"></i>It is usually composed of several sentences that together develop one.</a></li>
-                                <li><a href=""><i class="fa fa-dot-circle-o"></i>The purpose of this handout is to give some basic instruction.</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Web Ticker -->
-
-    <!-- Slider Area -->
-    <section class="slider-area">
+    
+    <section class="carousel-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-12 padding-fix-r">
-                    <div class="owl-carousel owl-slider">
-                        @foreach($sliders as $slider)
-                            <div class="slider-content">
-                            {{-- <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid"> --}}
-                            <img src="{{ asset($slider->foto_berita) }}" alt="" class="img-fluid" style="height: 480px">
-                            <div class="slider-layer" style="width: 100%;">
-                                <p><a href="" style="color: #ffffff; text-align: left;">{!! $slider->isi_berita !!}</a></p>
-                                <ul class="list-unstyled list-inline">
-                                    <li class="list-inline-item">{{ $slider->judul_berita }}</li>
-                                    <li class="list-inline-item">{{ $slider->tanggal_publish }}</li>
-                                </ul>
+                <div class="col-lg-12 col-md-12">
+                    <div class="">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                          <!-- Slide One - Set the background image for this slide in the line below -->
+                          <div class="carousel-item active">
+                            <img src="{{ asset('upload/slider/slider_1.jpg') }}" alt="" height="400px" width="100%">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3>First Slide</h3>
+                              <p>This is a description for the first slide.</p>
                             </div>
-                        </div>
-                        @endforeach
-
-                        {{-- <div class="slider-content">
-                            <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid">
-                            <div class="slider-layer">
-                                <p><a href="">This handout will help you understand how paragraphs are formed. It is usually composed of several sentences that together develop one.</a></p>
-                                <ul class="list-unstyled list-inline">
-                                    <li class="list-inline-item">SPORTS</li>
-                                    <li class="list-inline-item">September 24, 2017</li>
-                                </ul>
+                          </div>
+                          <!-- Slide Two - Set the background image for this slide in the line below -->
+                          <div class="carousel-item">
+                            <img src="{{ asset('upload/slider/slider_2.jpg') }}" alt="" height="400px" width="100%">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3>Second Slide</h3>
+                              <p>This is a description for the second slide.</p>
                             </div>
-                        </div>
-                        <div class="slider-content">
-                            <img src="{{ asset('assets_frontend/images/slider-2.jpg') }}" alt="" class="img-fluid">
-                            <div class="slider-layer">
-                                <p><a href="">The purpose of this handout is to give some basic instruction. It is usually composed of several sentences that together develop one.</a></p>
-                                <ul class="list-unstyled list-inline">
-                                    <li class="list-inline-item">LIFE STYLE</li>
-                                    <li class="list-inline-item">September 24, 2017</li>
-                                </ul>
+                          </div>
+                          <!-- Slide Three - Set the background image for this slide in the line below -->
+                          <div class="carousel-item">
+                            <img src="{{ asset('upload/slider/slider_3.jpg') }}" alt="" height="400px" width="100%">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3>Third Slide</h3>
+                              <p>This is a description for the third slide.</p>
                             </div>
+                          </div>
                         </div>
-                        <div class="slider-content">
-                            <img src="{{ asset('assets_frontend/images/slider-3.jpg') }}" alt="" class="img-fluid">
-                            <div class="slider-layer">
-                                <p><a href="">It is usually composed of several sentences that together develop one. It is usually composed of several sentences that together develop one.</a></p>
-                                <ul class="list-unstyled list-inline">
-                                    <li class="list-inline-item">FOOD</li>
-                                    <li class="list-inline-item">September 24, 2017</li>
-                                </ul>
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 slider-fix">
-                    <div class="slider-sidebar sidebar-o">
-                        <img src="{{ asset('assets_frontend/images/tech.jpg') }}" alt="" class="img-fluid">
-                        <div class="sidebar-layer">
-                            <p><a href="">It is usually composed of several sentences that together develop one.</a></p>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">TECHNOLOGY</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="slider-sidebar">
-                        <img src="{{ asset('assets_frontend/images/health.jpg') }}" alt="" class="img-fluid">
-                        <div class="sidebar-layer">
-                            <p><a href="">These sentences are selected from various online news.</a></p>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">HEALTH</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Slider Area -->
 
     <!-- All News -->
     <section class="allnews">
@@ -115,7 +67,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="latest-top">
-                        <h4>LATEST NEWS</h4>
+                        <h4>HOME</h4>
                     </div>
                     <div class="owl-carousel latest-slider">
                         <div class="latest-item">
@@ -408,6 +360,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
+
+                    <div class="add-widget" style="float: center">
+                        <a href=""><img src="{{ asset('upload/foto_struktur_organisasi/10112378.JPG') }}" alt="" class="img-fluid" width="50%" height="300px"></a>
+                    </div>
+
                     <div class="follow-widget">
                         <h4>FOLLOW US</h4>
                         <ul class="list-unstyled clearfix">
@@ -448,9 +405,6 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="add-widget">
-                        <a href=""><img src="{{ asset('assets_frontend/images/add-1.png') }}" alt="" class="img-fluid"></a>
                     </div>
                     <div class="tab-widget">
                         <!-- Nav tabs -->
@@ -585,6 +539,118 @@
         </div>
     </section>
     <!-- End All News -->
+
+
+    <!-- Web Ticker -->
+    <section class="top-news">
+        <div class="container">
+            <div class="news-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ticker d-flex justify-content-between">
+                            <div class="news-head">
+                                <span>BERITA TERBARU<i class="fa fa-caret-right"></i></span>
+                            </div>
+                            <ul id="webTicker">
+
+                                @foreach($breaking_news as $breaking_new)
+
+                                    <li><a href=""><i class="fa fa-dot-circle-o"></i>{{ $breaking_new->judul_berita }}</a></li>
+
+                                @endforeach
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Web Ticker -->
+
+    <!-- Slider Area -->
+    <section class="slider-area">
+        <div class="container">
+            <div class="row">
+                {{-- <div class="col-lg-8 col-md-12">
+                    <div class="" style="font-size: 22px;
+                        color: #222;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #ddd;
+                        margin-bottom: 35px;
+                        position: relative;">
+
+                        <h4>BERITA UTAMA</h4>
+                    </div>
+                </div> --}}    
+                <div class="col-lg-8 col-md-12 padding-fix-r">
+                    <div class="owl-carousel owl-slider">
+                        @foreach($sliders as $slider)
+                            <div class="slider-content">
+                            {{-- <img src="{{ asset('assets_frontend/images/slider-1.jpg') }}" alt="" class="img-fluid"> --}}
+                            <img src="{{ asset($slider->foto_berita) }}" alt="" class="img-fluid" style="height: 470px" width="100%">
+                            <div class="slider-layer" style="width: 100%;">
+                                <p>
+                                    <a href="" style="color: #ffffff; text-align: left;">
+                                        
+                                        {!! substr($slider->isi_berita, 0, 200) . '...' !!}   
+                                        
+                                    </a>
+                                </p>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">{!! substr($slider->judul_berita, 0, 20) . '...' !!} </li>
+                                    <li class="list-inline-item">{{ tanggal_indo($slider->tanggal_publish) }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        @endforeach
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 slider-fix">
+
+                    @foreach($slider_sides as $slider_side)
+
+                        @if(strlen($slider_side->isi_berita) > 100)
+
+                            <div class="slider-sidebar sidebar-o">
+                                <img src="{{ asset($slider_side->foto_berita) }}" alt="" class="img-fluid" style="height: 230px" width="100%">
+                                <div class="sidebar-layer">
+                                    <p>
+                                        <a href="">
+                                            {!! substr($slider_side->isi_berita, 0, 100) . '...' !!} 
+                                        </a>
+                                    </p>
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list-inline-item">
+                                            @if(strlen($slider_side->judul_berita) > 10)
+                                            
+                                                {!! substr($slider_side->judul_berita, 0, 10) . '...' !!}   
+                                            
+                                            @else
+
+                                               {!! $slider_side->judul_berita !!}
+
+                                            @endif
+                                        </li>
+                                        <li class="list-inline-item">{{ tanggal_indo($slider_side->tanggal_publish) }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                                                
+                        @else
+
+                           {!! $slider_side->isi_berita !!}
+
+                        @endif
+
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider Area -->
 
     <!-- Latest Videos -->
     <section class="videos">
