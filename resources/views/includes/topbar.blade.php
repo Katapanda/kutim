@@ -1,5 +1,5 @@
 <!-- Top Bar -->
-<section class="top-bar">
+{{-- <section class="top-bar">
 	<div class="container">
         <div class="bar-content">
     		<div class="row">
@@ -31,7 +31,7 @@
     		</div>
         </div>
 	</div>
-</section>
+</section> --}}
 <!-- End Top Bar -->
 
 <!-- Logo Area -->

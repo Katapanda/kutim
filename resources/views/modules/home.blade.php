@@ -23,7 +23,7 @@
                         <div class="carousel-inner" role="listbox">
                           <!-- Slide One - Set the background image for this slide in the line below -->
                           <div class="carousel-item active">
-                            <img src="{{ asset('upload/slider/slider_1.jpg') }}" alt="" height="400px" width="100%">
+                            <img src="{{ asset('upload/slider/slider_1.jpg') }}" alt="" height="450px" width="100%">
                             <div class="carousel-caption d-none d-md-block">
                               <h3>First Slide</h3>
                               <p>This is a description for the first slide.</p>
@@ -31,7 +31,7 @@
                           </div>
                           <!-- Slide Two - Set the background image for this slide in the line below -->
                           <div class="carousel-item">
-                            <img src="{{ asset('upload/slider/slider_2.jpg') }}" alt="" height="400px" width="100%">
+                            <img src="{{ asset('upload/slider/slider_2.jpg') }}" alt="" height="450px" width="100%">
                             <div class="carousel-caption d-none d-md-block">
                               <h3>Second Slide</h3>
                               <p>This is a description for the second slide.</p>
@@ -39,7 +39,7 @@
                           </div>
                           <!-- Slide Three - Set the background image for this slide in the line below -->
                           <div class="carousel-item">
-                            <img src="{{ asset('upload/slider/slider_3.jpg') }}" alt="" height="400px" width="100%">
+                            <img src="{{ asset('upload/slider/slider_3.jpg') }}" alt="" height="450px" width="100%">
                             <div class="carousel-caption d-none d-md-block">
                               <h3>Third Slide</h3>
                               <p>This is a description for the third slide.</p>
