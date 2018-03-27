@@ -194,4 +194,10 @@
     //     });
     // };
 
+
   </script>
+  @if ($message = Session::get('success'))
+    <script type="text/javascript">
+      show_notification('save', 'success');
+    </script>
+  @endif

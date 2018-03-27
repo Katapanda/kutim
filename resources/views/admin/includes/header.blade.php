@@ -68,7 +68,7 @@
             <span>
               <img class="img-circle " src="{{ asset('assets/images/avatar-1.png') }}" style="width:40px;" alt="User Image">
             </span>
-            <span>Mohamad Ihsan <i class=" icofont icofont-simple-down"></i></span>
+            <span>Irfan Rangga Gumilar <i class=" icofont icofont-simple-down"></i></span>
           </a>
           <ul class="dropdown-menu settings-menu">
             <li><a href="profile.html"><i class="icon-user"></i> Profil</a></li>
