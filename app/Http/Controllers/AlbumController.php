@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use yajra\DataTables\Datatables;
 
 use App\Models\Album;
@@ -34,7 +35,10 @@ class AlbumController extends Controller
     public function detailalbum($id)
     {
         $album = Album::find($id);
-        $detail = DetailAlbum::all();
+        $detail = DetailAlbum::where('id_album',$id)->get();
+        // $detail = DetailAlbum::select(['id', 'id_album', 'foto'])->where('id_album',$id);
+        // $detail = DetailAlbum::find($id);
+        // return $detail;
         return view('admin.modules.album.detailalbum', ['data' => $album, 'detail' => $detail]);
     }
     public function uploadfoto(Request $request)
