@@ -45,6 +45,11 @@
           <i class="icon-list"></i><span> Album</span>
         </a>
       </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'video.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('video.index') }}">
+          <i class="icon-list"></i><span> Video</span>
+        </a>
+      </li>
       <li class="treeview {{ (\Request::route()->getName() == 'artikel.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('artikel.index') }}">
           <i class="icon-list"></i><span> Artikel</span>
@@ -58,6 +63,11 @@
       <li class="treeview {{ (\Request::route()->getName() == 'berita.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('berita.index') }}">
           <i class="icon-list"></i><span> Berita</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'kategori.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('kategori.index') }}">
+          <i class="icon-list"></i><span> Kategori Berita</span>
         </a>
       </li>
 

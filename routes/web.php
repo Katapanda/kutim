@@ -35,9 +35,14 @@ Route::group(['prefix' => 'admin'], function() {
 	// Route Barang Asli
 	Route::resource('produk', 'ProdukController');
 	Route::get('api/produk', 'ProdukController@apiProduk')->name('admin.api.produk');
+	Route::resource('video', 'VideoController');
+	Route::get('api/video', 'VideoController@apiVideo')->name('admin.api.video');
 	// Route Barang Asli
 	Route::resource('multi', 'MultiController');
 	Route::get('api/multi', 'MultiController@apiMulti')->name('admin.api.multi');
+
+	Route::resource('kategori', 'KategoriBeritaController');
+	Route::get('api/kategori', 'KategoriBeritaController@apiKategoriBerita')->name('admin.api.kategori');
 
 	Route::get('artikel/editisi/{id}', 'ArtikelController@editisi');
 	Route::patch('artikel/editisi/{id}', 'ArtikelController@ubah');

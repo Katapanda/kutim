@@ -43,7 +43,8 @@
 @endsection
 
 @push('scripts')
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.js"></script>
+    {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.js"></script> --}}
+    <script src="{{ asset('assets/plugins/dropzone/dropzone.min.js') }}"></script>
     <script type="text/javascript">
         $("#datepicker").bootstrapMaterialDatePicker({ weekStart : 0, time: false, format : 'YYYY/MM/DD' });
         $('#time').bootstrapMaterialDatePicker({ date: false, format : 'HH:mm'});
