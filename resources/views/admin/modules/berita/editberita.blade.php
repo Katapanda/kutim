@@ -33,6 +33,19 @@
                               <label>Judul Berita</label>
                               <span class="help-block with-errors"></span>
                             </div>
+                            <div>
+                              <label>Kategori</label>
+                              <select name="select" class="form-control form-control-inverse fill" name="id_kategori">
+                                <option value="">Pilih Kategori</option>
+                                @foreach ($kategori as $kategori_berita)
+                                  <option value="{{ $kategori_berita->id }}" 
+                                    @if($kategori_berita->id == $isi['id_kategori'])  
+                                        selected="selected" 
+                                    @endif
+                                  >{{ $kategori_berita->nama_kategori }}</option>
+                                @endforeach
+                              </select>
+                            </div><br>
                             <div class="md-input-wrapper">
                               <input type="text" class="md-form-control md-static" name="sumber" required placeholder="Sumber" value="{{ $isi['sumber'] }}">
                               <label>Sumber</label>

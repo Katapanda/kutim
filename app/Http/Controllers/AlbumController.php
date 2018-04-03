@@ -104,7 +104,7 @@ class AlbumController extends Controller
                 return $album->keterangan_kegiatan;
             })
             ->addColumn('action', function($album){
-                return '<a href="'.url("admin/album/detail",$album->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Detail</a>'.
+                return '<a href="'.url("admin/album/detail",$album->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Tambah Foto</a>'.
                     '<a onclick="deleteData('. $album->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
                             <i class="icofont icofont-delete-alt"></i> Delete</a>';
             })

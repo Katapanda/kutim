@@ -48,7 +48,6 @@
                                 <thead>
                                     <tr>
                                         <th>Judul Berita</th>
-                                        <th>ISi Berita</th>
                                         <th>Sumber</th>
                                         <th>Foto</th>
                                         <th style="min-width: 150px">Aksi</th>
@@ -104,7 +103,6 @@
             },
             columns: [
                 {data: 'judul_berita', name: 'judul_berita'},
-                {data: 'isi_berita', name: 'isi_berita'},
                 {data: 'sumber', name: 'sumber'},
                 {data: 'foto_berita', name: 'foto_berita'},
                 {data: 'action', name: 'action', className: 'text-center', orderable: false, searchable: false}

@@ -57,7 +57,7 @@
       </li>
       <li class="treeview {{ (\Request::route()->getName() == 'agenda.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('agenda.index') }}">
-          <i class="icon-list"></i><span> Agend</span>
+          <i class="icon-list"></i><span> Agenda</span>
         </a>
       </li>
       <li class="treeview {{ (\Request::route()->getName() == 'berita.index') ? 'active' : '' }}">

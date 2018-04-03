@@ -48,7 +48,7 @@
                                 <thead>
                                     <tr>
                                         <th>Judul Artikel</th>
-                                        <th>ISi Artikel</th>
+                                        <th>Isi Artikel</th>
                                         <th>Sumber</th>
                                         <th>Foto</th>
                                         <th style="min-width: 150px">Aksi</th>
@@ -173,53 +173,53 @@
             });
         }
     }
-    $(function(){
-        $('#modal-form form').validator().on('submit', function (e) {
-            if (!e.isDefaultPrevented()){
-                var id = $('#id').val();
-                if (save_method == 'add') {
-                    url = "{{ route('artikel.store') }}";
-                }else{
-                    url = "{{ url('admin/artikel') . '/' }}" + id;
-                }
+    // $(function(){
+    //     $('#modal-form form').validator().on('submit', function (e) {
+    //         if (!e.isDefaultPrevented()){
+    //             var id = $('#id').val();
+    //             if (save_method == 'add') {
+    //                 url = "{{ route('artikel.store') }}";
+    //             }else{
+    //                 url = "{{ url('admin/artikel') . '/' }}" + id;
+    //             }
 
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
+    //             $.ajaxSetup({
+    //                 headers: {
+    //                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //                 }
+    //             });
 
-                $.ajax({
-                    url: url,
-                    type: 'POST',
-                    // data: $('#modal-form form').serialize(),
-                    data: new FormData($("#modal-form form")[0]),
-                    contentType: false,
-                    processData: false,
-                    success: function(data){
-                        $('#modal-form').modal('hide');
-                        oTable.ajax.reload();
+    //             $.ajax({
+    //                 url: url,
+    //                 type: 'POST',
+    //                 // data: $('#modal-form form').serialize(),
+    //                 data: new FormData($("#modal-form form")[0]),
+    //                 contentType: false,
+    //                 processData: false,
+    //                 success: function(data){
+    //                     $('#modal-form').modal('hide');
+    //                     oTable.ajax.reload();
 
-                        if (save_method == 'add') {
-                                show_notification('save', 'success');
-                        }else{
-                                show_notification('update', 'success');
-                        }
-                    },
-                    error: function(){
+    //                     if (save_method == 'add') {
+    //                             show_notification('save', 'success');
+    //                     }else{
+    //                             show_notification('update', 'success');
+    //                     }
+    //                 },
+    //                 error: function(){
 
-                        if (save_method == 'add') {
-                                show_notification('save', 'failed');
-                        }else{
-                                show_notification('update', 'failed');
-                        }
-                    }
-                });
-                // console.log(data);
-                return false;
-            }
-        });
-    });
+    //                     if (save_method == 'add') {
+    //                             show_notification('save', 'failed');
+    //                     }else{
+    //                             show_notification('update', 'failed');
+    //                     }
+    //                 }
+    //             });
+    //             // console.log(data);
+    //             return false;
+    //         }
+    //     });
+    // });
 </script>
 
 <script src="{{ asset('assets/plugins/cropper/cropper.js') }}"></script>

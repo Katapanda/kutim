@@ -47,7 +47,7 @@
                             <table id="agenda-table" class="table table-stripped">
                                 <thead>
                                     <tr>
-                                        <th>Jenis akegiatan</th>
+                                        <th>Jenis Kegiatan</th>
                                         <th>Nama Kegiatan</th>
                                         <th>Lokasi</th>
                                         <th>Keterangan Kegiatan</th>

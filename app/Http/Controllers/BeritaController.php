@@ -6,17 +6,21 @@ use Illuminate\Http\Request;
 use yajra\DataTables\Datatables;
 
 use App\Models\Berita;
+use App\Models\KategoriBerita;
 
 class BeritaController extends Controller
 {
     public function index()
     {
-        return view('admin.modules.berita.index');
+        $kategori = KategoriBerita::all();
+        // die($kategori);
+        return view('admin.modules.berita.index', compact('kategori'));
     }
     public function editisi($id)
     {
+        $kategori = KategoriBerita::all();
         $berita = Berita::find($id);
-        return view('admin.modules.berita.editberita', ['isi' => $berita]);
+        return view('admin.modules.berita.editberita', ['isi' => $berita, 'kategori' => $kategori]);
     }
     public function ajax_tampil($id)
     {
@@ -28,11 +32,11 @@ class BeritaController extends Controller
         $input = $request->all();
         $input['foto_berita'] = null;
 
+        // return $input;
         if ($request->hasFile('foto_berita')){
             $input['foto_berita'] = '/upload/foto_berita/'.str_slug($input['judul_berita'], '-').'.'.$request->foto_berita->getClientOriginalExtension();
             $request->foto_berita->move(public_path('/upload/foto_berita/'), $input['foto_berita']);
         }
-
         Berita::create($input);
 
         return redirect()->action('BeritaController@index')->with(['success' => 'Berhasil Tambah Data']);

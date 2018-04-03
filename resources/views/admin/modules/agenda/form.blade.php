@@ -41,8 +41,8 @@
             <span class="help-block with-errors"></span>
           </div>
           <div class="md-input-wrapper">
-            <input type="text" class="md-form-control md-static" name="hadirin" required placeholder="Hadirin">
-            <label>Hadirin</label>
+            <input type="text" class="md-form-control md-static" name="hadirin" required placeholder="Peserta">
+            <label>Peserta</label>
             <span class="help-block with-errors"></span>
           </div>
           <div class="md-input-wrapper" id="keterangan_kegiatan">

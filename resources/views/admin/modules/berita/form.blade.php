@@ -16,6 +16,21 @@
             <label>Judul Berita</label>
             <span class="help-block with-errors"></span>
           </div>
+          <div>
+            <label>Kategori</label>
+            {{-- <input type="hidden" name="kategori"> --}}
+            <select class="form-control form-control-inverse fill" name="id_kategori">
+              <option value="">Pilih Kategori</option>
+              @foreach ($kategori as $kategori_berita)
+                <option value="{{ $kategori_berita->id }}">{{ $kategori_berita->nama_kategori }}</option>
+              @endforeach
+            </select>
+          </div><br>
+          <div class="md-input-wrapper">
+            <input type="file" class="md-form-control md-static" name="foto_berita">
+            <label>Foto</label>
+            <span class="help-block with-errors"></span>
+          </div>
           <div class="md-input-wrapper">
             <input type="text" class="md-form-control md-static" name="sumber" required placeholder="Sumber">
             <label>Sumber</label>
@@ -24,11 +39,6 @@
           <div class="md-input-wrapper">
             <input type="text" class="md-form-control md-static" name="tanggal_publish" id="datepicker" required placeholder="Tanggal">
             <label>Tanggal Publish</label>
-            <span class="help-block with-errors"></span>
-          </div>
-          <div class="md-input-wrapper">
-            <input type="file" class="md-form-control md-static" name="foto_berita">
-            <label>Foto</label>
             <span class="help-block with-errors"></span>
           </div>
           <div class="md-input-wrapper">

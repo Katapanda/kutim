@@ -16,6 +16,7 @@ class CreateBeritaTable extends Migration
         Schema::create('berita', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judul_berita');
+            $table->integer('id_kategori');
             $table->text('isi_berita');
             $table->string('foto_berita');
             $table->string('sumber');

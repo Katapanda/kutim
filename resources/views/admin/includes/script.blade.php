@@ -122,13 +122,13 @@
         if (status == 'success') {
           
           var message = 'Data telah berhasil disimpan'; 
-          var icon = "{{ url('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/success.png') }}";
           var type = 'success';
             
         }else if (status == 'failed') {
           
           var message = 'Oops! Terjadi kesalahan pada koneksi. Data gagal disimpan'; 
-          var icon = "{{ url('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/error.png') }}";
           var type = 'danger';
             
         }
@@ -138,13 +138,13 @@
         if (status == 'success') {
           
           var message = 'Data telah berhasil diperbaharui'; 
-          var icon = "{{ url('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/success.png') }}";
           var type = 'success';
             
         }else if (status == 'failed') {
           
           var message = 'Oops! Terjadi kesalahan pada koneksi. Data gagal diperbaharui'; 
-          var icon = "{{ url('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/error.png') }}";
           var type = 'danger';
             
         }
@@ -154,13 +154,13 @@
         if (status == 'success') {
           
           var message = 'Data telah berhasil dihapus';
-          var icon = "{{ url('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/success.png') }}";
           var type = 'success';
             
         }else if (status == 'failed') {
           
           var message = 'Oops! Terjadi kesalahan pada koneksi. Data gagal dihapus';
-          var icon = "{{ url('assets/images/avatar-1.png') }}";
+          var icon = "{{ url('assets/images/error.png') }}";
           var type = 'danger';
             
         }
@@ -173,11 +173,11 @@
   </script>
   @if ($message = Session::get('success'))
     <script type="text/javascript">
-      notify('', "{{ $message }}", 'top', 'right', "{{ url('assets/images/avatar-1.png') }}", 'success', 'animated fadeInRight', 'animated fadeOutRight');
+      notify('', "{{ $message }}", 'top', 'right', "{{ url('assets/images/success.png') }}", 'success', 'animated fadeInRight', 'animated fadeOutRight');
     </script>
   @endif
   @if ($message = Session::get('error'))
     <script type="text/javascript">
-      notify('', "{{ $message }}", 'top', 'right', "{{ url('assets/images/avatar-1.png') }}", 'danger', 'animated fadeInRight', 'animated fadeOutRight');
+      notify('', "{{ $message }}", 'top', 'right', "{{ url('assets/images/error.png') }}", 'danger', 'animated fadeInRight', 'animated fadeOutRight');
     </script>
   @endif

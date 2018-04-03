@@ -34,6 +34,7 @@
                             {{ csrf_field() }}
                             <input type="hidden" name="id_album" value="{{ $data['id'] }}">
                           </form>
+                          <label style="color: red">Silahkan Drag foto Atau Klik Dan Masukan Banyak Foto, dngan Maksimal Size 2 MB/Foto</label>
                         </div>
                       </div>
                 </div>

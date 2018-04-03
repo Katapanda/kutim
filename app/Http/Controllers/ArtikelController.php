@@ -32,10 +32,7 @@ class ArtikelController extends Controller
 
         Artikel::create($input);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Contact Created'
-        ]);
+        return redirect()->action('ArtikelController@index')->with(['success' => 'Berhasil Tambah Data']);
     }
     public function edit($id)
     {

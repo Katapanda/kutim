@@ -12,8 +12,8 @@
         <div class="modal-body">
           <input type="hidden" name="id" id="id">
           <div class="md-input-wrapper">
-            <input type="text" class="md-form-control md-static" name="nama_kegiatan" required placeholder="NAma Kegiatan">
-            <label>NAma Kegiatan</label>
+            <input type="text" class="md-form-control md-static" name="nama_kegiatan" required placeholder="Nama Kegiatan">
+            <label>Nama Kegiatan</label>
             <span class="help-block with-errors"></span>
           </div>
           <div class="md-input-wrapper">

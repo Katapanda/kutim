@@ -12,8 +12,8 @@
         <div class="modal-body">
           <input type="hidden" name="id" id="id">
           <div class="md-input-wrapper">
-            <input type="text" class="md-form-control md-static" name="judul_album" required placeholder="JUdul Kegiatan">
-            <label>JUdul Kegiatan</label>
+            <input type="text" class="md-form-control md-static" name="judul_album" required placeholder="Judul Kegiatan">
+            <label>Judul Kegiatan</label>
             <span class="help-block with-errors"></span>
           </div>
           <div class="md-input-wrapper">
