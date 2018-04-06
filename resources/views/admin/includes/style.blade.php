@@ -34,6 +34,7 @@
 <!-- Responsive.css-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/cropper/cropper.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/orgchart/orgchart.css') }}">
 
 <!--color css-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color/color-1.min.css') }}" id="color"/>

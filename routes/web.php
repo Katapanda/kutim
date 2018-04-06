@@ -91,6 +91,7 @@ Route::group(['prefix' => 'admin'], function() {
 
 	// Route::resource('sodetail', 'SoDetailController');
 	Route::resource('so', 'StrukturOrganisasiController');
+	Route::get('/so/show/{jabatan}', 'StrukturOrganisasiController@detail');
 	Route::group(['prefix' => 'so'], function() {
 		Route::get('detail/{id}', 'SoDetailController@index');
 		Route::post('detail/{id}', 'SoDetailController@store');

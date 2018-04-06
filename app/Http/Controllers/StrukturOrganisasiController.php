@@ -6,12 +6,30 @@ use Illuminate\Http\Request;
 use yajra\DataTables\Datatables;
 
 use App\Models\StrukturOrganisasi;
+use App\Models\SoDetail;
 
 class StrukturOrganisasiController extends Controller
 {
     public function index()
     {
-        return view('admin.modules.so.index');
+
+        $kepala_dinas = StrukturOrganisasi::where('jabatan', 'Kepala Dinas')->first();
+        $kjf = StrukturOrganisasi::where('jabatan', 'Kelmpok Jabatan Fungsional')->first();
+        $kbp = StrukturOrganisasi::where('jabatan', 'Kepala Bidang Perumahan')->first();
+        $kpme = StrukturOrganisasi::where('jabatan', 'Kasii Perencanaan, Monitoring & Evaluasi')->first();
+        $kpn = StrukturOrganisasi::where('jabatan', 'Kasi Penyediaan')->first();
+        $kpm = StrukturOrganisasi::where('jabatan', 'Kasi Pembiayaan')->first();
+        $usp = StrukturOrganisasi::where('jabatan', 'UPT Sangata Utara')->first();
+        $uss = StrukturOrganisasi::where('jabatan', 'UPT Sangata Selatan')->first();
+        $kbkp = StrukturOrganisasi::where('jabatan', 'Kepla Bidang Kawasan Pemukiman')->first();
+        $kpdp = StrukturOrganisasi::where('jabatan', 'Kasi Pendataan Dan Perencanaan')->first();
+        $kpdpk = StrukturOrganisasi::where('jabatan', 'Kasi Pencegahan Dan Peningkatan Kualitas')->first();
+        $kmdp = StrukturOrganisasi::where('jabatan', 'Kasi Manfaat Dan Pengendalian')->first();
+        $sekertaris = StrukturOrganisasi::where('jabatan', 'Sekertaris')->first();
+        $kppdk = StrukturOrganisasi::where('jabatan', 'Kasubbag Perencanaan Program Dan Keuangan')->first();
+        $kudk = StrukturOrganisasi::where('jabatan', 'Kasubbag Umum Dan Kepegawaian')->first();
+
+        return view('admin.modules.so.index', compact('kepala_dinas', 'kjf', 'kbp', 'kpme', 'kpn', 'kpm', 'usp', 'uss', 'kbkp', 'kpdp', 'kpdpk', 'kmdp', 'sekertaris', 'kppdk', 'kudk'));
     }
     public function so()
     {
@@ -19,22 +37,34 @@ class StrukturOrganisasiController extends Controller
     } 
     public function detail($jabatan)
     {
-        $so = StrukturOrganisasi::where('jabatan', $jabatan)->get();
+        $so = StrukturOrganisasi::where('jabatan', $jabatan)->first(); 
+        if ($so) {
+            $detail = SoDetail::where('id_so', $so->id)->get();
+            return response()->json([
+                'so' => $so,
+                'data' => $detail,
+            ]);
+        } else {
+            return response()->json([
+                'so' => "",
+                'data' => "",
+            ]);
+        }
 
         // $so = StrukturOrganisasi::find($id);
-        return $so;
     }
 
     public function store(Request $request)
     {
         $input = $request->all();
-        // $data = [
-        //     'nama' => $request['nama'],
-        //     'email' => $request['email'],
-        //     'jabatan' => $request['jabatan'],
-        //     'bidang' => $request['bidang'],
-        //     'sub_bidang' => $request['sub_bidang']
-        // ];
+        $input['foto'] = null;
+
+        if ($request->hasFile('foto')){
+            $input['foto'] = '/upload/foto_so/'.str_slug($input['jabatan'], '-').'.'.$request->foto->getClientOriginalExtension();
+            $request->foto->move(public_path('/upload/foto_so/'), $input['foto']);
+        }
+
+        // Artikel::create($input);
 
         StrukturOrganisasi::create($input);
         return response()->json([
@@ -51,6 +81,17 @@ class StrukturOrganisasiController extends Controller
     {
         $input = $request->all();
         $so = StrukturOrganisasi::findOrFail($id);
+
+        $input['foto'] = $so->foto;
+
+        if ($request->hasFile('foto')){
+            if (!$so->foto == NULL){
+                unlink(public_path($so->foto));
+            }
+            $input['foto'] = '/upload/foto_so/'.str_slug($input['jabatan'], '-').'.'.$request->foto->getClientOriginalExtension();
+            $request->foto->move(public_path('/upload/foto_so/'), $input['foto']);
+        }
+
         $so->update($input);
 
         return response()->json([
@@ -60,8 +101,10 @@ class StrukturOrganisasiController extends Controller
     }
     public function destroy($id)
     {
-        
         $so = StrukturOrganisasi::findOrFail($id);
+        if (!$so->foto_so == NULL){
+            unlink(public_path($so->foto));
+        }
         StrukturOrganisasi::destroy($id);
 
         return response()->json([
