@@ -76,7 +76,19 @@
             <li class="p-0">
               <div class="dropdown-divider m-0"></div>
             </li>
-            <li><a href="#!"><i class="icon-logout"></i> Logout</a></li>
+            <li><a  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+            </li>
           </ul>
         </li>
       </ul>

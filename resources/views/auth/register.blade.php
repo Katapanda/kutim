@@ -76,25 +76,6 @@
                             </div>
                         </div>
 
-
-                        <div class="form-group row">
-                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('User Role') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="role_id" class="form-control{{ $errors->has('role_id') ? ' is-invalid' : '' }}" name="role_id" required >
-                                    @foreach($user_roles as $user_role)
-                                        <option value="{{ $user_role->id }}">{{ $user_role->role_name }}</option>
-                                    @endforeach
-                                </select>
-
-                                @if ($errors->has('role_id'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('role_id') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
