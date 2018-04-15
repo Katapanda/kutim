@@ -3,7 +3,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="defaultModalLabel">Detail Jabatan</h4>
-                <h6><?= date('d-M-Y'); ?></h6>
             </div>
             <div class="modal-body">
                 <input type="hidden" id="id" name="id">

@@ -77,6 +77,8 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::get('api/programkerja/ajaxtampil/{id}', 'ProgramKerjaController@ajax_tampil');
 
 	Route::resource('visimisi', 'VisiMisiController');
+	Route::get('visimisi/editisi/{id}', 'VisiMisiController@editisi');
+	Route::patch('visimisi/editisi/{id}', 'VisiMisiController@ubah');
 	Route::get('api/visimisi', 'VisiMisiController@apiVisiMisi')->name('admin.api.visimisi');
 	Route::get('api/visimisi/ajaxtampil/{id}', 'VisiMisiController@ajax_tampil');
 

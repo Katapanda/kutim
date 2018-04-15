@@ -32,7 +32,7 @@ File: menu.css
     content: initial;
 }
 .main-header-top {
-    @include bg-c(#1b8bf9);
+    @include bg-c(#009d61);
 }
 .nav-level{
     @include p(10px 15px !important);
@@ -122,7 +122,7 @@ File: menu.css
     &.active>a {
         @include c(#fff);
         @include f-w(600);
-        @include bg(#1b8bf9);
+        @include bg(#009d61);
     }
 }
 
@@ -134,7 +134,7 @@ File: menu.css
             @include c(#666);
         }
         &.active>a {
-            @include c(#1b8bf9);
+            @include c(#009d61);
             @include f-w(bold);
         }
     }
@@ -261,7 +261,7 @@ header .wrapper {
         max-height: 50px;
         @include b(0,radius);
         @include p(0);
-        @include bg-c(#1b8bf9);
+        @include bg-c(#009d61);
     }
     .sidebar-toggle {
         @include flt(left);
@@ -322,7 +322,7 @@ header .wrapper {
             @include c(#666);
             @include transition(all ease-in 0.3s);
             &:hover{
-                @include c(#1b8bf9);
+                @include c(#009d61);
             }
         }
         .notification-menu{
@@ -1347,7 +1347,7 @@ header .dropdown-menu {
                             left: 10px;
                             right: 10px;
                             @include shadow(0px 2px 4px 3px rgba(128, 128, 128, 0.24));
-                            @include b(3px solid #1b8bf9,top);
+                            @include b(3px solid #009d61,top);
                         }
                     }
                     >a>.icon-arrow-down{
@@ -1442,7 +1442,7 @@ header .dropdown-menu {
         @include pt(10px);
         h6{
             @include mb(0);
-            @include c(#1b8bf9);
+            @include c(#009d61);
             @include f-w(700);
         }
     }
@@ -1452,7 +1452,7 @@ header .dropdown-menu {
             @include c(#666);
             @include f-s(13px);
             &:hover{
-                @include c(#1b8bf9);
+                @include c(#009d61);
             }
             > i{
                 @include f-s(10px);

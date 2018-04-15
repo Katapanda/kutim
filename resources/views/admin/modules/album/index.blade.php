@@ -18,7 +18,7 @@
                 <div class="card-header">
                     <h5 class="card-header-text">Album List</h5>
                     {{-- button form modal --}}
-                    <button type="button" onclick="addForm()" class="btn btn-inverse-primary waves-effect waves-light btn-sm" style="float: right">
+                    <button type="button" onclick="addForm()" class="btn btn-inverse-success waves-effect waves-light btn-sm" style="float: right">
                       <i class="icofont icofont-plus"></i> Tambah Data
                     </button>
 
@@ -35,8 +35,8 @@
                                     <input type="text" id="keterangan_kegiatan" name="keterangan_kegiatan" class="form-control" placeholder="Description">
                                 </div>
                                 
-                                <button type="submit" class="btn btn-sm btn-primary">Filter</button>
-                                <button type="button" id="show-data" class="btn btn-inverse-info waves-effect waves-light btn-sm">Tampilkan Semua</button>
+                                <button type="submit" class="btn btn-sm btn-success">Filter</button>
+                                <button type="button" id="show-data" class="btn btn-inverse-success waves-effect waves-light btn-sm">Tampilkan Semua</button>
                             </form>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ File: menu.css
   content: initial; }
 
 .main-header-top {
-  background-color: #1b8bf9; }
+  background-color: #098958; }
 
 .nav-level {
   padding: 10px 15px !important;
@@ -84,7 +84,7 @@ File: menu.css
 .sidebar-menu > li.active > a {
   color: #fff;
   font-weight: 600;
-  background: #1b8bf9; }
+  background: #009d61; }
 
 .sidebar-menu .treeview-menu {
   margin: 0 1px;
@@ -92,7 +92,7 @@ File: menu.css
   .sidebar-menu .treeview-menu > li > a {
     color: #666; }
   .sidebar-menu .treeview-menu > li.active > a {
-    color: #1b8bf9;
+    color: #009d61;
     font-weight: bold; }
 
 .only-sidebar.sidebar-collapse .sidebar .logo .sidebar-toggle {
@@ -189,7 +189,7 @@ header .wrapper {
   max-height: 50px;
   border-radius: 0;
   padding: 0;
-  background-color: #1b8bf9; }
+  background-color: #009d61; }
 .main-header-top .sidebar-toggle {
   float: left;
   background-color: transparent;
@@ -244,7 +244,7 @@ header .wrapper {
     -ms-transition: all ease-in 0.3s;
     transition: all ease-in 0.3s; }
     .main-header-top .top-nav .settings-menu li a:hover {
-      color: #1b8bf9; }
+      color: #009d61; }
   .main-header-top .top-nav .notification-menu .dropdown-menu {
     min-width: 300px; }
     .main-header-top .top-nav .notification-menu .dropdown-menu i {
@@ -1176,7 +1176,7 @@ header .dropdown-menu {
         right: 10px;
         -webkit-box-shadow: 0px 2px 4px 3px rgba(128, 128, 128, 0.24);
         box-shadow: 0px 2px 4px 3px rgba(128, 128, 128, 0.24);
-        border-top: 3px solid #1b8bf9; }
+        border-top: 3px solid #009d61; }
       .horizontal-fixed .main-sidebar .sidebar-menu li > a > .icon-arrow-down {
         position: relative; }
     .horizontal-fixed .main-sidebar .sidebar-menu ul.treeview-menu ul.treeview-menu {
@@ -1236,7 +1236,7 @@ header .dropdown-menu {
     padding-top: 10px; }
     .mega-card h6 {
       margin-bottom: 0;
-      color: #1b8bf9;
+      color: #009d61;
       font-weight: 700; }
 
   ul.mega-list li > a {
@@ -1244,7 +1244,7 @@ header .dropdown-menu {
     color: #666;
     font-size: 13px; }
     ul.mega-list li > a:hover {
-      color: #1b8bf9; }
+      color: #009d61; }
     ul.mega-list li > a > i {
       font-size: 10px; }
   ul.mega-list li a {

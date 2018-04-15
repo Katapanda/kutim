@@ -1,6 +1,6 @@
-<header class="main-header-top hidden-print">
+<header class="main-header-top hidden-print" >
   <a href="index.html" class="logo">
-    <img class="img-fluid able-logo" src="{{ asset('assets/images/logo.png') }}" alt="Theme-logo">
+    <img class="img-fluid able-logo" src="{{ asset('assets_frontend/images/logo.png') }}" alt="Theme-logo">
   </a>
   <nav class="navbar navbar-static-top">
     <!-- Sidebar toggle button-->

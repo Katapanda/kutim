@@ -57,39 +57,39 @@
                                         <ul>
                                             <li id="node6">
                                                 @if ($kpme)
-                                                <img src="{{ url($kpme['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasii Perencanaan, Monitoring & Evaluasi')">
+                                                <img src="{{ url($kpme['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasii Perencanaan, Monitoring & Evaluasi <br> {{ $kpme['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasii Perencanaan, Monitoring & Evaluasi')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasii Perencanaan, Monitoring & Evaluasi <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kpn)
-                                                <img src="{{ url($kpn['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Penyediaan')">
+                                                <img src="{{ url($kpn['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Penyediaan <br> {{ $kpn['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Penyediaan')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Penyediaan <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kpm)
-                                                <img src="{{ url($kpm['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Pembiayaan')">
+                                                <img src="{{ url($kpm['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Pembiayaan <br> {{ $kpm['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Pembiayaan')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Pembiayaan <br>
                                                 </a>
                                                 @endif
@@ -137,37 +137,37 @@
                                        <ul>
                                             <li id="node6">
                                                 @if ($kpdp)
-                                                <img src="{{ url($kpdp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Pendataan Dan Perencanaan')"> Kasi Pendataan Dan Perencanaan <br> {{ $kpdp['nama'] }}
+                                                <img src="{{ url($kpdp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Pendataan Dan Perencanaan')"> Kasi Pendataan Dan Perencanaan <br>
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kpdpk)
-                                                <img src="{{ url($kpdpk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Pencegahan Dan Peningkatan Kualitas')">
+                                                <img src="{{ url($kpdpk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Pencegahan Dan Peningkatan Kualitas <br> {{ $kpdpk['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Pencegahan Dan Peningkatan Kualitas')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Pencegahan Dan Peningkatan Kualitas <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kmdp)
-                                                <img src="{{ url($kmdp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Manfaat Dan Pengendalian')">
+                                                <img src="{{ url($kmdp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Manfaat Dan Pengendalian <br> {{ $kmdp['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasi Manfaat Dan Pengendalian')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasi Manfaat Dan Pengendalian <br>
                                                 </a>
                                                 @endif
@@ -189,26 +189,26 @@
                                        <ul>
                                             <li id="node6">
                                                 @if ($kppdk)
-                                                <img src="{{ url($kppdk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasubbag Perencanaan Program Dan Keuangan')">
+                                                <img src="{{ url($kppdk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Perencanaan Program Dan Keuangan <br> {{ $kppdk['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasubbag Perencanaan Program Dan Keuangan')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Perencanaan Program Dan Keuangan <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kudk)
-                                                <img src="{{ url($kudk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasubbag Umum Dan Kepegawaian')">
+                                                <img src="{{ url($kudk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Umum Dan Kepegawaian <br> {{ $kudk['nama'] }}
                                                 </a>
                                                 @else
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                 <a href="#" onclick="detail('Kasubbag Umum Dan Kepegawaian')">
+                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Umum Dan Kepegawaian <br>
                                                 </a>
                                                 @endif
@@ -284,7 +284,7 @@
                                 '<td>'+data.data[i].nama+'</td></tr>';
                     }
                 }
-                $('#list_anggota').append(a);
+                $('#list_anggota').html(a);
             }
           },
           error : function() {

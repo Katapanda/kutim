@@ -11,7 +11,7 @@ class VisiMisiController extends Controller
 {
     public function index()
     {
-        return view('admin.modules.visi_misi.index');
+        return view('admin.modules.visimisi.index');
     }
     public function ajax_tampil($id)
     {
@@ -48,7 +48,7 @@ class VisiMisiController extends Controller
     public function editisi($id)
     {
         $visi_misi = VisiMisi::find($id);
-        return view('admin.modules.visi_misi.editvisi_misi', ['isi' => $visi_misi]);
+        return view('admin.modules.visimisi.editvisimisi', ['isi' => $visi_misi]);
     }
     public function ubah(Request $request, $id)
     {
@@ -95,7 +95,7 @@ class VisiMisiController extends Controller
     public function apiVisiMisi(Request $request)
     {
         // $visi_misi = VisiMisi::all();
-        $visi_misi = VisiMisi::select(['id', 'isi_visi_misi']);
+        $visi_misi = VisiMisi::select(['id', 'visi', 'misi']);
         // print_r($visi_misi);
         return Datatables::of($visi_misi)
             ->filter(function ($query) use ($request) {
@@ -113,10 +113,9 @@ class VisiMisiController extends Controller
                 return $visi_misi->misi;
             })
             ->addColumn('action', function($visi_misi){
-                return '<a href="'.url("admin/visi_misi/editisi",$visi_misi->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a> <a onclick="editForm('. $visi_misi->id .')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'.
-                    '<a onclick="deleteData('. $visi_misi->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
+                return '<a href="'.url("admin/visimisi/editisi",$visi_misi->id).'" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a> <a onclick="deleteData('. $visi_misi->id .')" class="btn btn-inverse-danger waves-effect waves-light btn-sm">
                             <i class="icofont icofont-delete-alt"></i> Delete</a>';
             })
-            ->rawColumns(['isi_visi_misi','action'])->make(true);
+            ->rawColumns(['visi','misi','action'])->make(true);
     }
 }

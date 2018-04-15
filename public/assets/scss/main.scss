@@ -257,7 +257,7 @@ textarea {
 
         a {
             @include f-s(16px);
-            @include c(#1b8bf9);
+            @include c(#009d61);
         }
 
         .breadcrumb-item:last-child a {
@@ -442,7 +442,7 @@ textarea {
                 opacity: 1;
 
                 &[data-selected] {
-                    @include c(#1b8bf9);
+                    @include c(#009d61);
                 }
 
                 &:hover {
@@ -582,7 +582,7 @@ textarea {
 
 .nav-tabs {
     .slide {
-        @include bg(#1b8bf9);
+        @include bg(#009d61);
         width: calc(100% / 4);
         height: 4px;
         @include pos(absolute);
@@ -609,7 +609,7 @@ textarea {
 
     .nav-link {
         @include b(none);
-        @include c(#1b8bf9);
+        @include c(#009d61);
 
         &:focus,
         &:hover {
@@ -632,7 +632,7 @@ textarea {
 
         .nav-link {
             &.active, &.active:focus, &.active:hover {
-                @include c(#1b8bf9);
+                @include c(#009d61);
                 @include b(none);
                 @include bg-c(transparent);
                 @include b(0,radius);
@@ -648,7 +648,7 @@ textarea {
         }
         &.open{
             .nav-link,&:focus,&:hover{
-                @include c(#1b8bf9);
+                @include c(#009d61);
                 @include b(none);
                 @include bg-c(transparent);
                 @include b(0,radius);
@@ -1482,7 +1482,7 @@ Basic card CSS
         @include f-s(25px);
         @include f-w(400);
         @include f-s(center);
-        @include c(#1b8bf9);
+        @include c(#009d61);
     }
     i {
         @include c(#777);
@@ -1626,7 +1626,7 @@ Basic card CSS
 ==========================  **/
 .sign-in-up {
     @include disp(flex);
-    @include bg-c(#1b8bf9);
+    @include bg-c(#009d61);
 }
 
 .sign-in-up-left {
@@ -2040,7 +2040,7 @@ tr:first-child > td > .fc-day-grid-event {
 }
 
 .fc-state-active {
-    @include bg-c(#1b8bf9);
+    @include bg-c(#009d61);
     @include c(#fff);
 
 }
@@ -2170,7 +2170,7 @@ input[type=text].md-form-control {
 .md-form-control:focus ~ .md-line:after,
 .md-form-control:focus ~ .md-line:before {
     width: 100%;
-    @include bg(#1b8bf9);
+    @include bg(#009d61);
 }
 
 .md-form-control .md-line:before {
@@ -2190,7 +2190,7 @@ input[type=text].md-form-control {
 .md-valid ~ label {
     top: -6px;
     @include f-s(13px);
-    @include c(#1b8bf9);
+    @include c(#009d61);
 }
 
 .md-label-file {
@@ -2260,7 +2260,7 @@ input[type=text].md-form-control {
 
 /*Primary labels*/
 .md-input-primary .md-form-control {
-    @include b(#1b8bf9 !important,color);
+    @include b(#009d61 !important,color);
 }
 
 .md-form-control:focus ~ .md-line:before,
@@ -2268,13 +2268,13 @@ input[type=text].md-form-control {
 .md-input-primary .md-form-control:focus ~ .md-line:before,
 .md-input-primary .md-line:after,
 .md-input-primary .md-line:before {
-    @include bg(#1b8bf9);
+    @include bg(#009d61);
 }
 
 .md-input-primary .md-form-control:focus ~ label,
 .md-input-primary > label,
 .md-valid ~ label {
-    @include c(#1b8bf9);
+    @include c(#009d61);
 }
 /*Success labels*/
 .md-input-success .md-form-control {
@@ -2359,7 +2359,7 @@ input[type=text].md-form-control {
         width: 0;
         bottom: 0;
         @include pos(absolute);
-        @include bg(#1b8bf9);
+        @include bg(#009d61);
         @include transition(0.2s ease all);
     }
     &:before {
@@ -2371,7 +2371,7 @@ input[type=text].md-form-control {
 }
 
 .bar-focus {
-    @include b(2px solid #1b8bf9,bottom);
+    @include b(2px solid #009d61,bottom);
     &:after,&:before {
         @include disp(none);
     }
@@ -2889,7 +2889,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
         @include c(#999);
         &::after {
             @include transform(scale(0));
-            @include bg-c(#1b8bf9);
+            @include bg-c(#009d61);
             @include b(#337ab7,color);
         }
         &::after,&::before {
@@ -2908,14 +2908,14 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
         }
     }
     label:hover .helper {
-        @include c(#1b8bf9);
+        @include c(#009d61);
     }
     input{
         &:checked ~ .helper::after {
             @include transform(scale(0.5));
         }
         &:checked ~ .helper::before {
-            @include c(#1b8bf9);
+            @include c(#009d61);
         }
     }
     &.radiofill{
@@ -2923,7 +2923,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
             @include transform(scale(1));
         }
         .helper::after {
-            @include bg-c(#1b8bf9);
+            @include bg-c(#009d61);
         }
     }
 }
@@ -3053,7 +3053,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 }
 
 .invoice-box {
-    @include bg(#1b8bf9);
+    @include bg(#009d61);
     @include c(#fff);
     @include p(20px 0);
     @include disp(flex);
@@ -3245,7 +3245,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 }
 
 .media .b-2-primary {
-    @include b(2px solid #1b8bf9);
+    @include b(2px solid #009d61);
 }
 /**====== Task Detailed css end ======**/
 /**  =====================
@@ -3365,7 +3365,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     Counter css start
 ======================= */
 .counter p {
-    @include c(#1b8bf9);
+    @include c(#009d61);
 }
 
 .comming-soon-from{
@@ -3886,7 +3886,7 @@ $or:#2a363b;
         @include mb(10px);
     }
     .ui-state-active {
-        @include bg-c(#1b8bf9);
+        @include bg-c(#009d61);
         @include c(#fff);
     }
 }
@@ -5728,7 +5728,7 @@ svg#sun {
 
 /* === color css starts=== */
 
-$th-col:#1b8bf9,#f57c00,#ff5252,#8B4DA5,#40c4ff;
+$th-col:#009d61,#f57c00,#ff5252,#8B4DA5,#40c4ff;
 @for $i from 1 through 5{
     .color-#{$i} {
         @include bg(nth($th-col,$i));
@@ -5762,7 +5762,7 @@ $th-col:#1b8bf9,#f57c00,#ff5252,#8B4DA5,#40c4ff;
         z-index: 9999;
         @include transition(all ease-in 0.3s);
         &:hover {
-            @include bg(#1b8bf9);
+            @include bg(#009d61);
             @include transition(all ease-in 0.3s);
             i{
                 @include c(#fff);
@@ -5770,13 +5770,13 @@ $th-col:#1b8bf9,#f57c00,#ff5252,#8B4DA5,#40c4ff;
             }
         }
         i {
-            @include c(#1b8bf9);
+            @include c(#009d61);
             @include f-s(25px);
             line-height: 50px;
         }
     }
     .settings-header {
-        @include bg(#1b8bf9);
+        @include bg(#009d61);
         height: 50px;
         @include p(15px 34px 0 34px);
         h3 {
