@@ -20,35 +20,40 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-link">
-                        <h4>ADDITIONAL</h4>
+                        <h4>MENU</h4>
                         <ul class="list-unstyled">
-                            <li><a href=""><i class="fa fa-caret-right"></i>Become A Member</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Legal Agreement</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Privacy Policy</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Terms & Condition</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Work For Us</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Newsletter Signup</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Berita</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Artikel</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Agenda</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Pengumuman</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Foto</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Video</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Peta</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>Kontak</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <div class="footer-twitter">
-                        <h4>TWITTER</h4>
+                    <div class="footer-link">
+                        <h4>PROFIL</h4>
                         <ul class="list-unstyled">
-                            <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">https://bh.com/</a></li>
-                            <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">https://bh.com/</a></li>
-                            <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="">https://bh.com/</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i> Sambutan </a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i> Sambutan </a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i> Sejarah </a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i> Struktur Organisasi </a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i> Tupoksi </a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i> Visi dan Misi </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2017 <a href="">TenNews</a>. All Rights Reserved.</p>
+                        {{-- <p>Copyright &copy; 2018 <a href="">TenNews</a>. All Rights Reserved.</p> --}}
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="designer-text text-right">
-                        <p>Designed With <i class="fa fa-heart"></i> By <a href="">SnazzyTheme</a></p>
+                        <p>Designed With <i class="fa fa-heart"></i> By <a href="">Katapanda</a></p>
                     </div>
                     <div class="back-to-top">
                         <i class="fa fa-angle-double-up"></i>
