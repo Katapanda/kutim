@@ -59,9 +59,8 @@
     <section class="carousel-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="">
-                      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -102,7 +101,6 @@
                           <span class="sr-only">Next</span>
                         </a>
                       </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -215,7 +213,7 @@
                     </div>
                     <div class="add-widget text-center">
                         <div class="card" style="width: 20rem; background-color: #EBE18C">
-                            <h5 class="card-header">Foto</h5>
+                            <h6 class="card-header">Foto Kepala Dinas</h6>
                             <a href=""><img src="{{ asset('upload/foto_struktur_organisasi/10112378.JPG') }}" alt="" class="img-fluid" width="50%" height="300px"></a><br/>
                             <p class="card-text"><h6>Julio Febryanto S.Kom</h6></p><br/>
                         </div>    
