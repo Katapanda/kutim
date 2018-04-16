@@ -19,7 +19,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: #FFFFFF;">
                     @foreach($sambutans as $sambutan)
                         {!! $sambutan->isi_sambutan !!}
                     @endforeach
