@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Berita;
 use App\Models\Artikel;
 use App\Models\Sambutan;
+use App\Models\Video;
 
 class HomeController extends Controller
 {
@@ -21,9 +22,10 @@ class HomeController extends Controller
     	$slider_sides = Berita::limit(2)->offset(1)->get();
         $artikel_paling_terbaru = Artikel::limit(1)->get();
         // $artikel_page_1 = Artikel::limit(4)->offset(1)->get();
-        $artikel_page_1 = Artikel::limit(4)->offset(0)->get();
+        $artikel_page_1 = Artikel::limit(7)->offset(0)->get();
         $artikel_page_2 = Artikel::limit(4)->offset(4)->get();
         $sambutans = Sambutan::limit(1)->offset(0)->get();
+        $videos = Video::limit(1)->offset(0)->get();
 
     	// return $sliders;
     	return view('modules.home', compact(
@@ -34,7 +36,8 @@ class HomeController extends Controller
     		'slider_sides',
             'artikel_paling_terbaru',
             'artikel_page_1',
-            'artikel_page_2'
+            'artikel_page_2',
+            'videos'
     	));
     }
 

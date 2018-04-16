@@ -115,97 +115,26 @@
                     <div class="more-top">
                         <h4>ARTIKEL</h4>
                     </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('upload/foto_berita/jemaah-umrah-indonesia-kini-tak-bisa-transit-ke-banyak-negara.jpg') }}" alt="" class="img-responsive" width="260px" height="169px"></a>
+
+                    @foreach($artikel_page_1 as $artikel)
+
+                        <div class="more-content">
+                            <div class="more-img">
+                                <a href=""><img src="{{ asset($artikel->foto_artikel) }}" alt="" class="img-responsive" width="260px" height="169px"></a>
+                            </div>
+                            <div class="img-content">
+                                <h6><a href="">{{ $artikel->judul_artikel }}</a></h6>
+                                <ul class="list-unstyled list-inline">
+                                    <li class="list-inline-item">FAMILY</li>
+                                    <li class="list-inline-item">{{ tanggal_indo($artikel->created_at) }}</li>
+                                </ul>
+                                <p>{!! substr($artikel->isi_artikel, 0, 170) . '...' !!} </p>
+                            </div>
                         </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">FAMILY</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('assets_frontend/images/more-2.jpg') }}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">LIFESTYLE</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('assets_frontend/images/more-2.jpg') }}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">LIFESTYLE</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('assets_frontend/images/more-2.jpg') }}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">LIFESTYLE</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('assets_frontend/images/more-2.jpg') }}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">LIFESTYLE</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('assets_frontend/images/more-3.jpg') }}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">WORLD</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
-                    <div class="more-content">
-                        <div class="more-img">
-                            <a href=""><img src="{{ asset('assets_frontend/images/more-4.jpg') }}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="img-content">
-                            <h6><a href="">It is usually composed of several sentences that together develop one.</a></h6>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item">TECHNOLOGY</li>
-                                <li class="list-inline-item">September 24, 2017</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
-                        </div>
-                    </div>
+
+                    @endforeach
+                    
+                    
                     <div class="more-content">
                         <div class="img-content text-right">
                             <button class="btn btn-md" style="background-color: #BFB35A; color: #ffffff"> Lihat Selengkapnya</button>
@@ -236,9 +165,12 @@
                     <div class="tag-widget">
                         <h4>VIDEO</h4>
                         <div class="card" style="width: 20rem; background-color: #EBE18C">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                            </div>
+                            @foreach($videos as $video)
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="{!! $video->link_video !!}" allowfullscreen></iframe>
+                                </div>
+                            @endforeach
+                            
                             <div class="card-footer text-center">
                                 <a href="#" class="btn btn-default btn-sm">Lihat Selengkapnya</a>
                             </div>
