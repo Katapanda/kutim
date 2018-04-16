@@ -12,7 +12,7 @@
     <!-- Modal Sambutan-->
     <div class="modal fade" id="sambutan-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="background-color: #EBE18C;">
                 <div class="modal-header">
                     <img src="{{ asset('assets_frontend/images/logo.png') }}" class="img-responsive" alt="">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -209,12 +209,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12" style="background-color: #BFB35A; margin-right: -1000px">
+                <div class="col-lg-4 col-md-12" style="background-color: #BFB35A;">
                     <div class="more-top">
                         <h4>KEPALA DINAS</h4>
                     </div>
-                    <div class="add-widget">
-                        <a href=""><img src="{{ asset('upload/foto_struktur_organisasi/10112378.JPG') }}" alt="" class="img-fluid" width="50%" height="300px"></a>
+                    <div class="add-widget text-center">
+                        <div class="card" style="width: 20rem; background-color: #EBE18C">
+                            <h5 class="card-header">Foto</h5>
+                            <a href=""><img src="{{ asset('upload/foto_struktur_organisasi/10112378.JPG') }}" alt="" class="img-fluid" width="50%" height="300px"></a><br/>
+                            <p class="card-text"><h6>Julio Febryanto S.Kom</h6></p><br/>
+                        </div>    
                     </div>
 
                     <div class="login-widget">
