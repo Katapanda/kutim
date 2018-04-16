@@ -206,6 +206,11 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis suscipit nesciunt nihil deleniti dolorum reiciendis aspernatur recusandae in, dolore quod pariatur......</p>
                         </div>
                     </div>
+                    <div class="more-content">
+                        <div class="img-content text-right">
+                            <button class="btn btn-md" style="background-color: #BFB35A; color: #ffffff"> Lihat Selengkapnya</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-md-12" style="background-color: #BFB35A;">
                     <div class="more-top">
