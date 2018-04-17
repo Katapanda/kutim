@@ -28,4 +28,20 @@
         </div>
     </div>
 
+    <!-- Struktur Organisasi -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="img-content">
+                        <br/>
+                        <h4>Struktur Organisasi</h4>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Struktur Organisasi -->
+
 @endsection

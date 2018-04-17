@@ -19,7 +19,7 @@
 // FRONTEND
 
 Route::get('/', 'Frontend\BerandaController@index')->name('beranda');
-Route::get('/sejarah', 'Frontend\HomeController@index')->name('sejarah');
+Route::get('/sejarah', 'Frontend\SejarahController@index')->name('sejarah');
 Route::get('/struktur_organisasi', 'Frontend\StrukturOrganisasiController@index')->name('struktur_organisasi');
 Route::get('/tupoksi', 'Frontend\TupoksiController@index')->name('tupoksi');
 Route::get('/visi_misi', 'Frontend\VisiMisiController@index')->name('visi_misi');

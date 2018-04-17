@@ -28,4 +28,28 @@
         </div>
     </div>
 
+    <!-- Visi & Misi -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="img-content">
+                        <br/>
+                        @if(count($visi_misi) > 0)
+                            
+                            <h4>Visi</h4>
+                            <p>@foreach($visi_misi as $vm) {{ $vm->visi }} @endforeach</p>
+
+                            <h4>Misi</h4>
+                            <p>@foreach($visi_misi as $vm) {{ $vm->misi }} @endforeach</p>
+                        
+                        @endif
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Visi & Misi -->
+
 @endsection

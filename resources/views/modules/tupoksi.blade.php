@@ -28,4 +28,21 @@
         </div>
     </div>
 
+    <!-- Tupoksi -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="img-content">
+                        <br/>
+                        <h4>Tupoksi</h4>
+                        <p>@foreach($tupoksi as $tpk) {{ $tpk->isi_tupoksi }} @endforeach</p>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Tupoksi -->
+
 @endsection
