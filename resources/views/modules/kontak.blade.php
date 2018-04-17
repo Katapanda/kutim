@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact-form">
-                        <h4>Hubungi Kami</h4>
+                        <h4>HUBUNGI KAMI</h4>
                         <form id="ajax-contact" method="post" action="send.php">
                             <div class="row">
                                 <div class="col-lg-6 ">
