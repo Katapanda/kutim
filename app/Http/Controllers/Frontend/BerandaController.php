@@ -12,13 +12,12 @@ use App\Models\Sambutan;
 use App\Models\Video;
 use App\Models\Album;
 
-class HomeController extends Controller
+class BerandaController extends Controller
 {
-    
     public function index()
     {
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
-    	$breaking_news = Berita::limit(5)->offset(0)->get(['id','judul_berita']);
+        $breaking_news = Berita::limit(5)->offset(0)->get(['id','judul_berita']);
     	$sliders = Berita::limit(3)->offset(0)->get();
     	$slider_sides = Berita::limit(2)->offset(1)->get();
         $artikel_paling_terbaru = Artikel::limit(1)->get();
@@ -42,72 +41,5 @@ class HomeController extends Controller
             'videos',
             'photos'
     	));
-    }
-
-    public function sejarah()
-    {
-        
-    }
-
-    public function struktur_organisasi()
-    {
-        
-    }
-
-    public function tupoksi()
-    {
-        
-    }
-
-    public function visi_misi()
-    {
-        
-    }
-
-    public function berita()
-    {
-        
-    }
-
-    public function artikel()
-    {
-        
-    }
-
-    public function agenda()
-    {
-        
-    }
-
-    public function pengumuman()
-    {
-        
-    }
-
-    public function foto()
-    {
-        
-    }
-
-    public function video()
-    {
-        
-    }
-
-    public function peta()
-    {
-        
-    }
-
-    public function kontak()
-    {
-        
-    }
-
-    public function tes()
-    {
-        $artikel_paling_terbaru = Artikel::limit(1)->get();
-
-        return $artikel_paling_terbaru;
     }
 }

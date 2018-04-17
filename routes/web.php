@@ -16,8 +16,23 @@
 //     return view('modules.home');
 // });
 
+// FRONTEND
 
-Route::get('/', 'Frontend\HomeController@index')->name('home');
+Route::get('/', 'Frontend\BerandaController@index')->name('beranda');
+Route::get('/sejarah', 'Frontend\HomeController@index')->name('sejarah');
+Route::get('/struktur_organisasi', 'Frontend\StrukturOrganisasiController@index')->name('struktur_organisasi');
+Route::get('/tupoksi', 'Frontend\TupoksiController@index')->name('tupoksi');
+Route::get('/visi_misi', 'Frontend\VisiMisiController@index')->name('visi_misi');
+Route::get('/berita', 'Frontend\BeritaController@index')->name('berita');
+Route::get('/berita/{id}/detail', 'Frontend\ArtikelController@detail')->name('berita.detail');
+Route::get('/artikel', 'Frontend\ArtikelController@index')->name('artikel');
+Route::get('/artikel/{id}/detail', 'Frontend\ArtikelController@detail')->name('artikel.detail');
+Route::get('/agenda', 'Frontend\AgendaController@index')->name('agenda');
+Route::get('/pengumuman', 'Frontend\PengumumanController@index')->name('pengumuman');
+Route::get('/foto', 'Frontend\FotoController@index')->name('foto');
+Route::get('/video', 'Frontend\VideoController@index')->name('video');
+Route::get('/peta', 'Frontend\PetaController@index')->name('peta');
+Route::get('/kontak', 'Frontend\KontakController@index')->name('kontak');
 
 
 Auth::routes();

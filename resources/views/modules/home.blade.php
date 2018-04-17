@@ -42,7 +42,7 @@
 
                                 @foreach($breaking_news as $breaking_new)
 
-                                    <li><a href=""><i class="fa fa-dot-circle-o"></i>{{ $breaking_new->judul_berita }}</a></li>
+                                    <li><a href="{{ route('berita.detail', [ $breaking_new->id ]) }}"><i class="fa fa-dot-circle-o"></i>{{ $breaking_new->judul_berita }}</a></li>
 
                                 @endforeach
 
@@ -134,12 +134,14 @@
 
                     @endforeach
                     
-                    
-                    <div class="more-content">
-                        <div class="img-content text-right">
-                            <button class="btn btn-md" style="background-color: #BFB35A; color: #ffffff"> Lihat Selengkapnya</button>
+                    @if(count($artikel_page_1) > 7)
+                        <div class="more-content">
+                            <div class="img-content text-right">
+                                <a href="{{ route('artikel') }}" class="btn btn-md" style="background-color: #BFB35A; color: #ffffff"> Lihat Selengkapnya</a>
+                            </div>
                         </div>
-                    </div>
+                    @endif
+
                 </div>
                 <div class="col-lg-4 col-md-12" style="background-color: #BFB35A;">
                     <div class="more-top">
@@ -156,42 +158,67 @@
                     <div class="login-widget">
                         <h4>FOTO</h4>
                         <div class="card" style="width: 20rem; background-color: #EBE18C">
-                            <img src="{{ asset('upload/foto_berita/jemaah-umrah-indonesia-kini-tak-bisa-transit-ke-banyak-negara.jpg') }}" alt="" class="card-img-top img-responsive" width="260px" height="169px">
-                            <div class="card-footer text-center">
-                                <a href="#" class="btn btn-default btn-sm">Lihat Selengkapnya</a>
-                            </div>
+                            @if(count($videos) > 0)
+                                @foreach($videos as $video)
+                                   <img src="{{ asset('upload/foto_berita/jemaah-umrah-indonesia-kini-tak-bisa-transit-ke-banyak-negara.jpg') }}" alt="" class="card-img-top img-responsive" width="260px" height="169px">
+                                    </div>
+                                @endforeach
+
+                                <div class="card-footer text-center">
+                                    <a href="{{ route('foto') }}" class="btn btn-default btn-sm">Lihat Selengkapnya</a>
+                                </div>
+
+                            @else
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <p class="btn btn-default btn-sm text-danger">Tidak ada Foto</p>
+                                </div>
+                            @endif    
+
                         </div>
                     </div>
                     <div class="tag-widget">
                         <h4>VIDEO</h4>
                         <div class="card" style="width: 20rem; background-color: #EBE18C">
-                            @foreach($videos as $video)
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="{!! $video->link_video !!}" allowfullscreen></iframe>
+                            @if(count($videos) > 0)
+                                @foreach($videos as $video)
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="{!! $video->link_video !!}" allowfullscreen></iframe>
+                                    </div>
+                                @endforeach
+
+                                <div class="card-footer text-center">
+                                    <a href="{{ route('video') }}" class="btn btn-default btn-sm">Lihat Selengkapnya</a>
                                 </div>
-                            @endforeach
+
+                            @else
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <p class="btn btn-default btn-sm text-danger">Tidak ada Video</p>
+                                </div>
+                            @endif    
                             
-                            <div class="card-footer text-center">
-                                <a href="#" class="btn btn-default btn-sm">Lihat Selengkapnya</a>
-                            </div>
                         </div>
                     </div>
                     <div class="tag-widget">
                         <h4>TAG LIST</h4>
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="">Berita</a></li>
-                            <li class="list-inline-item"><a href="">Artikel</a></li>
-                            <li class="list-inline-item"><a href="">Agenda</a></li>
-                            <li class="list-inline-item"><a href="">Pengumuman</a></li>
-                            <li class="list-inline-item"><a href="">Foto</a></li>
-                            <li class="list-inline-item"><a href="">Video</a></li>
-                            <li class="list-inline-item"><a href="">Peta</a></li>
-                            <li class="list-inline-item"><a href="">Kontak</a></li>
-                            <li class="list-inline-item"><a href="">Sambutan</a></li>
-                            <li class="list-inline-item"><a href="">Sejarah</a></li>
-                            <li class="list-inline-item"><a href="">Struktur Organisasi</a></li>
-                            <li class="list-inline-item"><a href="">Tupoksi</a></li>
-                            <li class="list-inline-item"><a href="">Visi & Misi</a></li>
+                            <li class="list-inline-item"><a href="{{ route('berita') }}">Berita</a></li>
+                            <li class="list-inline-item"><a href="{{ route('artikel') }}">Artikel</a></li>
+                            <li class="list-inline-item"><a href="{{ route('agenda') }}">Agenda</a></li>
+                            <li class="list-inline-item"><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
+                            <li class="list-inline-item"><a href="{{ route('foto') }}">Foto</a></li>
+                            <li class="list-inline-item"><a href="{{ route('video') }}">Video</a></li>
+                            <li class="list-inline-item"><a href="{{ route('peta') }}">Peta</a></li>
+                            <li class="list-inline-item"><a href="{{ route('kontak') }}">Kontak</a></li>
+                            <li class="list-inline-item"><a href="{{ route('sejarah') }}">Sejarah</a></li>
+                            <li class="list-inline-item"><a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a></li>
+                            <li class="list-inline-item"><a href="{{ route('tupoksi') }}">Tupoksi</a></li>
+                            <li class="list-inline-item"><a href="{{ route('visi_misi') }}">Visi & Misi</a></li>
                         </ul>
                     </div>
                 </div>

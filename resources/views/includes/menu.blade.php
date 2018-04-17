@@ -5,25 +5,51 @@
             <div class="row">
                 <div class="col-lg-10 col-md-12">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item active"><a href="index.html">BERANDA</a></li>
-                        <li class="list-inline-item"><a>PROFIL<i class="fa fa-angle-down"></i></a>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'beranda') ? 'active' : '' }}"><a href="{{ route('beranda') }}">BERANDA</a></li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'profil') ? 'active' : '' }}"><a>PROFIL<i class="fa fa-angle-down"></i></a>
                             <ul class="list-unstyled">
-                                <li><a data-toggle="modal" data-target="#sambutan-modal">SAMBUTAN</a></li>
-                                <li><a href="index.html">SEJARAH</a></li>
-                                <li><a href="about.html">STRUKTUR ORGANISASI</a></li>
-                                <li><a href="about.html">TUPOKSI</a></li>
-                                <li><a href="about.html">VISI DAN MISI</a></li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#sambutan-modal">SAMBUTAN</a>
+                                </li>
+                                <li class="{{ (\Request::route()->getName() == 'sejarah') ? 'active' : '' }}">
+                                    <a href="{{ route('sejarah') }}">SEJARAH</a>
+                                </li>
+                                <li class="{{ (\Request::route()->getName() == 'struktur_organisasi') ? 'active' : '' }}">
+                                    <a href="{{ route('struktur_organisasi') }}">STRUKTUR ORGANISASI</a>
+                                </li>
+                                <li class="{{ (\Request::route()->getName() == 'tupoksi') ? 'active' : '' }}">
+                                    <a href="{{ route('tupoksi') }}">TUPOKSI</a>
+                                </li>
+                                <li class="{{ (\Request::route()->getName() == 'visi_misi') ? 'active' : '' }}">
+                                    <a href="{{ route('visi_misi') }}">VISI DAN MISI</a>
+                                </li>
                                 
                             </ul>
                         </li>
-                        <li class="list-inline-item"><a href="">BERITA</a></li>
-                        <li class="list-inline-item"><a href="">ARTIKEL</a></li>
-                        <li class="list-inline-item"><a href="">AGENDA</a></li>
-                        <li class="list-inline-item"><a href="">PENGUMUMAN</a></li>
-                        <li class="list-inline-item"><a href="">FOTO</a></li>
-                        <li class="list-inline-item"><a href="">VIDEO</a></li>
-                        <li class="list-inline-item"><a href="">PETA</a></li>
-                        <li class="list-inline-item"><a href="">KONTAK</a></li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'berita') ? 'active' : '' }}">
+                            <a href="{{ route('berita') }}">BERITA</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'artikel') ? 'active' : '' }}">
+                            <a href="{{ route('artikel') }}">ARTIKEL</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'agenda') ? 'active' : '' }}">
+                            <a href="{{ route('agenda') }}">AGENDA</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'pengumuman') ? 'active' : '' }}">
+                            <a href="{{ route('pengumuman') }}">PENGUMUMAN</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'foto') ? 'active' : '' }}">
+                            <a href="{{ route('foto') }}">FOTO</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'video') ? 'active' : '' }}">
+                            <a href="{{ route('video') }}">VIDEO</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'peta') ? 'active' : '' }}">
+                            <a href="{{ route('peta') }}">PETA</a>
+                        </li>
+                        <li class="list-inline-item {{ (\Request::route()->getName() == 'kontak') ? 'active' : '' }}">
+                            <a href="{{ route('kontak') }}">KONTAK</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-12">
@@ -44,37 +70,54 @@
             <div class="col-lg-12">
                 <div class="mobile-menu">
                     <nav id="dropdown">
-                        <a href=""><img src="{{ asset('assets_frontend/images/mobile-logo.png') }}" alt="" class="img-fluid"></a>
+                        <a href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt="" class="img-fluid" width="400" height="800"></a>
                         <a href=""><i class="fa fa-home"></i></a>
                         <ul>
-                            <li class="list-inline-item"><a href="index.html">HOME</a></li>
-                            <li class="list-inline-item"><a href="">PAGES</a>
+                            <li class="list-inline-item"><a href="{{ route('beranda') }}">Beranda</a></li>
+                            <li class="list-inline-item"><a href="">PROFIL</a>
                                 <ul class="list-unstyled">
-                                    <li><a href="index.html">HOME</a></li>
-                                    <li><a href="about.html">ABOUT</a></li>
-                                    <li><a href="">CATAGORY</a>
-                                        <ul>
-                                            <li><a href="catagory-one.html">CATAGORY ONE</a></li>
-                                            <li><a href="catagory-two.html">CATAGORY TWO</a></li>
-                                        </ul>
+                                    <li>
+                                        <a data-toggle="modal" data-target="#sambutan-modal">SAMBUTAN</a>
                                     </li>
-                                    <li><a href="">NEWS DETAILS</a>
-                                        <ul>
-                                            <li><a href="news-details-one.html">NEWS DETAILS ONE</a></li>
-                                            <li><a href="news-details-two.html">NEWS DETAILS TWO</a></li>
-                                        </ul>
+                                    <li class="{{ (\Request::route()->getName() == 'sejarah') ? 'active' : '' }}">
+                                        <a href="{{ route('sejarah') }}">SEJARAH</a>
                                     </li>
-                                    <li><a href="contact.html">CONTACT</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="coming-soon.html">COMING_SOON</a></li>
-                                    <li><a href="404.html">404</a></li>
+                                    <li class="{{ (\Request::route()->getName() == 'struktur_organisasi') ? 'active' : '' }}">
+                                        <a href="{{ route('struktur_organisasi') }}">STRUKTUR ORGANISASI</a>
+                                    </li>
+                                    <li class="{{ (\Request::route()->getName() == 'tupoksi') ? 'active' : '' }}">
+                                        <a href="{{ route('tupoksi') }}">TUPOKSI</a>
+                                    </li>
+                                    <li class="{{ (\Request::route()->getName() == 'visi_misi') ? 'active' : '' }}">
+                                        <a href="{{ route('visi_misi') }}">VISI DAN MISI</a>
+                                    </li>
+                                    
                                 </ul>
                             </li>
-                            <li class="list-inline-item"><a href="">WORLD</a></li>
-                            <li class="list-inline-item"><a href="">HEALTH</a></li>
-                            <li class="list-inline-item"><a href="">TECHNOLOGY</a></li>
-                            <li class="list-inline-item"><a href="">POLITICS</a></li>
-                            <li class="list-inline-item"><a href="">SPORTS</a></li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'berita') ? 'active' : '' }}">
+                                <a href="{{ route('berita') }}">BERITA</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'artikel') ? 'active' : '' }}">
+                                <a href="{{ route('artikel') }}">ARTIKEL</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'agenda') ? 'active' : '' }}">
+                                <a href="{{ route('agenda') }}">AGENDA</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'pengumuman') ? 'active' : '' }}">
+                                <a href="{{ route('pengumuman') }}">PENGUMUMAN</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'foto') ? 'active' : '' }}">
+                                <a href="{{ route('foto') }}">FOTO</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'video') ? 'active' : '' }}">
+                                <a href="{{ route('video') }}">VIDEO</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'peta') ? 'active' : '' }}">
+                                <a href="{{ route('peta') }}">PETA</a>
+                            </li>
+                            <li class="list-inline-item {{ (\Request::route()->getName() == 'kontak') ? 'active' : '' }}">
+                                <a href="{{ route('kontak') }}">KONTAK</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>

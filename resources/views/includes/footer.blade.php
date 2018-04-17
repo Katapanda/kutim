@@ -22,14 +22,14 @@
                     <div class="footer-link">
                         <h4>MENU</h4>
                         <ul class="list-unstyled">
-                            <li><a href=""><i class="fa fa-caret-right"></i>Berita</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Artikel</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Agenda</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Pengumuman</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Foto</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Video</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Peta</a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i>Kontak</a></li>
+                            <li><a href="{{ route('berita') }}"><i class="fa fa-caret-right"></i>Berita</a></li>
+                            <li><a href="{{ route('artikel') }}"><i class="fa fa-caret-right"></i>Artikel</a></li>
+                            <li><a href="{{ route('agenda') }}"><i class="fa fa-caret-right"></i>Agenda</a></li>
+                            <li><a href="{{ route('pengumuman') }}"><i class="fa fa-caret-right"></i>Pengumuman</a></li>
+                            <li><a href="{{ route('foto') }}"><i class="fa fa-caret-right"></i>Foto</a></li>
+                            <li><a href="{{ route('video') }}"><i class="fa fa-caret-right"></i>Video</a></li>
+                            <li><a href="{{ route('peta') }}"><i class="fa fa-caret-right"></i>Peta</a></li>
+                            <li><a href="{{ route('kontak') }}"><i class="fa fa-caret-right"></i>Kontak</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,12 +37,11 @@
                     <div class="footer-link">
                         <h4>PROFIL</h4>
                         <ul class="list-unstyled">
-                            <li><a href=""><i class="fa fa-caret-right"></i> Sambutan </a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i> Sambutan </a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i> Sejarah </a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i> Struktur Organisasi </a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i> Tupoksi </a></li>
-                            <li><a href=""><i class="fa fa-caret-right"></i> Visi dan Misi </a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#sambutan-modal"><i class="fa fa-caret-right"></i> Sambutan </a></li>
+                            <li><a href="{{ route('sejarah') }}"><i class="fa fa-caret-right"></i> Sejarah </a></li>
+                            <li><a href="{{ route('struktur_organisasi') }}"><i class="fa fa-caret-right"></i> Struktur Organisasi </a></li>
+                            <li><a href="{{ route('tupoksi') }}"><i class="fa fa-caret-right"></i> Tupoksi </a></li>
+                            <li><a href="{{ route('visi_misi') }}"><i class="fa fa-caret-right"></i> Visi dan Misi </a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +52,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="designer-text text-right">
-                        <p>Designed With <i class="fa fa-heart"></i> By <a href="">Katapanda</a></p>
+                        <p>Designed With <i class="fa fa-heart"></i> By <a href="katapanda.com">Katapanda</a></p>
                     </div>
                     <div class="back-to-top">
                         <i class="fa fa-angle-double-up"></i>
