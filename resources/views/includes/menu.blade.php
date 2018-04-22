@@ -34,10 +34,10 @@
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
                         <ul class="dropdown-menu other_dropdwn">
-                            <li><a href="">Dasar Hukum</a></li>
-                            <li><a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a></li>
-                            <li><a href="{{ route('tupoksi') }}">Tugas Pokok dan Fungsi</a></li>
-                            <li><a href="{{ route('visi_misi') }}">Visi dan Misi</a></li>
+                            <li><a href="{{ route('dasar-hukum') }}">Dasar Hukum</a></li>
+                            <li><a href="{{ route('struktur-organisasi') }}">Struktur Organisasi</a></li>
+                            <li><a href="{{ route('tugas-pokok-dan-fungsi') }}">Tugas Pokok dan Fungsi</a></li>
+                            <li><a href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
                         </ul>
                     </li>
                     <li class="dropdown submenu">

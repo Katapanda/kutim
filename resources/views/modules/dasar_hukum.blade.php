@@ -4,27 +4,27 @@
 @include('includes.function')
 
 @section('title')
-	Tupoksi
+	Dasar Hukum
 @endsection
 
 @section('content')
     
 	<!-- Banner area -->
     <section class="banner_area" data-stellar-background-ratio="0.5">
-        <h2>Tugas Pokok dan Fungsi</h2>
+        <h2>Dasar Hukum</h2>
         <ol class="breadcrumb">
             <li><a href="">Informasi</a></li>
-            <li><a href="" class="active">Tugas Pokok dan Fungsi</a></li>
+            <li><a href="" class="active">Dasar Hukum</a></li>
         </ol>
     </section>
     <!-- End Banner area -->
 
-    <!-- Tupoksi -->
+    <!-- Dasar Hukum -->
     <section class="building_construction_area">
         <div class="container">
             <div class="row building_construction_row">
                 <div class="col-sm-8 constructing_laft">
-                    <h2>Tugas Pokok dan Fungsi</h2>
+                    <h2>Dasar Hukum</h2>
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
                     <div class="col-md-6 ipsum">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo-do consequat.</p>
@@ -46,6 +46,6 @@
             </div>
         </div>
     </section>
-    <!-- End Tupoksi -->
+    <!-- End Dasar Hukum -->
 
 @endsection

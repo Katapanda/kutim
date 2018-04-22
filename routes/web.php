@@ -20,9 +20,10 @@
 
 Route::get('/', 'Frontend\BerandaController@index')->name('beranda');
 Route::get('/sejarah', 'Frontend\SejarahController@index')->name('sejarah');
-Route::get('/struktur_organisasi', 'Frontend\StrukturOrganisasiController@index')->name('struktur_organisasi');
-Route::get('/tupoksi', 'Frontend\TupoksiController@index')->name('tupoksi');
-Route::get('/visi_misi', 'Frontend\VisiMisiController@index')->name('visi_misi');
+Route::get('/dasar-hukum', 'Frontend\DasarHukumController@index')->name('dasar-hukum');
+Route::get('/struktur-organisasi', 'Frontend\StrukturOrganisasiController@index')->name('struktur-organisasi');
+Route::get('/tugas-pokok-dan-fungsi', 'Frontend\TupoksiController@index')->name('tugas-pokok-dan-fungsi');
+Route::get('/visi-misi', 'Frontend\VisiMisiController@index')->name('visi-misi');
 Route::get('/berita', 'Frontend\BeritaController@index')->name('berita');
 Route::get('/berita/{id}/detail', 'Frontend\ArtikelController@detail')->name('berita.detail');
 Route::get('/artikel', 'Frontend\ArtikelController@index')->name('artikel');
