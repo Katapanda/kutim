@@ -9,35 +9,73 @@
 
 @section('content')
     
-	<!-- Modal Sambutan-->
-    <div class="modal fade" id="sambutan-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content" style="background-color: #EBE18C;">
-                <div class="modal-header">
-                    <img src="{{ asset('assets_frontend/images/logo.png') }}" class="img-responsive" alt="">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="background-color: #FFFFFF;">
-                    @foreach($sambutans as $sambutan)
-                        {!! $sambutan->isi_sambutan !!}
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Banner area -->
+    <section class="banner_area" data-stellar-background-ratio="0.5">
+        <h2>Foto</h2>
+        <ol class="breadcrumb">
+            <li><a href="">Galeri</a></li>
+            <li><a href="" class="active">Foto</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
 
     <!-- Foto -->
-    <section class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="img-content">
-                        <br/>
-                        <h4>Foto</h4>
-                        <br/>
-                    </div>
+    <section class="featured_works row" data-stellar-background-ratio="0.3">
+        <div class="featured_gallery">
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-1.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-2.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-3.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-4.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-5.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-6.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-7.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{{ asset('assets_frontend/images/gallery/gl-8.jpg') }}" alt="">
+                <div class="gallery_hover">
+                    <h4></h4>
+                    <a href="#">Perbesar</a>
                 </div>
             </div>
         </div>

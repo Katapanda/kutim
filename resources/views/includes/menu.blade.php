@@ -50,7 +50,7 @@
                         </ul>
                     </li>
                     <li class="dropdown submenu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foto</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galeri</a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('foto') }}">Foto</a></li>
                             <li><a href="{{ route('video') }}">Video</a></li>

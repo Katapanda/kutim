@@ -9,70 +9,52 @@
 
 @section('content')
     
-    <!-- Modal Sambutan-->
-    <div class="modal fade" id="sambutan-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content" style="background-color: #EBE18C;">
-                <div class="modal-header">
-                    <img src="{{ asset('assets_frontend/images/logo.png') }}" class="img-responsive" alt="">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="background-color: #FFFFFF;">
-                    @foreach($sambutans as $sambutan)
-                        {!! $sambutan->isi_sambutan !!}
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Banner area -->
+    <section class="banner_area" data-stellar-background-ratio="0.5">
+        <h2>Kontak</h2>
+        <ol class="breadcrumb">
+            <li><a href="">Beranda</a></li>
+            <li><a href="" class="active">Kontak</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
     
+    <!-- Map -->
+    <div class="contact_map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.645332652287!2d117.60221101475335!3d0.5335439996107466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320bb4d33a793b29%3A0xfaf84aa794bc5862!2sDinas+Perumahan+dan+Kawasan+Permukiman!5e0!3m2!1sid!2sid!4v1524366352906" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <!-- End Map -->
+
     <!-- Halaman Kontak -->
-    <section class="contact">
+    <section class="all_contact_info">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-form">
-                        <h4>HUBUNGI KAMI</h4>
-                        <form id="ajax-contact" method="post" action="send.php">
-                            <div class="row">
-                                <div class="col-lg-6 ">
-                                    <p><input type="text" id="name" name="name" placeholder="NAMA LENGKAP"></p>
-                                 </div>
-                                <div class="col-lg-6">
-                                    <p><input type="text" id="email" name="email" placeholder="EMAIL"></p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <p><textarea name="message" id="message" placeholder="PESAN"></textarea></p>
-                                </div>
-                                <div class="col-lg-12">
-                                    <button type="submit">KIRIM</button>
-                                </div>
-                            </div>
-                            <div id="form-messages"></div>
-                        </form>
+            <div class="row contact_row">
+                <div class="col-sm-6 contact_info">
+                    <h2>Informasi Kontak</h2>
+                    <div class="location">
+                        <div class="location_laft">
+                            <a class="f_location" href="#">Lokasi</a>
+                            <a href="#">Telp</a>
+                            <a href="#">Fax</a>
+                            <a href="#">Email</a>
+                        </div>
+                        <div class="address">
+                            <a href="#">Jl. Prof. Dr, Sudiatmo, Kawasan, Perkantoran bukit Pelangi, Tlk. Lingga, Sangatta Utara, Kabupaten Kutai Timur, <br> Kalimantan Timur 75683 </a>
+                            <a href="#">(0549) 123 456 789</a>
+                            <a href="#">(0549) 935-3026</a>
+                            <a href="#">info@katapanda.com</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <h4>INFORMASI KONTAK</h4>
-                        <ul class="list-unstyled con-info">
-                            <li><span>ALAMAT :</span> 123, King Street, New York, NY, USA.</li>
-                            <li><span>TELEPON :</span>+1 (435) 879 6453</li>
-                            <li><span>FAX :</span>+1 (435) 879 6451</li>
-                            <li><span>EMAIL :</span>info@tennews.com</li>
-                            <li><span>JAM KERJA :</span>Mon-Fri : 08:00-18:00<br>Sat-Sun : 08:00-13:00</li>
-                        </ul>
-                        <ul class="list-unstyled list-inline social">
-                            <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-rss"></i></a></li>
-                            <li class="list-inline-item"><a href=""><i class="fa fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
+                <div class="col-sm-6 contact_info send_message">
+                    <h2>Kirim Pesan</h2>
+                    <form class="form-inline contact_box">
+                        <input type="text" class="form-control input_box" placeholder="Nama Lengkap *">
+                        <input type="text" class="form-control input_box" placeholder="Email *">
+                        <input type="text" class="form-control input_box" placeholder="Subjek">
+                        <textarea class="form-control input_box" placeholder="Pesan"></textarea>
+                        <button type="submit" class="btn btn-default">Kirim</button>
+                    </form>
                 </div>
             </div>
         </div>
