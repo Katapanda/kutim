@@ -105,6 +105,11 @@
           <i class="icon-list"></i><span> Kategori Berita</span>
         </a>
       </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'kontak.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('kontak.index') }}">
+          <i class="icon-list"></i><span> Kontak</span>
+        </a>
+      </li>
       <li class="treeview {{ (\Request::route()->getName() == 'berita.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('berita.index') }}">
           <i class="icon-list"></i><span> Berita</span>

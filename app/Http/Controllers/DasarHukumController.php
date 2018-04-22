@@ -41,7 +41,7 @@ class DasarHukumController extends Controller
         if ($dasar_hukum->update($input)) {
             return redirect()->action('DasarHukumController@index')->with(['success' => 'Berhasil Ubah Data']);
         } else {
-            return redirect()->action('DasarHukumController@index')->with(['error' => 'Mohon Maaf Terjad Kesalahan, Data Tidak Berhasil DI Ubah']);
+            return redirect()->action('DasarHukumController@index')->with(['error' => 'Mohon Maaf Terjad Kesalahan, Data Tidak Berhasil Di Ubah']);
         }
     }
     public function destroy($id)
@@ -52,7 +52,7 @@ class DasarHukumController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'dasar_hukum Deleted'
+            'message' => 'Dasar Hukum Deleted'
         ]);
     }
 

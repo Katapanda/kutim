@@ -33,16 +33,18 @@
                     <h2>Informasi Kontak</h2>
                     <div class="location">
                         <div class="location_laft">
-                            <a class="f_location" href="#">Lokasi</a>
-                            <a href="#">Telp</a>
-                            <a href="#">Fax</a>
-                            <a href="#">Email</a>
+                            <a class="f_location">Lokasi</a>
+                            <a>Telp</a>
+                            <a>Fax</a>
+                            <a>Email</a>
                         </div>
                         <div class="address">
-                            <a href="#">Jl. Prof. Dr, Sudiatmo, Kawasan, Perkantoran bukit Pelangi, Tlk. Lingga, Sangatta Utara, Kabupaten Kutai Timur, <br> Kalimantan Timur 75683 </a>
-                            <a href="#">(0549) 123 456 789</a>
-                            <a href="#">(0549) 935-3026</a>
-                            <a href="#">info@katapanda.com</a>
+                            @foreach($kontak as $kon)
+                                <a>{{ $kon->lokasi }}</a>
+                                <a>{{ $kon->telepon }}</a>
+                                <a>{{ $kon->fax }}</a>
+                                <a>{{ $kon->email }}</a>
+                            @endforeach    
                         </div>
                     </div>
                 </div>

@@ -12,7 +12,7 @@
     <!-- Slider area -->
     <section class="slider_area row m0">
         <div class="slider_inner">
-            <div data-thumb="{{ asset('assets_frontend/images/slider-1.jpg') }}" data-src="{{ asset('assets_frontend/images/slider-1.jpg') }}">
+            <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
                    <div class="container">
                         <h5 class=" wow fadeInUp animated">Welcome to our</h5>
@@ -22,7 +22,7 @@
                    </div>
                 </div>
             </div>
-            <div data-thumb="{{ asset('assets_frontend/images/slider-2.jpg') }}" data-src="{{ asset('assets_frontend/images/slider-2.jpg') }}">
+            <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
                    <div class="container">
                         <h5 class=" wow fadeInUp animated">Welcome to our</h5>

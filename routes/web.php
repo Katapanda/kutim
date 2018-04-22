@@ -108,6 +108,10 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::get('api/dasar_hukum', 'DasarHukumController@apidasar_hukum')->name('admin.api.dasar_hukum');
 	Route::get('api/dasar_hukum/ajaxtampil/{id}', 'DasarHukumController@ajax_tampil');
 
+	Route::resource('kontak', 'KontakController');
+	Route::get('api/kontak', 'KontakController@apiKontak')->name('admin.api.kontak');
+	Route::get('api/kontak/ajaxtampil/{id}', 'KontakController@ajax_tampil');
+
 	Route::get('album/detail/{id}', 'AlbumController@detailalbum');
 	Route::post('api/imgalbum', 'AlbumController@uploadfoto');
 	Route::resource('album', 'AlbumController');
