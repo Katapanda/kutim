@@ -24,7 +24,7 @@
         <div class="container">
             <div class="feature_row row">
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('assets_frontend/images/feature-man-2.jpg') }}" alt="">
+                    <img src="{{ asset('assets_frontend/images/bupati.png') }}" alt="">
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">

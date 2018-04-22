@@ -13,7 +13,7 @@
         </div><!-- End searchForm -->
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="col-md-2 p0">
-            <div class="navbar-header">
+            <div class="navbar-header navbar-right">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>

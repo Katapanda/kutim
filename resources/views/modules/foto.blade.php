@@ -24,7 +24,7 @@
         <div class="featured_gallery">
             @foreach($foto as $ft) 
                 <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-                    <img src="{{ asset($ft->foto) }}" alt="">
+                    <img src="{{ asset($ft->foto) }}" alt="" width="100%" height="200px">
                     <div class="gallery_hover">
                         <h4></h4>
                         <a href="#">Perbesar</a>
