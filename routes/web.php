@@ -25,11 +25,13 @@ Route::get('/struktur-organisasi', 'Frontend\StrukturOrganisasiController@index'
 Route::get('/tugas-pokok-dan-fungsi', 'Frontend\TupoksiController@index')->name('tugas-pokok-dan-fungsi');
 Route::get('/visi-misi', 'Frontend\VisiMisiController@index')->name('visi-misi');
 Route::get('/berita', 'Frontend\BeritaController@index')->name('berita');
-Route::get('/berita/{id}/detail', 'Frontend\ArtikelController@detail')->name('berita.detail');
+Route::get('/berita/{id}/detail', 'Frontend\BeritaController@detail')->name('berita.detail');
 Route::get('/artikel', 'Frontend\ArtikelController@index')->name('artikel');
 Route::get('/artikel/{id}/detail', 'Frontend\ArtikelController@detail')->name('artikel.detail');
 Route::get('/agenda', 'Frontend\AgendaController@index')->name('agenda');
+Route::get('/agenda/{id}/detail', 'Frontend\AgendaController@detail')->name('agenda.detail');
 Route::get('/pengumuman', 'Frontend\PengumumanController@index')->name('pengumuman');
+Route::get('/pengumuman/{id}/detail', 'Frontend\PengumumanController@detail')->name('pengumuman.detail');
 Route::get('/foto', 'Frontend\FotoController@index')->name('foto');
 Route::get('/video', 'Frontend\VideoController@index')->name('video');
 Route::get('/peta', 'Frontend\PetaController@index')->name('peta');

@@ -43,9 +43,9 @@
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informasi</a>
                         <ul class="dropdown-menu other_dropdwn">
-                            <li><a href="{{ route('berita') }}">Berita</a></li>
-                            <li><a href="{{ route('artikel') }}">Artikel</a></li>
                             <li><a href="{{ route('agenda') }}">Agenda</a></li>
+                            <li><a href="{{ route('artikel') }}">Artikel</a></li>
+                            <li><a href="{{ route('berita') }}">Berita</a></li>
                             <li><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
                         </ul>
                     </li>

@@ -15,8 +15,17 @@ class PengumumanController extends Controller
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $sambutans = Sambutan::limit(1)->offset(0)->get();
         
-    	return view('modules.pengumuman', compact(
+    	return view('modules.pengumuman.index', compact(
     		'sambutans'
+    	));
+    }
+
+    public function detail($id)
+    {
+    	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
+        
+    	return view('modules.pengumuman.detail', compact(
+    		'tanggal_sekarang'
     	));
     }
 }

@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 
-                @include('includes.sidebar_menu_informasi')
+                @include('includes.sidebar_menu_profil')
 
             </div>
         </div>
