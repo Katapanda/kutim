@@ -13,24 +13,24 @@
     <section class="slider_area row m0">
         <div class="slider_inner">
             <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
-                <div class="camera_caption">
+                <!-- <div class="camera_caption">
                    <div class="container">
                         <h5 class=" wow fadeInUp animated">Welcome to our</h5>
                         <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN, MODERN, MULTIPURPOSE THEME</h3>
                         <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you turn your dream home or flat into a reality fast. The Love Boat promises something for everyone. Now the world don't move to the beat of just one</p>
                         <a class=" wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
                    </div>
-                </div>
+                </div> -->
             </div>
             <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
-                <div class="camera_caption">
+                <!-- <div class="camera_caption">
                    <div class="container">
                         <h5 class=" wow fadeInUp animated">Welcome to our</h5>
                         <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN ,MODERN, MULTIPURPOSE THEME</h3>
                         <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you turn your dream home or flat into a reality fast. The Love Boat promises something for everyone. Now the world don't move to the beat of just one</p>
                         <a class=" wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -149,27 +149,27 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>Informasi</h2>
-                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+                <h4>Dinas Perumahan dan Kawasan Pemukiman Kabupaten Kutai Timur</h4>
             </div>
             <div class="achievments_row row">
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-connectdevelop" aria-hidden="true"></i>
-                    <span class="counter">800</span>
+                    <span class="counter">20</span>
                     <h6>BERITA</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    <span class="counter">230</span>
+                    <span class="counter">13</span>
                     <h6>ARTIKEL</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-child" aria-hidden="true"></i>
-                    <span class="counter">1390</span>
+                    <span class="counter">5</span>
                     <h6>AGENDA</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
-                    <span class="counter">125</span>
+                    <span class="counter">2</span>
                     <h6>PENGUMUMAN</h6>
                 </div>
             </div>
