@@ -101,41 +101,41 @@
             <div class="row construction_iner">
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/cns-1.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://lpse.kutaitimurkab.go.id/">LPSE KUTAI TIMUR</a>
+                        <a href="http://lpse.kutaitimurkab.go.id/" target="_blank">LPSE KUTAI TIMUR</a>
                         <p>Layanan Pengadaan Secara Elektronik (LPSE)</p><br>
                    </div>
                 </div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/cns-2.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="https://www.pu.go.id/">PU-net</a>
+                        <a href="https://www.pu.go.id/" target="_blank">PU-net</a>
                         <p>Kementrian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia </p>
                    </div>
                 </div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/cns-3.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="https://sirup.lkpp.go.id/sirup">SIRUP</a>
+                        <a href="https://sirup.lkpp.go.id/sirup" target="_blank">SIRUP</a>
                         <p>Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah</p><br>
                    </div>
                 </div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/cns-1.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://www.kutaitimurkab.go.id/">PEMERINTAH KUTIM</a>
+                        <a href="http://www.kutaitimurkab.go.id/" target="_blank">PEMERINTAH KUTIM</a>
                         <p>Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
                    </div>
                 </div>

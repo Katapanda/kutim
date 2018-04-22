@@ -24,46 +24,26 @@
         <div class="container">
             <div class="feature_row row">
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('assets_frontend/images/feature-man-2.jpg') }}" alt="">
+                    <img src="{{ asset('assets_frontend/images/bupati.png') }}" alt="">
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
                         <h2>Pengumuman</h2>
-                        <h5>There are many variations of passages of Lorem Ipsum available.</h5>
+                        <h5>Dinas Perumahan dan Kawasan Pemukiman Kabupaten Kutai Timur</h5>
                     </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <i class="fa fa-wrench" aria-hidden="true"></i>
-                            </a>
+                    @foreach($pengumuman as $pgm)
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <a href="{{ route('pengumuman.detail', [$pgm->id]) }}">{{ $pgm->judul_pengumuman }}</a>
+                                <p>{{ tanggal_indo($pgm->tanggal_publish) }}</p>
+                            </div>
                         </div>
-                        <div class="media-body">
-                            <a href="{{ route('pengumuman.detail', [1]) }}">30+ YEARS OF EXPERIENCE</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <i class="fa fa-rocket" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">QUALIFIED EXPERTS</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <i class="fa fa-users" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">Best Customer Services</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

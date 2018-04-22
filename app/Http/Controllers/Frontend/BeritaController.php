@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Album;
 use App\Models\Berita;
-use App\Models\Sambutan;
+use App\Models\Kontak;
 use App\Models\Video;
 
 class BeritaController extends Controller
@@ -16,7 +16,7 @@ class BeritaController extends Controller
     public function index()
     {
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
-        $sambutan = Sambutan::limit(1)->offset(0)->get();
+        $kontak = Kontak::limit(1)->offset(0)->get();
     	
     	// $berita = Berita::limit(25)->offset(0)->get();
     	// $breaking_news = Berita::limit(5)->offset(0)->get(['id','judul_berita']);
@@ -27,17 +27,17 @@ class BeritaController extends Controller
      //    $videos = Video::limit(1)->offset(0)->get();
 
     	return view('modules.berita.index', compact(
-    		'sambutan'
+    		'kontak'
     	));
     }
 
     public function detail($id)
     {
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
-        $sambutan = Sambutan::limit(1)->offset(0)->get();
+        $kontak = Kontak::limit(1)->offset(0)->get();
         
     	return view('modules.berita.detail', compact(
-    		'sambutan'
+    		'kontak'
     	));
     }
 }

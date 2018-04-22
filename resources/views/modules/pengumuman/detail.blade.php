@@ -51,39 +51,19 @@
 
                     <div class="resent">
                         <h3>PENGUMUMAN LAINNYA</h3>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="{{ asset('assets_frontend/images/blog/rs-1.jpg') }}" alt="">
-                                </a>
+                        @foreach($pengumuman as $pgm)
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="{{ asset($pgm->foto_pamflet) }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="">{!! substr($pgm->judul_pengumuman, 0, 100) . '...' !!}</a>
+                                    <h6>{{ tanggal_indo($pgm->tanggal_publish) }}</h6>
+                                </div>
                             </div>
-                            <div class="media-body">
-                                <a href="">Get informed about construction industry trends &amp; development.</a>
-                                <h6>Oct 19, 2016</h6>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="{{ asset('assets_frontend/images/blog/rs-2.jpg') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <a href="">Get informed about construction industry trends &amp; development.</a>
-                                <h6>Oct 19, 2016</h6>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="{{ asset('assets_frontend/images/blog/rs-3.jpg') }}" alt="">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <a href="">Get informed about construction industry trends &amp; development.</a>
-                                <h6>Oct 19, 2016</h6>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

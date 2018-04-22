@@ -29,41 +29,21 @@
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
                         <h2>Agenda</h2>
-                        <h5>There are many variations of passages of Lorem Ipsum available.</h5>
+                        <h5>Dinas Perumahan dan Kawasan Pemukiman Kabupaten Kutai Timur</h5>
                     </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <i class="fa fa-wrench" aria-hidden="true"></i>
-                            </a>
+                    @foreach($agenda as $ag)
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <a href="{{ route('agenda.detail', [$ag->id]) }}">{{ $ag->nama_kegiatan }}</a>
+                                <p>{{ tanggal_indo($ag->tanggal) }}</p>
+                            </div>
                         </div>
-                        <div class="media-body">
-                            <a href="{{ route('agenda.detail', [1]) }}">30+ YEARS OF EXPERIENCE</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <i class="fa fa-rocket" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">QUALIFIED EXPERTS</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <i class="fa fa-users" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="#">Best Customer Services</a>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
