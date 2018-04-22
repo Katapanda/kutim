@@ -35,28 +35,28 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
                         <ul class="dropdown-menu other_dropdwn">
                             <li><a href="">Dasar Hukum</a></li>
-                            <li><a href="">Struktur Organisasi</a></li>
-                            <li><a href="">Tugas Pokok dan Fungsi</a></li>
-                            <li><a href="">Visi dan Misi</a></li>
+                            <li><a href="{{ route('struktur_organisasi') }}">Struktur Organisasi</a></li>
+                            <li><a href="{{ route('tupoksi') }}">Tugas Pokok dan Fungsi</a></li>
+                            <li><a href="{{ route('visi_misi') }}">Visi dan Misi</a></li>
                         </ul>
                     </li>
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informasi</a>
                         <ul class="dropdown-menu other_dropdwn">
-                            <li><a href="">Berita</a></li>
-                            <li><a href="">Artikel</a></li>
-                            <li><a href="">Agenda</a></li>
-                            <li><a href="">Pengumuman</a></li>
+                            <li><a href="{{ route('berita') }}">Berita</a></li>
+                            <li><a href="{{ route('artikel') }}">Artikel</a></li>
+                            <li><a href="{{ route('agenda') }}">Agenda</a></li>
+                            <li><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
                         </ul>
                     </li>
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foto</a>
                         <ul class="dropdown-menu">
-                            <li><a href="">Foto</a></li>
-                            <li><a href="">Video</a></li>
+                            <li><a href="{{ route('foto') }}">Foto</a></li>
+                            <li><a href="{{ route('video') }}">Video</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Kontak</a></li>
+                    <li><a href="{{ route('kontak') }}">Kontak</a></li>
                     <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
