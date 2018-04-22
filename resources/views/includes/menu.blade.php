@@ -20,7 +20,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=""><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a>
+                <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a>
             </div>
         </div>
 
@@ -28,8 +28,8 @@
         <div class="col-md-10 p0">
             <div class="collapse navbar-collapse" id="min_navbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="">
-                        <a href="">Beranda</a>
+                    <li>
+                        <a href="{{ route('beranda') }}">Beranda</a>
                     </li>
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
