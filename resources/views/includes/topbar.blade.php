@@ -2,7 +2,7 @@
 <section class="top_header_area">
     <div class="container">
         <ul class="nav navbar-nav top_nav">
-            <li><a href=""><i class="fa fa-phone"></i>(022) 314 5016</a></li>
+            <li><a href=""><i class="fa fa-phone"></i>(0549) 123 456 789</a></li>
             <li><a href=""><i class="fa fa-envelope-o"></i>info@katapanda.com</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right social_nav">

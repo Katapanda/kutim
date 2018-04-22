@@ -40,10 +40,11 @@
         </a>
       </li> --}}
 
+
       <li class="nav-level">Profile</li>
-      <li class="treeview {{ (\Request::route()->getName() == 'visimisi.index') ? 'active' : '' }}">
-        <a class="waves-effect waves-dark" href="{{ route('visimisi.index') }}">
-          <i class="icon-list"></i><span> Visi & Misi</span>
+      <li class="treeview {{ (\Request::route()->getName() == 'dasar_hukum.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('dasar_hukum.index') }}">
+          <i class="icon-list"></i><span> Dasar Hukum</span>
         </a>
       </li>
       <li class="treeview {{ (\Request::route()->getName() == 'so.index') ? 'active' : '' }}">
@@ -54,6 +55,11 @@
       <li class="treeview {{ (\Request::route()->getName() == 'tupoksi.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('tupoksi.index') }}">
           <i class="icon-user"></i><span> Tupoksi</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'visimisi.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('visimisi.index') }}">
+          <i class="icon-list"></i><span> Visi & Misi</span>
         </a>
       </li>
       <li class="treeview {{ (\Request::route()->getName() == 'sejarah.index') ? 'active' : '' }}">

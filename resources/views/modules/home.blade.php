@@ -77,11 +77,15 @@
                     <div class="subtittle">
                         <h2>SAMBUTAN</h2>
                     </div>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p>
+                        @foreach($sambutan as $sbtn)
+                            {!! $sbtn->isi_sambutan !!}
+                        @endforeach
+                    </p>
                     <!-- <a href="#" class="button_all">Contact Now</a> -->
                 </div>
                 <div class="col-md-5 col-sm-6 about_client">
-                    <img src="{{ asset('assets_frontend/images/about_client.jpg') }}" alt="">
+                    <img src="{{ asset('assets_frontend/images/bupati.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -93,7 +97,6 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>TAUTAN TERKAIT</h2>
-                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
             </div>
             <div class="row construction_iner">
                 <div class="col-md-3 col-sm-6 construction">
@@ -101,7 +104,7 @@
                         <img src="{{ asset('assets_frontend/images/cns-1.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <i class="fa fa-link" aria-hidden="true"></i>
                         <a href="http://lpse.kutaitimurkab.go.id/">LPSE KUTAI TIMUR</a>
                         <p>Layanan Pengadaan Secara Elektronik (LPSE)</p><br>
                    </div>
@@ -111,7 +114,7 @@
                         <img src="{{ asset('assets_frontend/images/cns-2.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                        <i class="fa fa-link" aria-hidden="true"></i>
                         <a href="https://www.pu.go.id/">PU-net</a>
                         <p>Kementrian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia </p>
                    </div>
@@ -121,7 +124,7 @@
                         <img src="{{ asset('assets_frontend/images/cns-3.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                        <i class="fa fa-link" aria-hidden="true"></i>
                         <a href="https://sirup.lkpp.go.id/sirup">SIRUP</a>
                         <p>Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah</p><br>
                    </div>
@@ -131,7 +134,7 @@
                         <img src="{{ asset('assets_frontend/images/cns-1.jpg') }}" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <i class="fa fa-link" aria-hidden="true"></i>
                         <a href="http://www.kutaitimurkab.go.id/">PEMERINTAH KUTIM</a>
                         <p>Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
                    </div>

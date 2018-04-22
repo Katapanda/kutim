@@ -16,34 +16,28 @@ class BeritaController extends Controller
     public function index()
     {
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
+        $sambutan = Sambutan::limit(1)->offset(0)->get();
     	
-    	$berita = Berita::limit(25)->offset(0)->get();
-    	$breaking_news = Berita::limit(5)->offset(0)->get(['id','judul_berita']);
-    	$sliders = Berita::limit(3)->offset(0)->get();
-    	$slider_sides = Berita::limit(2)->offset(1)->get();
+    	// $berita = Berita::limit(25)->offset(0)->get();
+    	// $breaking_news = Berita::limit(5)->offset(0)->get(['id','judul_berita']);
+    	// $sliders = Berita::limit(3)->offset(0)->get();
+    	// $slider_sides = Berita::limit(2)->offset(1)->get();
         
-        $photos = Album::limit(1)->offset(0)->get();
-        $sambutans = Sambutan::limit(1)->offset(0)->get();
-        $videos = Video::limit(1)->offset(0)->get();
+     //    $photos = Album::limit(1)->offset(0)->get();
+     //    $videos = Video::limit(1)->offset(0)->get();
 
     	return view('modules.berita.index', compact(
-    		'berita',
-    		'breaking_news',
-    		'photos',
-    		'sambutans',
-    		'sliders',
-    		'slider_sides',
-    		'videos'
+    		'sambutan'
     	));
     }
 
     public function detail($id)
     {
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
-        $sambutans = Sambutan::limit(1)->offset(0)->get();
+        $sambutan = Sambutan::limit(1)->offset(0)->get();
         
     	return view('modules.berita.detail', compact(
-    		'sambutans'
+    		'sambutan'
     	));
     }
 }
