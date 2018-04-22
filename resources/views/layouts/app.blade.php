@@ -12,18 +12,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ asset('assets_frontend/images/favicon.ico') }}" type="image/x-icon">
-        <link rel="icon" href="{{ asset('assets_frontend/images/favicon.ico') }}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{ asset('assets_frontend/images/favicon.png') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('assets_frontend/images/favicon.png') }}" type="image/x-icon">
 
         {{-- include style css --}}
         @include('includes.style')
 
     </head>
-    {{-- Verner Panton : #F2C45A; Cantaloupe Skin : #BFB35A; Knoll : #5E8C6A --}}
-    <body style="background-color: #EBE18C;">
 
-        <!-- Pre-Loader -->
-        <div id="page-preloader"><span class="spinner"></span></div>
+    <body>
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
         <!-- End Pre-Loader -->
 
         {{-- include topbar --}}

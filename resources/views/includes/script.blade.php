@@ -3,38 +3,23 @@ JavaScript Files
 ========================================== -->
 
 <!-- jQuery JS -->
-<script src="{{ asset('assets_frontend/js/assets/vendor/jquery-1.12.4.min.js') }}"></script>
-
-<!-- Poppers Js -->
-<script src="{{ asset('assets_frontend/js/assets/popper.js') }}"></script>
-
-<!-- Bootstrap -->
-<script src="{{ asset('assets_frontend/js/assets/bootstrap.min.js') }}"></script>
-	
-<!-- Sticky Js -->
-<script src="{{ asset('assets_frontend/js/assets/jquery.sticky.js') }}"></script>
-
-<!-- WOW JS -->
-<script src="{{ asset('assets_frontend/js/assets/wow.min.js') }}"></script>
-
-<!-- Smooth Scroll -->
-<script src="{{ asset('assets_frontend/js/assets/smooth-scroll.js') }}"></script>
-
-<!-- Mean Menu -->
-<script src="{{ asset('assets_frontend/js/assets/jquery.meanmenu.min.js') }}"></script>
-
-<!-- News Ticker -->
-<script src="{{ asset('assets_frontend/js/assets/jquery.newsticker.min.js') }}"></script>
-
-<!-- Owl Carousel -->
-<script src="{{ asset('assets_frontend/js/assets/owl.carousel.min.js') }}"></script>
-
-<!-- Magnific Popup -->
-<script src="{{ asset('assets_frontend/js/assets/jquery.magnific-popup.min.js') }}"></script>
-
-<!-- Syotimer -->
-<script src="{{ asset('assets_frontend/js/assets/jquery.syotimer.min.js') }}"></script>
-
-<!-- Custom JS -->
-<script src="{{ asset('assets_frontend/js/plugins.js') }}"></script>
-<script src="{{ asset('assets_frontend/js/custom.js') }}"></script>
+<script src="{{ asset('assets_frontend/js/jquery-1.12.0.min.js') }}"></script>
+<!-- Bootstrap JS -->
+<script src="{{ asset('assets_frontend/js/bootstrap.min.js') }}"></script>
+<!-- Animate JS -->
+<script src="{{ asset('assets_frontend/vendors/animate/wow.min.js') }}"></script>
+<!-- Camera Slider -->
+<script src="{{ asset('assets_frontend/vendors/camera-slider/jquery.easing.1.3.js') }}"></script>
+<script src="{{ asset('assets_frontend/vendors/camera-slider/camera.min.js') }}"></script>
+<!-- Isotope JS -->
+<script src="{{ asset('assets_frontend/vendors/isotope/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('assets_frontend/vendors/isotope/isotope.pkgd.min.js') }}"></script>
+<!-- Progress JS -->
+<script src="{{ asset('assets_frontend/vendors/Counter-Up/jquery.counterup.min.js') }}"></script>
+<script src="{{ asset('assets_frontend/vendors/Counter-Up/waypoints.min.js') }}"></script>
+<!-- Owlcarousel JS -->
+<script src="{{ asset('assets_frontend/vendors/owl_carousel/owl.carousel.min.js') }}"></script>
+<!-- Stellar JS -->
+<script src="{{ asset('assets_frontend/vendors/stellar/jquery.stellar.js') }}"></script>
+<!-- Theme JS -->
+<script src="{{ asset('assets_frontend/js/theme.js') }}"></script>

@@ -1,128 +1,66 @@
-<!-- Menu Area -->
-<section class="menu-area">
+<!-- Header_Area -->
+<nav class="navbar navbar-default header_aera" id="main_navbar">
     <div class="container">
-        <div class="menu-content">
-            <div class="row">
-                <div class="col-lg-10 col-md-12">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'beranda') ? 'active' : '' }}"><a href="{{ route('beranda') }}">BERANDA</a></li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'profil') ? 'active' : '' }}"><a>PROFIL<i class="fa fa-angle-down"></i></a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a data-toggle="modal" data-target="#sambutan-modal">SAMBUTAN</a>
-                                </li>
-                                <li class="{{ (\Request::route()->getName() == 'sejarah') ? 'active' : '' }}">
-                                    <a href="{{ route('sejarah') }}">SEJARAH</a>
-                                </li>
-                                <li class="{{ (\Request::route()->getName() == 'struktur_organisasi') ? 'active' : '' }}">
-                                    <a href="{{ route('struktur_organisasi') }}">STRUKTUR ORGANISASI</a>
-                                </li>
-                                <li class="{{ (\Request::route()->getName() == 'tupoksi') ? 'active' : '' }}">
-                                    <a href="{{ route('tupoksi') }}">TUPOKSI</a>
-                                </li>
-                                <li class="{{ (\Request::route()->getName() == 'visi_misi') ? 'active' : '' }}">
-                                    <a href="{{ route('visi_misi') }}">VISI DAN MISI</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'berita') ? 'active' : '' }}">
-                            <a href="{{ route('berita') }}">BERITA</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'artikel') ? 'active' : '' }}">
-                            <a href="{{ route('artikel') }}">ARTIKEL</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'agenda') ? 'active' : '' }}">
-                            <a href="{{ route('agenda') }}">AGENDA</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'pengumuman') ? 'active' : '' }}">
-                            <a href="{{ route('pengumuman') }}">PENGUMUMAN</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'foto') ? 'active' : '' }}">
-                            <a href="{{ route('foto') }}">FOTO</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'video') ? 'active' : '' }}">
-                            <a href="{{ route('video') }}">VIDEO</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'peta') ? 'active' : '' }}">
-                            <a href="{{ route('peta') }}">PETA</a>
-                        </li>
-                        <li class="list-inline-item {{ (\Request::route()->getName() == 'kontak') ? 'active' : '' }}">
-                            <a href="{{ route('kontak') }}">KONTAK</a>
-                        </li>
-                    </ul>
+        <!-- searchForm -->
+        <div class="searchForm">
+            <form action="#" class="row m0">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="search" name="search" class="form-control" placeholder="Pencarian ...">
+                    <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
                 </div>
-                <div class="col-lg-2 col-md-12">
-                    <div class="clock text-right">
-                        <span id="dg-clock"></span>
-                    </div>
-                </div>
+            </form>
+        </div><!-- End searchForm -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="col-md-2 p0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=""><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a>
             </div>
         </div>
-    </div>
-</section>
-<!-- End Menu Area -->
 
-<!-- Mobile Menu -->
-<section class="mobile-menu-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="mobile-menu">
-                    <nav id="dropdown">
-                        <a href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt="" class="img-fluid" width="400" height="800"></a>
-                        <a href=""><i class="fa fa-home"></i></a>
-                        <ul>
-                            <li class="list-inline-item"><a href="{{ route('beranda') }}">Beranda</a></li>
-                            <li class="list-inline-item"><a href="">PROFIL</a>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a data-toggle="modal" data-target="#sambutan-modal">SAMBUTAN</a>
-                                    </li>
-                                    <li class="{{ (\Request::route()->getName() == 'sejarah') ? 'active' : '' }}">
-                                        <a href="{{ route('sejarah') }}">SEJARAH</a>
-                                    </li>
-                                    <li class="{{ (\Request::route()->getName() == 'struktur_organisasi') ? 'active' : '' }}">
-                                        <a href="{{ route('struktur_organisasi') }}">STRUKTUR ORGANISASI</a>
-                                    </li>
-                                    <li class="{{ (\Request::route()->getName() == 'tupoksi') ? 'active' : '' }}">
-                                        <a href="{{ route('tupoksi') }}">TUPOKSI</a>
-                                    </li>
-                                    <li class="{{ (\Request::route()->getName() == 'visi_misi') ? 'active' : '' }}">
-                                        <a href="{{ route('visi_misi') }}">VISI DAN MISI</a>
-                                    </li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'berita') ? 'active' : '' }}">
-                                <a href="{{ route('berita') }}">BERITA</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'artikel') ? 'active' : '' }}">
-                                <a href="{{ route('artikel') }}">ARTIKEL</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'agenda') ? 'active' : '' }}">
-                                <a href="{{ route('agenda') }}">AGENDA</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'pengumuman') ? 'active' : '' }}">
-                                <a href="{{ route('pengumuman') }}">PENGUMUMAN</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'foto') ? 'active' : '' }}">
-                                <a href="{{ route('foto') }}">FOTO</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'video') ? 'active' : '' }}">
-                                <a href="{{ route('video') }}">VIDEO</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'peta') ? 'active' : '' }}">
-                                <a href="{{ route('peta') }}">PETA</a>
-                            </li>
-                            <li class="list-inline-item {{ (\Request::route()->getName() == 'kontak') ? 'active' : '' }}">
-                                <a href="{{ route('kontak') }}">KONTAK</a>
-                            </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="col-md-10 p0">
+            <div class="collapse navbar-collapse" id="min_navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="">Beranda</a>
+                    </li>
+                    <li class="dropdown submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
+                        <ul class="dropdown-menu other_dropdwn">
+                            <li><a href="">Dasar Hukum</a></li>
+                            <li><a href="">Struktur Organisasi</a></li>
+                            <li><a href="">Tugas Pokok dan Fungsi</a></li>
+                            <li><a href="">Visi dan Misi</a></li>
                         </ul>
-                    </nav>
-                </div>
-            </div>
+                    </li>
+                    <li class="dropdown submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informasi</a>
+                        <ul class="dropdown-menu other_dropdwn">
+                            <li><a href="">Berita</a></li>
+                            <li><a href="">Artikel</a></li>
+                            <li><a href="">Agenda</a></li>
+                            <li><a href="">Pengumuman</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foto</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Foto</a></li>
+                            <li><a href="">Video</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Kontak</a></li>
+                    <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </div>
-    </div>
-</section>
-<!-- End Mobile Menu -->
+    </div><!-- /.container -->
+</nav>
+<!-- End Header_Area -->

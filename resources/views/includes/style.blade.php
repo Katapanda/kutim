@@ -1,32 +1,13 @@
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
-<!-- Bootstrap -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/bootstrap.min.css') }}">
-
-<!-- Fontawesome Icon -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/font-awesome.min.css') }}">
-
+<!-- Bootstrap CSS -->
+<link href="{{ asset('assets_frontend/css/bootstrap.min.css') }}" rel="stylesheet">
 <!-- Animate CSS -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/animate.css') }}">
+<link href="{{ asset('assets_frontend/vendors/animate/animate.css') }}" rel="stylesheet">
+<!-- Icon CSS-->
+<link rel="stylesheet" href="{{ asset('assets_frontend/vendors/font-awesome/css/font-awesome.min.css') }}">
+<!-- Camera Slider -->
+<link rel="stylesheet" href="{{ asset('assets_frontend/vendors/camera-slider/camera.css') }}">
+<!-- Owlcarousel CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/vendors/owl_carousel/owl.carousel.css') }}" media="all">
 
-<!-- Mean Menu -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/meanmenu.min.css') }}">
-
-<!-- Owl Carousel -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/owl.carousel.min.css') }}">
-
-<!-- Magnific Popup -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/magnific-popup.css') }}">
-
-<!-- Custom Style -->
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/normalize.css') }}">
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('assets_frontend/css/assets/responsive.css') }}">
-
-<script>
-	
-     $(window).load(function(){        
-   $('#sambutan-modal').modal('show');
-    }); 
-</script>
+<!--Theme Styles CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/style.css') }}" media="all" />
