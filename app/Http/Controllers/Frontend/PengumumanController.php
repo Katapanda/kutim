@@ -13,13 +13,14 @@ class PengumumanController extends Controller
 {
     public function index()
     {
-    	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $kontak = Kontak::limit(1)->offset(0)->get();
         $pengumuman = Pengumuman::limit(4)->offset(0)->get();
+        $tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         
     	return view('modules.pengumuman.index', compact(
     		'kontak',
-            'pengumuman'
+            'pengumuman',
+            'tanggal_sekarang'
     	));
     }
 
@@ -30,9 +31,9 @@ class PengumumanController extends Controller
         $pengumuman = Pengumuman::get();
         
     	return view('modules.pengumuman.detail', compact(
-    		'tanggal_sekarang',
             'kontak',
-            'pengumuman'
+            'pengumuman',
+            'tanggal_sekarang'
     	));
     }
 }

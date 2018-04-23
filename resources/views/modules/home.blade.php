@@ -154,22 +154,22 @@
             <div class="achievments_row row">
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-connectdevelop" aria-hidden="true"></i>
-                    <span class="counter">20</span>
+                    <span class="counter">{{ count($berita) }}</span>
                     <h6>BERITA</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    <span class="counter">13</span>
+                    <span class="counter">{{ count($artikel) }}</span>
                     <h6>ARTIKEL</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-child" aria-hidden="true"></i>
-                    <span class="counter">5</span>
+                    <span class="counter">{{ count($agenda) }}</span>
                     <h6>AGENDA</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
-                    <span class="counter">2</span>
+                    <span class="counter">{{ count($pengumuman) }}</span>
                     <h6>PENGUMUMAN</h6>
                 </div>
             </div>

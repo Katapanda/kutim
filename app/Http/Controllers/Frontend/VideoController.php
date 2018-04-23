@@ -7,16 +7,19 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Kontak;
+use App\Models\Video;
 
 class VideoController extends Controller
 {
     public function index()
     {
-    	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $kontak = Kontak::limit(1)->offset(0)->get();
+    	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
+    	$video = Video::get();
         
     	return view('modules.video', compact(
-    		'kontak'
+    		'kontak',
+    		'video'
     	));
     }
 }

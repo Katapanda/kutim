@@ -20,14 +20,24 @@
     <!-- End Banner area -->
 
     <!-- Video -->
-    <section class="building_construction_area">
+    <section class="blog_tow_area">
         <div class="container">
-            <div class="row building_construction_row">
-                <div class="col-sm-8 constructing_laft">
-                    <h2>Video</h2>
-                    
-                </div>
-            </div>
+           <div class="row blog_tow_row">
+                @foreach($video as $vd)
+                    <div class="col-md-4 col-sm-6">
+                        <div class="renovation">
+                            <iframe width="100%" height="200"
+                            src="{!! $vd->link_video !!}">
+                            </iframe>
+                            <div class="renovation_content">
+                                <a class="clipboard" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                                <a class="tittle" href="{{ route('berita.detail', [1]) }}">{!! substr($vd->nama_kegiatan, 0, 35) . '...' !!}</a>
+                                <p>{!! substr($vd->keterangan, 0, 75) . '...' !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+           </div>
         </div>
     </section>
     <!-- End Video -->
