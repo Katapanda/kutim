@@ -20,7 +20,7 @@
 
     </head>
     {{-- Verner Panton : #F2C45A; Cantaloupe Skin : #BFB35A; Knoll : #5E8C6A --}}
-    <body style="background-color: #EBE18C;">
+    <body style="background-image: url('{{ asset('images/vintage.jpg') }}');">
 
         <!-- Pre-Loader -->
         <div id="page-preloader"><span class="spinner"></span></div>
