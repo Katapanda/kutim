@@ -23,7 +23,7 @@
                     </button>
 
                 </div>
-                <div class="card-block" style="float: center;">
+                <!-- <div class="card-block" style="float: center;">
                     <div class="row">
                         <div class="col-md-12">
                             <h6>Filter</h6>
@@ -37,15 +37,15 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="card-block">
                     <div class="row">
                         <div class="col-sm-12 table-responsive">
                             <table id="tupoksi-table" class="table table-stripped">
                                 <thead>
                                     <tr>
-                                        <th>ISi Tupoksi</th>
-                                        <th style="min-width: 150px">Aksi</th>
+                                        <th>Isi Tupoksi</th>
+                                        <th style="min-width: 30%">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody></tbody>

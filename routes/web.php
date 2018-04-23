@@ -16,8 +16,26 @@
 //     return view('modules.home');
 // });
 
+// FRONTEND
 
-Route::get('/', 'Frontend\HomeController@index')->name('home');
+Route::get('/', 'Frontend\BerandaController@index')->name('beranda');
+Route::get('/sejarah', 'Frontend\SejarahController@index')->name('sejarah');
+Route::get('/dasar-hukum', 'Frontend\DasarHukumController@index')->name('dasar-hukum');
+Route::get('/struktur-organisasi', 'Frontend\StrukturOrganisasiController@index')->name('struktur-organisasi');
+Route::get('/tugas-pokok-dan-fungsi', 'Frontend\TupoksiController@index')->name('tugas-pokok-dan-fungsi');
+Route::get('/visi-misi', 'Frontend\VisiMisiController@index')->name('visi-misi');
+Route::get('/berita', 'Frontend\BeritaController@index')->name('berita');
+Route::get('/berita/{id}/detail', 'Frontend\BeritaController@detail')->name('berita.detail');
+Route::get('/artikel', 'Frontend\ArtikelController@index')->name('artikel');
+Route::get('/artikel/{id}/detail', 'Frontend\ArtikelController@detail')->name('artikel.detail');
+Route::get('/agenda', 'Frontend\AgendaController@index')->name('agenda');
+Route::get('/agenda/{id}/detail', 'Frontend\AgendaController@detail')->name('agenda.detail');
+Route::get('/pengumuman', 'Frontend\PengumumanController@index')->name('pengumuman');
+Route::get('/pengumuman/{id}/detail', 'Frontend\PengumumanController@detail')->name('pengumuman.detail');
+Route::get('/foto', 'Frontend\FotoController@index')->name('foto');
+Route::get('/video', 'Frontend\VideoController@index')->name('video');
+Route::get('/peta', 'Frontend\PetaController@index')->name('peta');
+Route::get('/kontak', 'Frontend\KontakController@index')->name('kontak');
 
 
 Auth::routes();
@@ -86,6 +104,14 @@ Route::group(['middleware' => ['auth']], function () {
 		Route::get('api/sejarah', 'SejarahController@apiSejarah')->name('admin.api.sejarah');
 		Route::get('api/sejarah/ajaxtampil/{id}', 'SejarahController@ajax_tampil');
 
+		Route::resource('dasar_hukum', 'DasarHukumController');
+		Route::get('api/dasar_hukum', 'DasarHukumController@apidasar_hukum')->name('admin.api.dasar_hukum');
+		Route::get('api/dasar_hukum/ajaxtampil/{id}', 'DasarHukumController@ajax_tampil');
+
+		Route::resource('kontak', 'KontakController');
+		Route::get('api/kontak', 'KontakController@apiKontak')->name('admin.api.kontak');
+		Route::get('api/kontak/ajaxtampil/{id}', 'KontakController@ajax_tampil');
+
 		Route::get('album/detail/{id}', 'AlbumController@detailalbum');
 		Route::post('api/imgalbum', 'AlbumController@uploadfoto');
 		Route::resource('album', 'AlbumController');
@@ -104,7 +130,6 @@ Route::group(['middleware' => ['auth']], function () {
 		Route::get('api/so', 'StrukturOrganisasiController@apiSO')->name('admin.api.so');
 		Route::get('api/sodetail/{id}', 'SoDetailController@apiSODetail')->name('admin.api.sodetail');
 	});
-
 });
 // API FRONTEND
 Route::get('api/home', 'Frontend\HomeController@index')->name('api.home');
