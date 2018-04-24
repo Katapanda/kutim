@@ -29,10 +29,12 @@ class PengumumanController extends Controller
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $kontak = Kontak::limit(1)->offset(0)->get();
         $pengumuman = Pengumuman::get();
+        $pengumuman_detail = Pengumuman::find($id);
         
     	return view('modules.pengumuman.detail', compact(
             'kontak',
             'pengumuman',
+            'pengumuman_detail',
             'tanggal_sekarang'
     	));
     }

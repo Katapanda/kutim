@@ -28,10 +28,12 @@ class AgendaController extends Controller
     {
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $agenda = Agenda::get();
+        $agenda_detail = Agenda::find($id);
         $kontak = Kontak::limit(1)->offset(0)->get();
         
     	return view('modules.agenda.detail', compact(
             'agenda',
+            'agenda_detail',
             'kontak',
             'tanggal_sekarang'
     	));
