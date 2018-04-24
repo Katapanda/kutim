@@ -80,7 +80,7 @@
                                     </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="">{!! substr($ag->nama_kegiatan, 0, 100) . '...' !!}</a>
+                                    <a href="{{ route('agenda.detail', [$ag->id]) }}" title="{{ $ag->judul_pengumuman }}">{!! substr($ag->nama_kegiatan, 0, 35) . '...' !!}</a>
                                     <h6>{{ tanggal_indo($ag->tanggal) }}</h6>
                                 </div>
                             </div>

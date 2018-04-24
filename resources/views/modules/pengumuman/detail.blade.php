@@ -58,7 +58,7 @@
                                     </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="">{!! substr($pgm->judul_pengumuman, 0, 100) . '...' !!}</a>
+                                    <a href="{{ route('pengumuman.detail', [$pgm->id]) }}" title="{{ $pgm->judul_pengumuman }}">{!! substr($pgm->judul_pengumuman, 0, 35) . '...' !!}</a>
                                     <h6>{{ tanggal_indo($pgm->tanggal_publish) }}</h6>
                                 </div>
                             </div>

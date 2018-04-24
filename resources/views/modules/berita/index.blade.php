@@ -23,132 +23,26 @@
     <section class="blog_tow_area">
         <div class="container">
            <div class="row blog_tow_row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-1.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="{{ route('berita.detail', [1]) }}">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
+                @foreach($berita as $br)
+                    <div class="col-md-4 col-sm-6">
+                        <div class="renovation">
+                            <img src="{{ asset($br->foto_berita) }}" alt="" width="100%" height="200">
+                            <div class="renovation_content">
+                                <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
+                                <a class="tittle" href="{{ route('berita.detail', [$br->id]) }}" title="{{ $br->judul_berita }}">
+                                    {!! substr($br->judul_berita, 0, 35) . '...' !!}
+                                </a>
+                                <div class="date_comment">
+                                    <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                        {{ tanggal_indo($br->tanggal_publish) }}
+                                    </a>
+                                    <!-- <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a> -->
+                                </div>
+                                <p>{!! strip_tags(substr($br->isi_berita, 0, 125)) . '...' !!}</p>
                             </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-2.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-3.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-4.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-5.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-6.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-7.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-8.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="renovation">
-                        <img src="{{ asset('assets_frontend/images/blog/renovation/r-9.jpg') }}" alt="">
-                        <div class="renovation_content">
-                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                            <a class="tittle" href="#">Commercial Construction &amp; Renovation</a>
-                            <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>October 20, 2016</a>
-                                <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>3</a>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
            </div>
         </div>
     </section>
