@@ -6,29 +6,38 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Artikel;
 use App\Models\Kontak;
 
 class ArtikelController extends Controller
 {
     public function index()
     {
-    	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
+        $artikel = Artikel::get();
+        $artikel_detail = Artikel::find(1);
         $kontak = Kontak::limit(1)->offset(0)->get();
+        $tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
 
     	return view('modules.artikel.index', compact(
-    		'tanggal_sekarang', 
-            'kontak'
+            'artikel',
+            'artikel_detail',
+            'kontak',
+            'tanggal_sekarang'
     	));
     }
 
     public function detail($id)
     {
-    	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
+        $artikel = Artikel::get();
+        $artikel_detail = Artikel::find($id);
         $kontak = Kontak::limit(1)->offset(0)->get();
+        $tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         
     	return view('modules.artikel.detail', compact(
-    		'tanggal_sekarang',
-            'kontak'
+            'artikel',
+            'artikel_detail',
+            'kontak',
+            'tanggal_sekarang'
     	));
     }
 }
