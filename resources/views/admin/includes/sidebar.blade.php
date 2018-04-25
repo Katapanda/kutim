@@ -3,11 +3,11 @@
   <section class="sidebar" id="sidebar-scroll">
     
     <div class="user-panel">
-      <div class="f-left image"><img src="{{ asset('assets/images/avatar-1.png') }}" alt="User Image" class="img-circle">
+      <div class="f-left image"><img class="img-fluid able-logo" src="{{ asset('assets_frontend/images/logo.png') }}" alt="Theme-logo" style="height: 100%"> 
       </div>
       <div class="f-left info">
-        <p>Irfan Rangga Gumilar</p>
-        <p class="designation">ADMIN <i class="icofont icofont-caret-down m-l-5"></i></p>
+        <p style="font-size: 12px">DINAS PERUMAHAN DAN <br>KAWASAN PEMUKIMAN</p>
+        <p class="designation" style="font-size: 9px">KABUPATEN KUTAI TIMUR <i class="icofont icofont-caret-down m-l-5"></i></p>
       </div>
     </div>
     <!-- sidebar profile Menu-->

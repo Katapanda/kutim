@@ -1,6 +1,6 @@
 <header class="main-header-top hidden-print" >
-  <a href="index.html" class="logo">
-    <img class="img-fluid able-logo" src="{{ asset('assets_frontend/images/logo.png') }}" alt="Theme-logo">
+  <a href="index.html" class="logo" style="font-size: 14px">
+    DISPERKIM
   </a>
   <nav class="navbar navbar-static-top">
     <!-- Sidebar toggle button-->
@@ -14,48 +14,7 @@
               <i class="icofont icofont-search-alt-1"></i>
           </a>
         </li>
-        <li class="dropdown notification-menu">
-          <a href="#!" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-            <i class="icon-bell"></i>
-            <span class="badge badge-danger header-badge">9</span>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="not-head">You have <b class="text-primary">4</b> new notifications.</li>
-            <li class="bell-notification">
-              <a href="javascript:;" class="media">
-                <span class="media-left media-icon">
-                  <img class="img-circle" src="{{ asset('assets/images/avatar-1.png') }}" alt="User Image">
-                </span>
-                <div class="media-body">
-                  <span class="block">Lisa sent you a mail</span><span class="text-muted block-time">2min ago</span>
-                </div>
-              </a>
-            </li>
-            <li class="bell-notification">
-              <a href="javascript:;" class="media">
-                <span class="media-left media-icon">
-                  <img class="img-circle" src="{{ asset('assets/images/avatar-2.png') }}" alt="User Image">
-                </span>
-                <div class="media-body">
-                  <span class="block">Server Not Working</span><span class="text-muted block-time">20min ago</span>
-                </div>
-              </a>
-            </li>
-            <li class="bell-notification">
-              <a href="javascript:;" class="media">
-                <span class="media-left media-icon">
-                  <img class="img-circle" src="{{ asset('assets/images/avatar-3.png') }}" alt="User Image">
-                </span>
-                <div class="media-body">
-                  <span class="block">Transaction xyz complete</span><span class="text-muted block-time">3 hours ago</span>
-                </div>
-              </a>
-            </li>
-            <li class="not-footer">
-              <a href="#!">See all notifications.</a>
-            </li>
-          </ul>
-        </li>
+        
         <!-- window screen -->
         <li class="pc-rheader-submenu">
           <a href="#!" class="drop icon-circle" onclick="javascript:toggleFullScreen()">
@@ -71,8 +30,8 @@
             <span>Irfan Rangga Gumilar <i class=" icofont icofont-simple-down"></i></span>
           </a>
           <ul class="dropdown-menu settings-menu">
-            <li><a href="profile.html"><i class="icon-user"></i> Profil</a></li>
-            <li><a href="message.html"><i class="icon-envelope-open"></i> Pesan</a></li>
+            {{-- <li><a href="profile.html"><i class="icon-user"></i> Profil</a></li>
+            <li><a href="message.html"><i class="icon-envelope-open"></i> Pesan</a></li> --}}
             <li class="p-0">
               <div class="dropdown-divider m-0"></div>
             </li>
