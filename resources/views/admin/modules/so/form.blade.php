@@ -5,7 +5,7 @@
                 <h4 class="modal-title" id="defaultModalLabel">Detail Jabatan</h4>
             </div>
             <div class="modal-body">
-                <input type="hidden" id="id" name="id">
+                <input type="hidden" id="id_hps" name="id">
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-striped table-bordered">
@@ -16,6 +16,7 @@
                                     <td>Email</td>
                                     <td>Bidang</td>
                                     <td>Sub Bidang</td>
+                                    <td>Aksi</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,6 +26,7 @@
                                     <td id="email"></td>
                                     <td id="bidang"></td>
                                     <td id="sub_bidang"></td>
+                                    <td id="aksi"></td>
                                 </tr>
                             </tbody>
                         </table>

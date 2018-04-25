@@ -10,4 +10,5 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/vendors/owl_carousel/owl.carousel.css') }}" media="all">
 
 <!--Theme Styles CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/orgchart/orgchart.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/style.css') }}" media="all" />

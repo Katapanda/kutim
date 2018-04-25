@@ -19,25 +19,32 @@
                     <h5 class="card-header-text">Struktur Organisasi</h5>
 
                 </div>
-                <div class="card-block">
+                <div class="card-block" >
                     <div class="row" style="overflow-y: auto;overflow-x: scroll;">
                         <ul id="tree-data" style="display:none;">
                             <li id="root" >
+                                @if ($kepala_dinas)
                                 <a href="#" onclick="detail('Kepala Dinas')" style="color: #fff;">
                                     <img src="{{ url($kepala_dinas['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                    <p>Kepala Dinas<br>{{ $kepala_dinas['nama'] }} </p>
+                                    <p style="color: #fff;">Kepala Dinas<br>{{ $kepala_dinas['nama'] }} </p>
                                 </a>
+                                @else 
+                                <a href="#" onclick="detail('Kepala Dinas')" style="color: #fff;">
+                                    <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
+                                    <p style="color: #fff;">Kepala Dinas<br></p>
+                                </a>
+                                @endif
                                 <ul>
                                     <li id="node1">
                                         @if ($kjf)
                                         <a href="#" onclick="detail('Kelmpok Jabatan Fungsional')">
                                             <img src="{{ url($kjf['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                            <p>Kelmpok Jabatan Fungsional <br> {{ $kjf['nama'] }}. </p>
+                                            <p style="color: #fff;">Kelmpok Jabatan Fungsional <br> {{ $kjf['nama'] }}. </p>
                                         </a>
                                         @else 
                                         <a href="#" onclick="detail('Kelmpok Jabatan Fungsional')">
                                             <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                            <p>Kelmpok Jabatan Fungsional <br>. </p>
+                                            <p style="color: #fff;">Kelmpok Jabatan Fungsional <br>. </p>
                                         </a>
                                         @endif
                                     </li>
@@ -46,51 +53,51 @@
                                         @if ($kbp)
                                         <a href="#" onclick="detail('Kepala Bidang Perumahan')">
                                             <img src="{{ url($kbp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                            <p>Kepala Bidang Perumahan <br> {{ $kbp['nama'] }}</p>
+                                            <p style="color: #fff;">Kepala Bidang Perumahan <br> {{ $kbp['nama'] }}</p>
                                         </a>
                                         @else
                                         <a href="#" onclick="detail('Kepala Bidang Perumahan')">
                                             <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                            <p>Kepala Bidang Perumahan <br></p>
+                                            <p style="color: #fff;">Kepala Bidang Perumahan <br></p>
                                         </a>
                                         @endif
                                         <ul>
                                             <li id="node6">
                                                 @if ($kpme)
-                                                <a href="#" onclick="detail('Kasii Perencanaan, Monitoring & Evaluasi')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Perencanaan, Monitoring & Evaluasi')">
                                                 <img src="{{ url($kpme['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasii Perencanaan, Monitoring & Evaluasi <br> {{ $kpme['nama'] }}
+                                                    Kasubbid Perencanaan, Monitoring & Evaluasi <br> {{ $kpme['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasii Perencanaan, Monitoring & Evaluasi')">
+                                                <a href="#" style="color: #fff;"  onclick="detail('Kasubbid Perencanaan, Monitoring & Evaluasi')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasii Perencanaan, Monitoring & Evaluasi <br>
+                                                    Kasubbid Perencanaan, Monitoring & Evaluasi <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kpn)
-                                                <a href="#" onclick="detail('Kasi Penyediaan')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Penyediaan')">
                                                 <img src="{{ url($kpn['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Penyediaan <br> {{ $kpn['nama'] }}
+                                                    Kasubbid Penyediaan <br> {{ $kpn['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasi Penyediaan')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Penyediaan')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Penyediaan <br>
+                                                    Kasubbid Penyediaan <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kpm)
-                                                <a href="#" onclick="detail('Kasi Pembiayaan')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Pembiayaan')">
                                                 <img src="{{ url($kpm['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Pembiayaan <br> {{ $kpm['nama'] }}
+                                                    Kasubbid Pembiayaan <br> {{ $kpm['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasi Pembiayaan')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Pembiayaan')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Pembiayaan <br>
+                                                    Kasubbid Pembiayaan <br>
                                                 </a>
                                                 @endif
                                             </li>
@@ -100,12 +107,12 @@
                                         @if ($usp)
                                         <a href="#" onclick="detail('UPT Sangata Utara')">
                                             <img src="{{ url($usp['foto']) }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>UPT Sangata Utara <br> {{ $usp['nama'] }}</p>
+                                            <p style="color: #fff;">UPT Sangata Utara <br> {{ $usp['nama'] }}</p>
                                         </a>
                                         @else
                                         <a href="#" onclick="detail('UPT Sangata Utara')">
                                             <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>UPT Sangata Utara <br></p>
+                                            <p style="color: #fff;">UPT Sangata Utara <br></p>
                                         </a>
                                         @endif
                                     </li>
@@ -113,12 +120,12 @@
                                         @if ($uss)
                                         <a href="#" onclick="detail('UPT Sangata Selatan')">
                                             <img src="{{ url($uss['foto']) }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>UPT Sangata Selatan <br> {{ $uss['nama'] }}</p>
+                                            <p style="color: #fff;">UPT Sangata Selatan <br> {{ $uss['nama'] }}</p>
                                         </a>
                                         @else
                                         <a href="#" onclick="detail('UPT Sangata Selatan')">
                                             <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>UPT Sangata Selatan <br></p>
+                                            <p style="color: #fff;">UPT Sangata Selatan <br></p>
                                         </a>
                                         @endif
                                     </li>
@@ -126,49 +133,51 @@
                                         @if ($kbkp)
                                         <a href="#" onclick="detail('Kepla Bidang Kawasan Pemukiman')">
                                             <img src="{{ url($kbkp['foto']) }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>Kepla Bidang Kawasan Pemukiman <br> {{ $kbkp['nama'] }}</p>
+                                            <p style="color: #fff;">Kepla Bidang Kawasan Pemukiman <br> {{ $kbkp['nama'] }}</p>
                                         </a>
                                         @else
                                         <a href="#" onclick="detail('Kepla Bidang Kawasan Pemukiman')">
                                             <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>Kepla Bidang Kawasan Pemukiman <br></p>
+                                            <p style="color: #fff;">Kepla Bidang Kawasan Pemukiman <br></p>
                                         </a>
                                         @endif
                                        <ul>
                                             <li id="node6">
                                                 @if ($kpdp)
-                                                <a href="#" onclick="detail('Kasi Pendataan Dan Perencanaan')"> Kasi Pendataan Dan Perencanaan <br> {{ $kpdp['nama'] }}
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Pendataan Dan Perencanaan')"> 
                                                 <img src="{{ url($kpdp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
+                                                Kasubbid Pendataan Dan Perencanaan <br> {{ $kpdp['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasi Pendataan Dan Perencanaan')"> Kasi Pendataan Dan Perencanaan <br>
-                                                <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Pendataan Dan Perencanaan')">
+                                                    <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
+                                                     Kasubbid Pendataan Dan Perencanaan <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kpdpk)
-                                                <a href="#" onclick="detail('Kasi Pencegahan Dan Peningkatan Kualitas')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Pencegahan Dan Peningkatan Kualitas')">
                                                 <img src="{{ url($kpdpk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Pencegahan Dan Peningkatan Kualitas <br> {{ $kpdpk['nama'] }}
+                                                    Kasubbid Pencegahan Dan Peningkatan Kualitas <br> {{ $kpdpk['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasi Pencegahan Dan Peningkatan Kualitas')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Pencegahan Dan Peningkatan Kualitas')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Pencegahan Dan Peningkatan Kualitas <br>
+                                                    Kasubbid Pencegahan Dan Peningkatan Kualitas <br>
                                                 </a>
                                                 @endif
                                             </li>
                                             <li id="node6">
                                                 @if ($kmdp)
-                                                <a href="#" onclick="detail('Kasi Manfaat Dan Pengendalian')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Manfaat Dan Pengendalian')">
                                                 <img src="{{ url($kmdp['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Manfaat Dan Pengendalian <br> {{ $kmdp['nama'] }}
+                                                    Kasubbid Manfaat Dan Pengendalian <br> {{ $kmdp['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasi Manfaat Dan Pengendalian')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbid Manfaat Dan Pengendalian')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
-                                                    Kasi Manfaat Dan Pengendalian <br>
+                                                    Kasubbid Manfaat Dan Pengendalian <br>
                                                 </a>
                                                 @endif
                                             </li>
@@ -178,23 +187,23 @@
                                         @if ($sekertaris)
                                         <a href="#" onclick="detail('Sekertaris')">
                                             <img src="{{ url($sekertaris['foto']) }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>Sekertaris <br> {{ $sekertaris['nama'] }}</p>
+                                            <p style="color: #fff;">Sekertaris <br> {{ $sekertaris['nama'] }}</p>
                                         </a>
                                         @else
                                         <a href="#" onclick="detail('Sekertaris')">
                                             <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px;  margin-right: 10px">
-                                            <p>Sekertaris <br></p>
+                                            <p style="color: #fff;">Sekertaris <br></p>
                                         </a>
                                         @endif
                                        <ul>
                                             <li id="node6">
                                                 @if ($kppdk)
-                                                <a href="#" onclick="detail('Kasubbag Perencanaan Program Dan Keuangan')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbag Perencanaan Program Dan Keuangan')">
                                                 <img src="{{ url($kppdk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Perencanaan Program Dan Keuangan <br> {{ $kppdk['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasubbag Perencanaan Program Dan Keuangan')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbag Perencanaan Program Dan Keuangan')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Perencanaan Program Dan Keuangan <br>
                                                 </a>
@@ -202,12 +211,12 @@
                                             </li>
                                             <li id="node6">
                                                 @if ($kudk)
-                                                <a href="#" onclick="detail('Kasubbag Umum Dan Kepegawaian')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbag Umum Dan Kepegawaian')">
                                                 <img src="{{ url($kudk['foto']) }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Umum Dan Kepegawaian <br> {{ $kudk['nama'] }}
                                                 </a>
                                                 @else
-                                                <a href="#" onclick="detail('Kasubbag Umum Dan Kepegawaian')">
+                                                <a href="#" style="color: #fff;" onclick="detail('Kasubbag Umum Dan Kepegawaian')">
                                                 <img src="{{ asset('images/close.png') }}" style="width: 120px; height: 120px; margin-right: 10px">
                                                     Kasubbag Umum Dan Kepegawaian <br>
                                                 </a>
@@ -267,12 +276,16 @@
                 $('.modal-title').text('Detail Jabatan');
 
                 $('#link').attr("href","{{ url('admin/so/detail') }}"+"/"+data.so.id);
+                $('#id_hps').val(data.so.id);
                 $('#id').val(data.so.id);
                 $('#nama').text(data.so.nama);
                 $('#jabatan').text(data.so.jabatan);
                 $('#email').text(data.so.email);
                 $('#bidang').text(data.so.bidang);
                 $('#sub_bidang').text(data.so.sub_bidang);
+                $('#aksi').html(
+                    // '<a onclick="editForm('+data.so.id+')" class="btn btn-inverse-warning waves-effect waves-light btn-sm"> <i class="icofont icofont-edit-alt"></i> Edit</a>'+
+                    '<a onclick="deleteData('+data.so.id+')" class="btn btn-inverse-danger waves-effect waves-light btn-sm"> <i class="icofont icofont-delete-alt"></i> Delete</a>');
                 if (data.data == "") {
                     var a = '<tr><td colspan="3">Data Anggota Tidak Ada</td></tr>';
                 } else {
@@ -281,7 +294,8 @@
                     for (var i = 0; i < data.data.length; i++) {
                         a = a + '<tr><td>'+(j++)+'</td>'+
                                 '<td>'+data.data[i].nip+'</td>'+
-                                '<td>'+data.data[i].nama+'</td></tr>';
+                                '<td>'+data.data[i].nama+'</td>'+
+                                '</tr>';
                     }
                 }
                 $('#list_anggota').html(a);
@@ -369,29 +383,30 @@
 //           }
 //         });
 //     }
-//     function deleteData(id){
-//         var popup = confirm("Apakah anda yakin akan menghapus data ini?");
-//         var csrf_token = "{{ csrf_token() }}";
-//         var id_so = $('#id_so').val();
-//         if (popup == true) {
-//             $.ajaxSetup({
-//                 headers: {
-//                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                 }
-//             });
-//             $.ajax({
-//                 url: "{{ url('admin/so/detail') }}" + '/' +$id_so+'/'+ id,
-//                 type: "POST",
-//                 data: {'_method' : 'DELETE', _token : csrf_token},
-//                 success: function(data){
-//                     show_notification('delete', 'success');
-//                 },
-//                 error: function(){
-//                     show_notification('delete', 'failed');
-//                 }
-//             });
-//         }
-//     }
+    function deleteData(id){
+        var popup = confirm("Apakah anda yakin akan menghapus data ini?");
+        var csrf_token = "{{ csrf_token() }}";
+        var id = $('#id_hps').val();
+        console.log(id);
+        if (popup == true) {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: "{{ url('admin/so/') }}" + '/' + id,
+                type: "POST",
+                data: {'_method' : 'DELETE', _token : csrf_token},
+                success: function(data){
+                    show_notification('delete', 'success');
+                },
+                error: function(){
+                    show_notification('delete', 'failed');
+                }
+            });
+        }
+    }
 //     // function simpan() {
 // $(document).ready(function(){
 //     $('#detail-modal').click(function(e){
