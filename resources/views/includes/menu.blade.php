@@ -22,11 +22,15 @@
                 </button>
                 <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a>
             </div>
+            <div style="margin-top: -150px;">
+                <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt=""></a>
+            </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="col-md-10 p0">
             <div class="collapse navbar-collapse" id="min_navbar">
+                
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="{{ route('beranda') }}">Beranda</a>
