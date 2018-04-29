@@ -13,7 +13,7 @@
         </div><!-- End searchForm -->
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="col-md-2 p0">
-            <div class="navbar-header navbar-right">
+            <div class="navbar-header navbar-left">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -22,14 +22,22 @@
                 </button>
                 <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a>
             </div>
-            <div style="margin-top: -150px;">
-                <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt=""></a>
-            </div>
         </div>
 
+        <div class="col-md-4">
+            <div class="collapse navbar-collapse">
+                <div style="margin-left: -230px; margin-top: -25px" class="nav navbar-nav navbar-left">
+                    <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt="" width="800px" ></a>
+                </div>
+            </div>
+        </div>        
+
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="col-md-10 p0">
+        <div class="col-md-6 p0">
             <div class="collapse navbar-collapse" id="min_navbar">
+                <!-- <div style="margin-left: -100px;" class="nav navbar-nav navbar-left">
+                    <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt="" class="img-responsive"></a>
+                </div> -->
                 
                 <ul class="nav navbar-nav navbar-right">
                     <li>

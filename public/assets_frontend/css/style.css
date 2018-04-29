@@ -312,7 +312,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .header_aera .navbar-collapse .navbar-nav.navbar-right li a {
   font: 700 14px/70px "Roboto", sans-serif;
-  color: #ffffff;
+  color: #333333;
   text-transform: uppercase;
   padding: 0;
   padding-left: 30px;
