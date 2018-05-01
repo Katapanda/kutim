@@ -10,19 +10,11 @@
 @section('content')
     
     <!-- Slider area -->
-    <section class="slider_area row m0">
-        <div class="slider_inner">
-            <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
-                <!-- <div class="camera_caption">
-                   <div class="container">
-                        <h5 class=" wow fadeInUp animated">Welcome to our</h5>
-                        <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN, MODERN, MULTIPURPOSE THEME</h3>
-                        <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you turn your dream home or flat into a reality fast. The Love Boat promises something for everyone. Now the world don't move to the beat of just one</p>
-                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
-                   </div>
-                </div> -->
+    <section class="slider_area row m0" style="height: 350px">
+        <div class="slider_inner" style="height: 350px">
+            <div data-thumb="{{ asset('upload/slider/banner_11.png') }}" data-src="{{ asset('upload/slider/banner_11.png') }}">
             </div>
-            <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
+            <div data-thumb="{{ asset('upload/slider/banner_11.png') }}" data-src="{{ asset('upload/slider/banner_11.png') }}">
                 <!-- <div class="camera_caption">
                    <div class="container">
                         <h5 class=" wow fadeInUp animated">Welcome to our</h5>

@@ -43,6 +43,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth']], function () {
 	Route::group(['prefix' => 'admin'], function() {
+	    Route::get('/', 'DashboardController@admin_index');
 	    Route::get('dashboard', 'DashboardController@admin_index')->name('dashboard');
 
 	    Route::resource('user', 'UserController');
@@ -77,6 +78,11 @@ Route::group(['middleware' => ['auth']], function () {
 		Route::patch('berita/editisi/{id}', 'BeritaController@ubah');
 		Route::resource('berita', 'BeritaController');
 		Route::get('api/berita', 'BeritaController@apiBerita')->name('admin.api.berita');
+
+		Route::get('bidang/editisi/{id}', 'BidangController@editisi');
+		Route::patch('bidang/editisi/{id}', 'BidangController@ubah');
+		Route::resource('bidang', 'BidangController');
+		Route::get('api/bidang', 'BidangController@apiBidang')->name('admin.api.bidang');
 
 		Route::resource('gambaranumum', 'GambaranUmumController');
 		Route::get('api/gambaranumum', 'GambaranUmumController@apiGambaranUmum')->name('admin.api.gambaranumum');
