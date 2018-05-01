@@ -12,7 +12,7 @@
     <!-- Slider area -->
     <section class="slider_area row m0">
         <div class="slider">
-            <img src="{{ asset('upload/slider/banner_1.png') }}" width="100%" height="490px">
+            <img src="{{ asset('upload/slider/banner_1.png') }}" width="100%" height="500px">
             <!-- <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
                    <div class="container">
