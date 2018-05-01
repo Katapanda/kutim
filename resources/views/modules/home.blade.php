@@ -10,7 +10,7 @@
 @section('content')
     
     <!-- Slider area -->
-<<<<<<< HEAD
+
     <section class="slider_area row m0">
         <div class="slider">
             <img src="{{ asset('upload/slider/banner_1.png') }}" width="100%" height="500px">
