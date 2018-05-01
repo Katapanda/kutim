@@ -47,10 +47,9 @@
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bidang</a>
                         <ul class="dropdown-menu other_dropdwn">
-                            <li><a href="{{ route('dasar-hukum') }}">Sekretariat</a></li>
-                            <li><a href="{{ route('struktur-organisasi') }}">Bidang Perumahan</a></li>
-                            <li><a href="{{ route('tugas-pokok-dan-fungsi') }}">Bidang Kawasan dan Permukiman</a></li>
-                            <li><a href="{{ route('visi-misi') }}">UPT Pemakaman dan Pertamanan</a></li>
+                            @foreach($bidang as $data_bidang) 
+                                <li><a href="{{ route('bidang') }}/{{ $data_bidang->id }}">{{ $data_bidang->judul }}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li class="dropdown submenu">

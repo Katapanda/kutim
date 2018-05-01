@@ -20,6 +20,8 @@
 
 Route::get('/', 'Frontend\BerandaController@index')->name('beranda');
 Route::get('/sejarah', 'Frontend\SejarahController@index')->name('sejarah');
+Route::get('/bidang/{id}', 'Frontend\BerandaController@detail')->name('bidang_detail');
+Route::get('/bidang', 'Frontend\BerandaController@index')->name('bidang');
 Route::get('/dasar-hukum', 'Frontend\DasarHukumController@index')->name('dasar-hukum');
 Route::get('/struktur-organisasi', 'Frontend\StrukturOrganisasiController@index')->name('struktur-organisasi');
 Route::get('/tugas-pokok-dan-fungsi', 'Frontend\TupoksiController@index')->name('tugas-pokok-dan-fungsi');

@@ -12,6 +12,7 @@ use App\Models\Berita;
 use App\Models\Kontak;
 use App\Models\Pengumuman;
 use App\Models\Sambutan;
+use App\Models\Bidang;
 
 class BerandaController extends Controller
 {
@@ -23,6 +24,7 @@ class BerandaController extends Controller
         $berita     = Berita::get();
         $kontak     = Kontak::limit(1)->offset(0)->get();
         $pengumuman = Pengumuman::get();
+        $bidang     = Bidang::get();
         $sambutan   = Sambutan::limit(1)->offset(0)->get();
 
     	return view('modules.home', compact(
@@ -31,7 +33,31 @@ class BerandaController extends Controller
             'berita',
             'kontak',
             'pengumuman',
+            'bidang',
     		'sambutan'
     	));
+    }
+    public function detail($id)
+    {
+        $tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
+        $agenda     = Agenda::get();
+        $artikel    = Artikel::get();
+        $berita     = Berita::get();
+        $kontak     = Kontak::limit(1)->offset(0)->get();
+        $pengumuman = Pengumuman::get();
+        $bidang     = Bidang::get();
+        $bidang_detail     = Bidang::find($id);
+        $sambutan   = Sambutan::limit(1)->offset(0)->get();
+
+        return view('modules.bidang', compact(
+            'agenda',
+            'artikel',
+            'berita',
+            'kontak',
+            'pengumuman',
+            'bidang',
+            'bidang_detail',
+            'sambutan'
+        ));
     }
 }
