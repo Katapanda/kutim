@@ -115,6 +115,11 @@
           <i class="icon-list"></i><span> Berita</span>
         </a>
       </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'bidang.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('bidang.index') }}">
+          <i class="icon-list"></i><span> Bidang</span>
+        </a>
+      </li>
 
       {{-- <li class="treeview {{ (\Request::route()->getName() == 'user.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('user.index') }}">
