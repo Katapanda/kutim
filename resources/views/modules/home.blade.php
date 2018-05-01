@@ -10,9 +10,10 @@
 @section('content')
     
     <!-- Slider area -->
+
     <section class="slider_area row m0">
         <div class="slider">
-            <img src="{{ asset('upload/slider/banner_1.png') }}" width="100%" height="490px">
+            <img src="{{ asset('upload/slider/banner_1.png') }}" width="100%" height="500px">
             <!-- <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
                    <div class="container">
@@ -25,6 +26,14 @@
             </div>
             <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
+=======
+    <section class="slider_area row m0" style="height: 350px">
+        <div class="slider_inner" style="height: 350px">
+            <div data-thumb="{{ asset('upload/slider/banner_11.png') }}" data-src="{{ asset('upload/slider/banner_11.png') }}">
+            </div>
+            <div data-thumb="{{ asset('upload/slider/banner_11.png') }}" data-src="{{ asset('upload/slider/banner_11.png') }}">
+                <!-- <div class="camera_caption">
+>>>>>>> 96b5a482c1cf79a50d7de2d5c45daddbb850a660
                    <div class="container">
                         <h5 class=" wow fadeInUp animated">Welcome to our</h5>
                         <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN ,MODERN, MULTIPURPOSE THEME</h3>

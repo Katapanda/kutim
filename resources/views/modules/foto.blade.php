@@ -112,7 +112,7 @@
         <div class="featured_gallery">
             @foreach($foto as $ft) 
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <img id="myImg" src="{{ asset($ft->foto) }}" alt="" width="100%" height="200px">
+                    <img id="myImg" onclick='gambar("{{ asset($ft->foto) }}")' src="{{ asset($ft->foto) }}" alt="{{ asset($ft->foto) }}" width="100%" height="200px">
                 </div>
             @endforeach
         </div>
@@ -121,7 +121,7 @@
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
-      <span class="close">&times;</span>
+      <span class="close" style="">&times; close</span>
       <img class="modal-content" id="img01">
       <div id="caption"></div>
     </div>
@@ -134,9 +134,9 @@
         var img = document.getElementById('myImg');
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
-        img.onclick = function(){
+        function gambar(src){
             modal.style.display = "block";
-            modalImg.src = this.src;
+            modalImg.src = src;
             captionText.innerHTML = this.alt;
         }
 
