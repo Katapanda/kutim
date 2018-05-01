@@ -24,7 +24,7 @@
     <section class="building_construction_area">
         <div class="container">
             <div class="row building_construction_row">
-                <div class="col-sm-8 constructing_laft">
+                <div class="col-md-12 constructing_laft">
                     <h2>Struktur Organisasi</h2>
                     <div class="row" style="overflow-y: auto;overflow-x: scroll;">
                         <ul id="tree-data" style="display:none;">
@@ -238,7 +238,7 @@
                     </div>
                 </div>
                 
-                @include('includes.sidebar_menu_profil')
+                <!-- @include('includes.sidebar_menu_profil') -->
 
             </div>
         </div>

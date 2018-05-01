@@ -1,5 +1,6 @@
 <!-- Header_Area -->
 <nav class="navbar navbar-default header_aera" id="main_navbar">
+
     <div class="container">
         <!-- searchForm -->
         <div class="searchForm">
@@ -20,20 +21,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a>
+                <!-- <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt=""></a> -->
             </div>
         </div>
 
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
             <div class="collapse navbar-collapse">
-                <div style="margin-left: -230px; margin-top: -25px" class="nav navbar-nav navbar-left">
-                    <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt="" width="800px" ></a>
+                <div style="margin-left: -200px; margin-top: -20px" class="nav navbar-nav navbar-left">
+                    <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt="" width="700px" ></a>
                 </div>
             </div>
-        </div>        
+        </div>    -->     
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="col-md-6 p0">
+        <div class="col-md-10 p0">
             <div class="collapse navbar-collapse" id="min_navbar">
                 <!-- <div style="margin-left: -100px;" class="nav navbar-nav navbar-left">
                     <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/nama_dinas.png') }}" alt="" class="img-responsive"></a>
@@ -42,6 +43,15 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="{{ route('beranda') }}">Beranda</a>
+                    </li>
+                    <li class="dropdown submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bidang</a>
+                        <ul class="dropdown-menu other_dropdwn">
+                            <li><a href="{{ route('dasar-hukum') }}">Sekretariat</a></li>
+                            <li><a href="{{ route('struktur-organisasi') }}">Bidang Perumahan</a></li>
+                            <li><a href="{{ route('tugas-pokok-dan-fungsi') }}">Bidang Kawasan dan Permukiman</a></li>
+                            <li><a href="{{ route('visi-misi') }}">UPT Pemakaman dan Pertamanan</a></li>
+                        </ul>
                     </li>
                     <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
