@@ -25,7 +25,60 @@ JavaScript Files
 <script src="{{ asset('assets_frontend/js/theme.js') }}"></script>
 
 
-<script src="{{ asset('assets/plugins/orgchart/orgchart.js') }}"></script>
+<!-- <script src="{{ asset('assets/plugins/orgchart/orgchart.js') }}"></script> -->
+
+<!-- <script type="text/javascript" src="{{ asset('assets/chart/js/jquery.min.js') }}"></script> -->
+<script type="text/javascript" src="{{ asset('assets/chart/js/jquery.orgchart.js') }}"></script>
+<script type="text/javascript">
+$(function() {
+
+    var datascource = {
+        'id': '1',
+        'name': 'KEPALA DINAS',
+        'title': '',
+        'children': [
+            { 'id': '2', 'name': 'SEKRETARIS', 'title': '', 'className': 'middle-level',
+              'children': [
+                { 'id': '5', 'name': 'KASUBBAG PERENCANAAN PROGRAM DAN KEUANGAN', 'title': '', 'className': 'product-dept' },
+                { 'id': '6', 'name': 'KASUBBAG UMUM DAN KEPEGAWAIAN', 'title': '', 'className': 'product-dept' }
+              ]
+            },
+            { 'id': '3', 'name': 'KEPALA BIDANG PERUMAHAN', 'title': '', 'className': 'middle-level',
+              'children': [
+                { 'id': '7', 'name': 'KASUBBID PERENCANAAN MONITORING DAN EVALUASI', 'title': '', 'className': 'product-dept' },
+                { 'id': '8', 'name': 'KASUBBID PENYEDIAAN', 'title': '', 'className': 'product-dept' },
+                { 'id': '9', 'name': 'KASUBBID PEMBIAYAAN', 'title': '', 'className': 'product-dept' }
+              ]
+            },
+            { 'id': '4', 'name': 'KEPALA BIDANG PERMUKIMAN', 'title': '', 'className': 'middle-level',
+              'children': [
+                { 'id': '10', 'name': 'KASUBBID PENDATAAN & PERENCANAAN', 'title': '', 'className': 'product-dept' },
+                { 'id': '11', 'name': 'KASUBBID PENCEGAHAN DAN PENINGKATAN KUALITAS', 'title': '', 'className': 'product-dept' },
+                { 'id': '12', 'name': 'KASUBBID MANFAAT DAN PENGENDALIAN', 'title': '', 'className': 'product-dept' }
+              ]
+            }
+        ]
+    };
+
+    $('#chart-container').orgchart({
+      'data' : datascource,
+      'visibleLevel': 3,
+      'nodeContent': 'title',
+      'nodeID': 'id',
+      'createNode': function($node, data) {
+        var secondMenuIcon = $('<i>', {
+          'class': 'fa fa-info-circle second-menu-icon',
+          click: function() {
+            $(this).siblings('.second-menu').toggle();
+          }
+        });
+        var secondMenu = '<div class="second-menu"><img class="avatar" src="img/avatar/' + data.id + '.jpg">'+ data.name +'</div>';
+        $node.append(secondMenuIcon).append(secondMenu);
+      }
+    });
+
+});
+</script>
 
 <script type="text/javascript">
     $(document).ready(function () {

@@ -3,7 +3,7 @@
   <section class="sidebar" id="sidebar-scroll">
     
     <div class="user-panel">
-      <div class="f-left image"><img class="img-fluid able-logo" src="{{ asset('assets_frontend/images/logo.png') }}" alt="Theme-logo" style="height: 100%"> 
+      <div class="f-left image"><img class="img-fluid able-logo" src="{{ asset('assets_frontend/images/logo1.png') }}" alt="Theme-logo" style="height: 100%"> 
       </div>
       <div class="f-left info">
         <p style="font-size: 12px">DINAS PERUMAHAN DAN <br>KAWASAN PEMUKIMAN</p>

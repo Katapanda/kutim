@@ -1,5 +1,5 @@
 <header class="main-header-top hidden-print" >
-  <a href="index.html" class="logo" style="font-size: 14px">
+  <a href="" class="logo" style="font-size: 14px">
     DISPERKIM
   </a>
   <nav class="navbar navbar-static-top">
@@ -27,7 +27,7 @@
             <span>
               <img class="img-circle " src="{{ asset('assets/images/avatar-1.png') }}" style="width:40px;" alt="User Image">
             </span>
-            <span>Irfan Rangga Gumilar <i class=" icofont icofont-simple-down"></i></span>
+            <span>Admin <i class=" icofont icofont-simple-down"></i></span>
           </a>
           <ul class="dropdown-menu settings-menu">
             {{-- <li><a href="profile.html"><i class="icon-user"></i> Profil</a></li>
