@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row m0 blog_row">
                 <div class="col-sm-8 main_blog">
-                    @if($artikel_detail->count() > 0)
+                    @if($artikel_detail != NULL)
                         <img src="{{ asset($artikel_detail->foto_artikel) }}" alt="">
                         <div class="col-xs-1 p0">
                            <div class="blog_date">

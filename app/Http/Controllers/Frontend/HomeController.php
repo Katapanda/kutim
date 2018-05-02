@@ -27,6 +27,7 @@ class HomeController extends Controller
         // $artikel_page_1 = Artikel::limit(4)->offset(1)->get();
         $artikel_page_1 = Artikel::limit(7)->offset(0)->get();
         $artikel_page_2 = Artikel::limit(4)->offset(4)->get();
+        $foto = Foto::limit(8)->offset(0)->get();
         $sambutans = Sambutan::limit(1)->offset(0)->get();
         $videos = Video::limit(1)->offset(0)->get();
         $photos = Album::limit(1)->offset(0)->get();
@@ -34,6 +35,7 @@ class HomeController extends Controller
     	// return $sliders;
     	return view('modules.home', compact(
             'bidang',
+            'foto',
     		'sambutans',
             'tanggal_sekarang', 
     		'breaking_news', 

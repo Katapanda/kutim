@@ -110,6 +110,48 @@
     </section>
     <!-- End About Us Area -->
 
+    <section class="featured_works row" data-stellar-background-ratio="0.3" style="background-position: 50% -1484.1px;">
+        <div class="tittle wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <h2>Foto</h2>
+            <h4>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h4>
+        </div>
+        <div class="featured_gallery">
+            @foreach($foto as $f)
+                <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                    <img src="{{ asset($f->foto) }}" alt="" height="200px" width="100%">
+                </div>
+            @endforeach
+        <div class="text-center col-md-12">
+            <a href="{{ route('foto') }}" class="btn btn-default btn-sm"><strong>Lihat Foto Lainnya</strong></a>
+        </div>
+    </section>
+
+    <section class="latest_blog_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <h2>Video</h2>
+            <h4>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h4>
+            </div>
+            <div class="row latest_blog">
+                <div class="col-md-4 col-sm-6 blog_content">
+                     @foreach($video as $vd)
+                        <div class="gallery_iner p0">
+                            <embed width="100%" height="200"
+                                src="{!! $vd->link_video !!}" allowfullscreen>
+                                <div class="renovation_content">
+                                    <a class="clipboard" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                                    <a class="tittle">{!! substr($vd->nama_kegiatan, 0, 35) . '...' !!}</a>
+                                    <p>{!! substr($vd->keterangan, 0, 75) . '...' !!}</p>
+                                </div>
+                        </div>
+                    @endforeach
+            </div>
+            <div class="text-center col-md-12">
+                <a href="{{ route('video') }}" class="btn btn-default btn-sm"><strong>Lihat Video Lainnya</strong></a>
+            </div>
+        </div>
+    </section>
+
     <!-- What ew offer Area -->
     <section class="what_we_area row">
         <div class="container">

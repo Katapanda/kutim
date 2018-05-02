@@ -73,6 +73,7 @@ $(function() {
           }
         });
         var secondMenu = '<div class="second-menu"><img class="avatar" src="img/avatar/' + data.id + '.jpg">'+ data.name +'</div>';
+        
         $node.append(secondMenuIcon).append(secondMenu);
       }
     });

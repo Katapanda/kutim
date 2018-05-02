@@ -9,10 +9,12 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Agenda;
 use App\Models\Artikel;
 use App\Models\Berita;
+use App\Models\DetailAlbum;
 use App\Models\Kontak;
 use App\Models\Pengumuman;
 use App\Models\Sambutan;
 use App\Models\Bidang;
+use App\Models\Video;
 
 class BerandaController extends Controller
 {
@@ -22,19 +24,23 @@ class BerandaController extends Controller
         $agenda     = Agenda::get();
         $artikel    = Artikel::get();
         $berita     = Berita::get();
+        $foto       = DetailAlbum::limit(4)->offset(0)->get();
         $kontak     = Kontak::limit(1)->offset(0)->get();
         $pengumuman = Pengumuman::get();
         $bidang     = Bidang::get();
         $sambutan   = Sambutan::limit(1)->offset(0)->get();
+        $video      = Video::limit(4)->offset(0)->get();
 
     	return view('modules.home', compact(
             'agenda',
             'artikel',
             'berita',
+            'foto',
             'kontak',
             'pengumuman',
             'bidang',
-    		'sambutan'
+    		'sambutan',
+            'video'
     	));
     }
     public function detail($id)
@@ -48,6 +54,19 @@ class BerandaController extends Controller
         $bidang     = Bidang::get();
         $bidang_detail     = Bidang::find($id);
         $sambutan   = Sambutan::limit(1)->offset(0)->get();
+        $video      = Video::limit(4)->offset(0)->get();
+
+        return view('modules.home', compact(
+            'agenda',
+            'artikel',
+            'berita',
+            'foto',
+            'kontak',
+            'pengumuman',
+            'bidang',
+            'sambutan',
+            'video'
+        ));
 
         return view('modules.bidang', compact(
             'agenda',
