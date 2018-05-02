@@ -30,7 +30,7 @@
                     </p>
                 </div>
                 
-                @include('includes.sidebar_menu_profil')
+                @include('includes.sidebar_menu_bidang')
 
             </div>
         </div>

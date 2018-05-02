@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Kontak;
 use App\Models\StrukturOrganisasi;
 use App\Models\SoDetail;
+use App\Models\Bidang;
 
 class StrukturOrganisasiController extends Controller
 {
     public function index()
     {
+        $bidang = Bidang::get();
         $kontak = Kontak::limit(1)->offset(0)->get();
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         
@@ -33,6 +35,6 @@ class StrukturOrganisasiController extends Controller
         $kppdk = StrukturOrganisasi::where('jabatan', 'Kasubbag Perencanaan Program Dan Keuangan')->first();
         $kudk = StrukturOrganisasi::where('jabatan', 'Kasubbag Umum Dan Kepegawaian')->first();
 
-        return view('modules.struktur_organisasi', compact('kepala_dinas', 'kjf', 'kbp', 'kpme', 'kpn', 'kpm', 'usp', 'uss', 'kbkp', 'kpdp', 'kpdpk', 'kmdp', 'sekertaris', 'kppdk', 'kudk', 'kontak'));
+        return view('modules.struktur_organisasi', compact('bidang', 'kepala_dinas', 'kjf', 'kbp', 'kpme', 'kpn', 'kpm', 'usp', 'uss', 'kbkp', 'kpdp', 'kpdpk', 'kmdp', 'sekertaris', 'kppdk', 'kudk', 'kontak'));
     }
 }

@@ -12,13 +12,14 @@
                     <form class="md-float-material" method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="text-center">
-                            <img src="{{ asset('assets_frontend/images/logo.png') }}" alt="logo">
+                            <img src="{{ asset('assets_frontend/images/logo1.png') }}" alt="logo" class="img-responsive"> 
+                            <h5 style="color: #333333">Dinas Perumahan dan Kawasan Permukiman<br>Kabupaten Kutai Timur</h5>
                         </div>
-                        {{-- <h3 class="text-center txt-success">
-                            Sign In to your account
-                        </h3> --}}
+                        <h3 class="text-center txt-success">
+                            Login
+                        </h3> 
                         <div class="md-input-wrapper">
-                            <input id="username" type="text" class="md-form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+                            <input id="username" type="text" class="md-form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" placeholder="Username" required autofocus>
 
                                 @if ($errors->has('username'))
                                     <span class="invalid-feedback">
@@ -27,7 +28,7 @@
                                 @endif
                         </div>
                         <div class="md-input-wrapper">
-                            <input id="password" type="password" class="md-form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Username">
+                            <input id="password" type="password" class="md-form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Password">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">

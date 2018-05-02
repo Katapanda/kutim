@@ -45,20 +45,20 @@
                         <a href="{{ route('beranda') }}">Beranda</a>
                     </li>
                     <li class="dropdown submenu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bidang</a>
-                        <ul class="dropdown-menu other_dropdwn">
-                            @foreach($bidang as $data_bidang) 
-                                <li><a href="{{ route('bidang') }}/{{ $data_bidang->id }}">{{ $data_bidang->judul }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
-                    <li class="dropdown submenu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
                         <ul class="dropdown-menu other_dropdwn">
                             <li><a href="{{ route('dasar-hukum') }}">Dasar Hukum</a></li>
                             <li><a href="{{ route('struktur-organisasi') }}">Struktur Organisasi</a></li>
                             <li><a href="{{ route('tugas-pokok-dan-fungsi') }}">Tugas Pokok dan Fungsi</a></li>
                             <li><a href="{{ route('visi-misi') }}">Visi dan Misi</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bidang</a>
+                        <ul class="dropdown-menu other_dropdwn">
+                            @foreach($bidang as $data_bidang) 
+                                <li><a href="{{ route('bidang') }}/{{ $data_bidang->id }}">{{ $data_bidang->judul }}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li class="dropdown submenu">

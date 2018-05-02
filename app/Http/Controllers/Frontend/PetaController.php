@@ -7,15 +7,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Kontak;
+use App\Models\Bidang;
 
 class PetaController extends Controller
 {
     public function index()
     {
+        $bidang = Bidang::get();
     	$tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $kontak = Kontak::limit(1)->offset(0)->get();
         
     	return view('modules.peta', compact(
+    		'bidang',
     		'kontak'
     	));
     }

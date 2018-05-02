@@ -13,7 +13,7 @@
 
     <section class="slider_area row m0">
         <div class="slider">
-            <img src="{{ asset('upload/slider/banner_1.png') }}" width="100%" height="500px">
+            <img src="{{ asset('upload/slider/banner.png') }}" width="100%" height="500px">
             <!-- <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
                    <div class="container">
@@ -52,23 +52,31 @@
            <div class="row builder_all">
                 <div class="col-md-3 col-sm-6 builder">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    <h4>Sekretariat</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <h4>BIDANG PERMUKIMAN</h4>
+                    <p>
+                    Melaksanakan penyiapan perumusan kebijakan, koordinasi, pembinaan, bimbingan dan pengendalian teknis lingkup Seksi Pendataan dan Perencanaan, Pencegahan dan Peningkatan Kualitas, Manfaat dan pengendalian.
+                    </p>
                 </div>
                 <div class="col-md-3 col-sm-6 builder">
                     <i class="fa fa-building" aria-hidden="true"></i>
-                    <h4>Bidang Perumahan</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <h4>BIDANG PERTAMANAN DAN PEMAKAMAN</h4>
+                    <p>
+                    Membantu Kepala Dinas dalam melaksanakan penyiapan bahan perumusan kebijakan teknis operasional kegiatan.
+                    </p>
                 </div>
                 <div class="col-md-3 col-sm-6 builder">
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <h4>Bidang Kawasan Permukiman</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h4>BIDANG PERUMAHAN</h4>
+                    <p>
+                    Melaksanakan penyiapan perumusan kebijakan, koordinasi, pembinaan, bimbingan dan pengendalian teknis lingkup Seksi Perencanaan Monitoring dan evaluasi, Penyediaan dan pembiayaan.
+                    </p>
                 </div>
                 <div class="col-md-3 col-sm-6 builder">
-                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                    <h4>UPT Pemakaman dan Pertamanan</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    <h4>SEKRETARIAT</h4>
+                    <p>
+                    Sekretariat mempunyai  tugas pokok membantu Kepala Dinas dalam rangka melaksanakan koordinasi pelaksanaan tugas bidang dan pelayanan teknis serta administratif kepada seluruh satuan organisasi dalam Lingkungan Dinas Perumahan dan Kawasan Permukiman yang meliputi Perencanaan Program, Keuangan, Umum dan Kepagawaian.
+                    </p>
                 </div>
            </div>
         </div>
@@ -112,7 +120,7 @@
                 <div class="col-md-1 col-sm-12"></div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link/lpse.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px" width="100%">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
@@ -122,7 +130,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link/pu.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
@@ -132,7 +140,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link/sirup.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
@@ -144,7 +152,7 @@
                 <div class="col-md-3 col-sm-12"></div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link/pemerintah.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
@@ -154,11 +162,11 @@
                 </div>
                 <div class="col-md-3 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link.jpg') }}" alt="">
+                        <img src="{{ asset('assets_frontend/images/link/pamsimas.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://www.kutaitimurkab.go.id/" target="_blank">PEMERINTAH KUTIM</a>
+                        <a href="http://pamsimas.pu.go.id/" target="_blank">PAMSIMAS</a>
                         <p>Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
                    </div>
                 </div>

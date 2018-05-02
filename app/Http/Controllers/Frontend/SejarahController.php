@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Kontak;
 use App\Models\Sejarah;
+use App\Models\Bidang;
 
 class SejarahController extends Controller
 {
@@ -18,6 +19,7 @@ class SejarahController extends Controller
         $sejarah = Sejarah::limit(1)->offset(0)->get();
         
     	return view('modules.sejarah', compact(
+            'bidang',
     		'kontak',
     		'sejarah'
     	));
