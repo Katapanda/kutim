@@ -29,7 +29,7 @@ class BerandaController extends Controller
         $pengumuman = Pengumuman::get();
         $bidang     = Bidang::get();
         $sambutan   = Sambutan::limit(1)->offset(0)->get();
-        $video      = Video::limit(4)->offset(0)->get();
+        $video      = Video::limit(1)->offset(0)->get();
 
     	return view('modules.home', compact(
             'agenda',

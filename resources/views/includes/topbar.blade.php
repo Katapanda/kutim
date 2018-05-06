@@ -22,7 +22,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="col-md-8 p0">
             <div class="navbar-header navbar-left">
-                <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt="" width="100%" height="90px"></a>
+                <a class="navbar-brand" href="{{ route('beranda') }}"><img src="{{ asset('assets_frontend/images/logo.png') }}" alt="" width="100%" height="80px"></a>
             </div>
         </div>
 

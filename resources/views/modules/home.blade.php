@@ -4,7 +4,7 @@
 @include('includes.function')
 
 @section('title')
-	Beranda
+    Beranda
 @endsection
 
 @section('content')
@@ -50,7 +50,14 @@
     <section class="professional_builder row" style="background-color: rgba(0, 0, 0, 0.82);">
         <div class="container">
            <div class="row builder_all">
-                <div class="col-md-3 col-sm-6 builder">
+                @foreach($bidang as $bd)
+                    <div class="col-md-3 col-sm-6 builder">
+                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                        <h4><a href="{{ route('bidang') }}/{{ $bd->id }}" style="color: #fff">{{ $bd->judul }}</a></h4>
+                    </div>
+                @endforeach
+
+                <!-- <div class="col-md-3 col-sm-6 builder">
                     <i class="fa fa-file-text-o" aria-hidden="true"></i>
                     <h4 style="color: #fff">SEKRETARIAT</h4>
                     <p style="color: #fff">
@@ -77,7 +84,7 @@
                     <p style="color: #fff">
                     Membantu Kepala Dinas dalam melaksanakan penyiapan bahan perumusan kebijakan teknis operasional kegiatan.
                     </p>
-                </div>
+                </div> -->
            </div>
         </div>
     </section>
@@ -86,16 +93,16 @@
     <!-- About Us Area -->
     <section class="about_us_area row">
         <div class="container">
-            <div class="tittle wow fadeInUp">
-                <h2>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h2>
-                <h4>Beranda</h4>
-            </div>
+            <!--<div class="tittle wow fadeInUp">-->
+            <!--    <h2>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h2>-->
+            <!--    <h4>Beranda</h4>-->
+            <!--</div>-->
             <div class="row about_row">
                 <div class="who_we_area col-md-7 col-sm-6">
                     <!-- <div class="subtittle">
                         <h2>SAMBUTAN</h2>
                     </div> -->
-                    <p>
+                    <p style="margin-top:-50px">
                         @foreach($sambutan as $sbtn)
                             {!! $sbtn->isi_sambutan !!}
                         @endforeach
@@ -112,21 +119,39 @@
 
     <section class="featured_works row" data-stellar-background-ratio="0.3" style="background-position: 50% -1484.1px;">
         <div class="tittle wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <h2>Foto</h2>
+            <h2>Foto & Vide0</h2>
             <h4>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h4>
         </div>
         <div class="featured_gallery">
+            <div class="col-md-6">
             @foreach($foto as $f)
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <div class="col-md-6 col-sm-6 col-xs-6 gallery_iner p0">
                     <img src="{{ asset($f->foto) }}" alt="" height="250px" width="100%">
                 </div>
             @endforeach
+            </div>
+            <div class="col-md-6">
+                @foreach($video as $vd)
+                        <div class="col-md-12 col-sm-12">
+                            <div class="renovation">
+                                <iframe width="100%" height="500"
+                                src="{!! $vd->link_video !!}" allowfullscreen="allowfullscreen"></iframe>
+                                <div class="renovation_content">
+                                    <a class="clipboard" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                                    <a class="tittle">{!! substr($vd->nama_kegiatan, 0, 35) . '...' !!}</a>
+                                    <p>{!! substr($vd->keterangan, 0, 75) . '...' !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+            </div>
         <div class="text-center col-md-12">
             <a href="{{ route('foto') }}" class="btn btn-default btn-sm"><strong>Lihat Foto Lainnya</strong></a>
+            <a href="{{ route('video') }}" class="btn btn-default btn-sm"><strong>Lihat Video Lainnya</strong></a>
         </div>
     </section>
 
-    <section class="latest_blog_area">
+    <!-- <section class="latest_blog_area">
         <div class="container">
             <div class="tittle wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                 <h2>Video</h2>
@@ -153,7 +178,7 @@
                 <a href="{{ route('video') }}" class="btn btn-default btn-sm"><strong>Lihat Video Lainnya</strong></a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- What ew offer Area -->
     <section class="what_we_area row" style="background-color: rgba(0, 0, 0, 0.82);">
@@ -165,30 +190,30 @@
                 <div class="col-md-1 col-sm-12"></div>
                 <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link/lpse.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px" width="100%">
+                        <img src="{{ asset('assets_frontend/images/link/lpse.jpg') }}" alt="" height="90px" width="100%" style="padding-bottom: 20px" width="100%">
                    </div>
                    <div class="cns-content" style="padding: 0px 5px">
-                        <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://lpse.kutaitimurkab.go.id/" target="_blank" style="font-size: 11px">LPSE KUTAI TIMUR</a>
+                        <!--<i class="fa fa-link" aria-hidden="true"></i>-->
+                        <a href="http://lpse.kutaitimurkab.go.id/" target="_blank" style="font-size: 12px">LPSE KUTAI TIMUR</a>
                         <p style="font-size: 11px">Layanan Pengadaan Secara Elektronik (LPSE)</p><br>
                    </div>
                 </div>
                 <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link/pu.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
+                        <img src="{{ asset('assets_frontend/images/link/pu.jpg') }}" alt="" height="90px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content" style="padding: 0px 5px">
-                        <i class="fa fa-link" aria-hidden="true"></i>
+                        <!--<i class="fa fa-link" aria-hidden="true"></i>-->
                         <a href="https://www.pu.go.id/" target="_blank" style="font-size: 11px">PU-net</a>
                         <p style="font-size: 11px">Kementrian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia </p>
                    </div>
                 </div>
                 <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link/sirup.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
+                        <img src="{{ asset('assets_frontend/images/link/sirup.jpg') }}" alt="" height="90px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content" style="padding: 0px 5px">
-                        <i class="fa fa-link" aria-hidden="true"></i>
+                        <!--<i class="fa fa-link" aria-hidden="true"></i>-->
                         <a href="https://sirup.lkpp.go.id/sirup" target="_blank" style="font-size: 11px">SIRUP</a>
                         <p style="font-size: 11px">Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah</p><br>
                    </div>
@@ -197,20 +222,20 @@
                 <div class="col-md-2 col-sm-12"></div> --}}
                 <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link/pemerintah.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
+                        <img src="{{ asset('assets_frontend/images/link/pemerintah.jpg') }}" alt="" height="90px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content" style="padding: 0px 5px">
-                        <i class="fa fa-link" aria-hidden="true"></i>
+                        <!--<i class="fa fa-link" aria-hidden="true"></i>-->
                         <a href="http://www.kutaitimurkab.go.id/" target="_blank" style="font-size: 11px">PEMERINTAH KUTIM</a>
                         <p style="font-size: 11px">Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
                    </div>
                 </div>
                 <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('assets_frontend/images/link/pamsimas.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
+                        <img src="{{ asset('assets_frontend/images/link/pamsimas.jpg') }}" alt="" height="90px" width="100%" style="padding-bottom: 20px">
                    </div>
                    <div class="cns-content" style="padding: 0px 5px">
-                        <i class="fa fa-link" aria-hidden="true"></i>
+                        <!--<i class="fa fa-link" aria-hidden="true"></i>-->
                         <a href="http://pamsimas.pu.go.id/" target="_blank" style="font-size: 11px">PAMSIMAS</a>
                         <p style="font-size: 11px">Link Pamsimas Kutai Timur Kalimantan Timur</p><br>
                    </div>
