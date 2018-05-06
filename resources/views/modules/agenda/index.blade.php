@@ -23,10 +23,10 @@
     <<section class="our_feature_area">
         <div class="container">
             <div class="feature_row row">
-                <div class="col-md-6 feature_img">
-                    <img src="{{ asset('assets_frontend/images/bupati.png') }}" alt="">
+                <div class="col-md-4 feature_img">
+                    <img src="{{ asset('assets_frontend/images/logo2.png') }}" alt="" style="width: 80%">
                 </div>
-                <div class="col-md-6 feature_content">
+                <div class="col-md-8 feature_content">
                     <div class="subtittle">
                         <h2>Agenda</h2>
                         <h5>Dinas Perumahan dan Kawasan Pemukiman Kabupaten Kutai Timur</h5>

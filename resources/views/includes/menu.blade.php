@@ -77,6 +77,7 @@
                             <li><a href="{{ route('video') }}">Video</a></li>
                         </ul>
                     </li>
+                    <li><a href="{{ route('keluhan') }}">Pengaduan</a></li>
                     <li><a href="{{ route('kontak') }}">Kontak</a></li>
                     <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li>
                 </ul>

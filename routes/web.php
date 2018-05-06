@@ -20,6 +20,8 @@
 
 Route::get('/', 'Frontend\BerandaController@index')->name('beranda');
 Route::get('/sejarah', 'Frontend\SejarahController@index')->name('sejarah');
+Route::get('/keluhan', 'Frontend\KeluhanController@index')->name('keluhan');
+Route::post('/keluhan', 'Frontend\KeluhanController@store')->name('tambah_keluhan');
 Route::get('/bidang/{id}', 'Frontend\BerandaController@detail')->name('bidang_detail');
 Route::get('/bidang', 'Frontend\BerandaController@index')->name('bidang');
 Route::get('/dasar-hukum', 'Frontend\DasarHukumController@index')->name('dasar-hukum');
@@ -71,10 +73,16 @@ Route::group(['middleware' => ['auth']], function () {
 		Route::get('api/artikel', 'ArtikelController@apiArtikel')->name('admin.api.artikel');
 
 
+		Route::get('api/keluhan', 'KeluhanController@apiKeluhan')->name('admin.api.keluhan');
+		Route::get('/keluhan', 'KeluhanController@index')->name('admin.keluhan');
+
 		Route::get('agenda/editisi/{id}', 'AgendaController@editisi');
 		Route::patch('agenda/editisi/{id}', 'AgendaController@ubah');
 		Route::resource('agenda', 'AgendaController');
 		Route::get('api/agenda', 'AgendaController@apiAgenda')->name('admin.api.agenda');
+
+		Route::resource('document', 'DocumentController');
+		Route::get('api/document', 'DocumentController@apiDocument')->name('admin.api.document');
 
 		Route::get('berita/editisi/{id}', 'BeritaController@editisi');
 		Route::patch('berita/editisi/{id}', 'BeritaController@ubah');

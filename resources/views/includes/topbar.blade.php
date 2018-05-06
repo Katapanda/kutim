@@ -17,8 +17,8 @@
 <!-- End Top Header_Area -->
 
 <!-- Header_Area -->
-<nav class="navbar navbar-default header_aera" style="background-color: #EEEEEE; height: 90px">
-    <div class="container">
+<nav class="navbar navbar-default header_aera" style="background-color: rgba(0, 0, 0, 0.82); height: 90px">
+    <div class="container" style="margin-left: -23px;">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="col-md-8 p0">
             <div class="navbar-header navbar-left">

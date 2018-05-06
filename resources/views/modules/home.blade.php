@@ -47,35 +47,35 @@
     <!-- End Slider area -->
 
     <!-- Professional Builde -->
-    <section class="professional_builder row">
+    <section class="professional_builder row" style="background-color: rgba(0, 0, 0, 0.82);">
         <div class="container">
            <div class="row builder_all">
                 <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    <h4 style="color: #fff">SEKRETARIAT</h4>
+                    <p style="color: #fff">
+                    Sekretariat mempunyai  tugas pokok membantu Kepala Dinas dalam rangka melaksanakan koordinasi pelaksanaan tugas bidang dan pelayanan teknis serta administratif kepada seluruh satuan organisasi dalam Lingkungan Dinas Perumahan dan Kawasan Permukiman yang meliputi Perencanaan Program, Keuangan, Umum dan Kepagawaian.
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    <h4>BIDANG PERMUKIMAN</h4>
-                    <p>
+                    <h4 style="color: #fff">BIDANG PERUMAHAN</h4>
+                    <p style="color: #fff">
+                    Melaksanakan penyiapan perumusan kebijakan, koordinasi, pembinaan, bimbingan dan pengendalian teknis lingkup Seksi Perencanaan Monitoring dan evaluasi, Penyediaan dan pembiayaan.
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h4 style="color: #fff">BIDANG KAWASAN PERMUKIMAN</h4>
+                    <p style="color: #fff">
                     Melaksanakan penyiapan perumusan kebijakan, koordinasi, pembinaan, bimbingan dan pengendalian teknis lingkup Seksi Pendataan dan Perencanaan, Pencegahan dan Peningkatan Kualitas, Manfaat dan pengendalian.
                     </p>
                 </div>
                 <div class="col-md-3 col-sm-6 builder">
                     <i class="fa fa-building" aria-hidden="true"></i>
-                    <h4>BIDANG PERTAMANAN DAN PEMAKAMAN</h4>
-                    <p>
+                    <h4 style="color: #fff">UPT PERTAMANAN DAN PEMAKAMAN</h4>
+                    <p style="color: #fff">
                     Membantu Kepala Dinas dalam melaksanakan penyiapan bahan perumusan kebijakan teknis operasional kegiatan.
-                    </p>
-                </div>
-                <div class="col-md-3 col-sm-6 builder">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <h4>BIDANG PERUMAHAN</h4>
-                    <p>
-                    Melaksanakan penyiapan perumusan kebijakan, koordinasi, pembinaan, bimbingan dan pengendalian teknis lingkup Seksi Perencanaan Monitoring dan evaluasi, Penyediaan dan pembiayaan.
-                    </p>
-                </div>
-                <div class="col-md-3 col-sm-6 builder">
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <h4>SEKRETARIAT</h4>
-                    <p>
-                    Sekretariat mempunyai  tugas pokok membantu Kepala Dinas dalam rangka melaksanakan koordinasi pelaksanaan tugas bidang dan pelayanan teknis serta administratif kepada seluruh satuan organisasi dalam Lingkungan Dinas Perumahan dan Kawasan Permukiman yang meliputi Perencanaan Program, Keuangan, Umum dan Kepagawaian.
                     </p>
                 </div>
            </div>
@@ -118,7 +118,7 @@
         <div class="featured_gallery">
             @foreach($foto as $f)
                 <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-                    <img src="{{ asset($f->foto) }}" alt="" height="200px" width="100%">
+                    <img src="{{ asset($f->foto) }}" alt="" height="250px" width="100%">
                 </div>
             @endforeach
         <div class="text-center col-md-12">
@@ -133,19 +133,22 @@
             <h4>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h4>
             </div>
             <div class="row latest_blog">
-                <div class="col-md-4 col-sm-6 blog_content">
-                     @foreach($video as $vd)
-                        <div class="gallery_iner p0">
-                            <embed width="100%" height="200"
+                <div class="row blog_tow_row">
+                    @foreach($video as $vd)
+                        <div class="col-md-4 col-sm-6">
+                            <div class="renovation">
+                                <embed width="100%" height="200"
                                 src="{!! $vd->link_video !!}" allowfullscreen>
                                 <div class="renovation_content">
                                     <a class="clipboard" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
                                     <a class="tittle">{!! substr($vd->nama_kegiatan, 0, 35) . '...' !!}</a>
                                     <p>{!! substr($vd->keterangan, 0, 75) . '...' !!}</p>
                                 </div>
+                            </div>
                         </div>
                     @endforeach
-            </div>
+               </div>
+            </div><br>
             <div class="text-center col-md-12">
                 <a href="{{ route('video') }}" class="btn btn-default btn-sm"><strong>Lihat Video Lainnya</strong></a>
             </div>
@@ -153,63 +156,63 @@
     </section>
 
     <!-- What ew offer Area -->
-    <section class="what_we_area row">
+    <section class="what_we_area row" style="background-color: rgba(0, 0, 0, 0.82);">
         <div class="container">
-            <div class="tittle wow fadeInUp">
-                <h2>TAUTAN TERKAIT</h2>
+            <div class="tittle wow fadeInUp" >
+                <h2 style="color: #f8b81d">TAUTAN TERKAIT</h2>
             </div>
             <div class="row construction_iner">
                 <div class="col-md-1 col-sm-12"></div>
-                <div class="col-md-3 col-sm-6 construction">
+                <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('assets_frontend/images/link/lpse.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px" width="100%">
                    </div>
-                   <div class="cns-content">
+                   <div class="cns-content" style="padding: 0px 5px">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://lpse.kutaitimurkab.go.id/" target="_blank">LPSE KUTAI TIMUR</a>
-                        <p>Layanan Pengadaan Secara Elektronik (LPSE)</p><br>
+                        <a href="http://lpse.kutaitimurkab.go.id/" target="_blank" style="font-size: 11px">LPSE KUTAI TIMUR</a>
+                        <p style="font-size: 11px">Layanan Pengadaan Secara Elektronik (LPSE)</p><br>
                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 construction">
+                <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('assets_frontend/images/link/pu.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
-                   <div class="cns-content">
+                   <div class="cns-content" style="padding: 0px 5px">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="https://www.pu.go.id/" target="_blank">PU-net</a>
-                        <p>Kementrian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia </p>
+                        <a href="https://www.pu.go.id/" target="_blank" style="font-size: 11px">PU-net</a>
+                        <p style="font-size: 11px">Kementrian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia </p>
                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 construction">
+                <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('assets_frontend/images/link/sirup.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
-                   <div class="cns-content">
+                   <div class="cns-content" style="padding: 0px 5px">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="https://sirup.lkpp.go.id/sirup" target="_blank">SIRUP</a>
-                        <p>Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah</p><br>
+                        <a href="https://sirup.lkpp.go.id/sirup" target="_blank" style="font-size: 11px">SIRUP</a>
+                        <p style="font-size: 11px">Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah</p><br>
                    </div>
-                </div>
+                </div>{{-- 
                 <div class="col-md-12 col-sm-12"></div>
-                <div class="col-md-3 col-sm-12"></div>
-                <div class="col-md-3 col-sm-6 construction">
+                <div class="col-md-2 col-sm-12"></div> --}}
+                <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('assets_frontend/images/link/pemerintah.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
-                   <div class="cns-content">
+                   <div class="cns-content" style="padding: 0px 5px">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://www.kutaitimurkab.go.id/" target="_blank">PEMERINTAH KUTIM</a>
-                        <p>Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
+                        <a href="http://www.kutaitimurkab.go.id/" target="_blank" style="font-size: 11px">PEMERINTAH KUTIM</a>
+                        <p style="font-size: 11px">Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 construction">
+                <div class="col-md-2 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('assets_frontend/images/link/pamsimas.jpg') }}" alt="" height="110px" width="100%" style="padding-bottom: 20px">
                    </div>
-                   <div class="cns-content">
+                   <div class="cns-content" style="padding: 0px 5px">
                         <i class="fa fa-link" aria-hidden="true"></i>
-                        <a href="http://pamsimas.pu.go.id/" target="_blank">PAMSIMAS</a>
-                        <p>Link Pemerintahan Kutai Timur Kalimantan Timur</p><br>
+                        <a href="http://pamsimas.pu.go.id/" target="_blank" style="font-size: 11px">PAMSIMAS</a>
+                        <p style="font-size: 11px">Link Pamsimas Kutai Timur Kalimantan Timur</p><br>
                    </div>
                 </div>
             </div>

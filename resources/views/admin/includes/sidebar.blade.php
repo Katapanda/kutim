@@ -120,6 +120,16 @@
           <i class="icon-list"></i><span> Bidang</span>
         </a>
       </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'admin.keluhan') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('admin.keluhan') }}">
+          <i class="icon-list"></i><span> Pengaduan</span>
+        </a>
+      </li>
+      <li class="treeview {{ (\Request::route()->getName() == 'document.index') ? 'active' : '' }}">
+        <a class="waves-effect waves-dark" href="{{ route('document.index') }}">
+          <i class="icon-list"></i><span> Upload Document</span>
+        </a>
+      </li>
 
       {{-- <li class="treeview {{ (\Request::route()->getName() == 'user.index') ? 'active' : '' }}">
         <a class="waves-effect waves-dark" href="{{ route('user.index') }}">

@@ -48,6 +48,7 @@ class BerandaController extends Controller
         $tanggal_sekarang = date('Y-m-d', strtotime(DB::raw(now())));
         $agenda     = Agenda::get();
         $artikel    = Artikel::get();
+        $foto       = DetailAlbum::limit(4)->offset(0)->get();
         $berita     = Berita::get();
         $kontak     = Kontak::limit(1)->offset(0)->get();
         $pengumuman = Pengumuman::get();
@@ -56,17 +57,17 @@ class BerandaController extends Controller
         $sambutan   = Sambutan::limit(1)->offset(0)->get();
         $video      = Video::limit(4)->offset(0)->get();
 
-        return view('modules.home', compact(
-            'agenda',
-            'artikel',
-            'berita',
-            'foto',
-            'kontak',
-            'pengumuman',
-            'bidang',
-            'sambutan',
-            'video'
-        ));
+        // return view('modules.home', compact(
+        //     'agenda',
+        //     'artikel',
+        //     'berita',
+        //     'foto',
+        //     'kontak',
+        //     'pengumuman',
+        //     'bidang',
+        //     'sambutan',
+        //     'video'
+        // ));
 
         return view('modules.bidang', compact(
             'agenda',
