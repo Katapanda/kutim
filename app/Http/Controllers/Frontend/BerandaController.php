@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Agenda;
+use App\Models\Album;
 use App\Models\Artikel;
 use App\Models\Berita;
 use App\Models\DetailAlbum;
@@ -24,12 +25,21 @@ class BerandaController extends Controller
         $agenda     = Agenda::get();
         $artikel    = Artikel::get();
         $berita     = Berita::get();
-        $foto       = DetailAlbum::limit(4)->offset(0)->get();
+        // $foto       = DetailAlbum::limit(4)->offset(0)->get();
         $kontak     = Kontak::limit(1)->offset(0)->get();
         $pengumuman = Pengumuman::get();
         $bidang     = Bidang::get();
         $sambutan   = Sambutan::limit(1)->offset(0)->get();
         $video      = Video::limit(1)->offset(0)->get();
+
+        $foto = DetailAlbum::leftJoin('album', 'foto_album.id_album', '=', 'album.id')
+            ->limit(4)
+            ->select(
+                'album.judul_album', 
+                'album.keterangan_kegiatan', 
+                'foto_album.foto'
+            )->get();
+
 
     	return view('modules.home', compact(
             'agenda',

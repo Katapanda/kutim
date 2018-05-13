@@ -214,7 +214,7 @@
             <div class="col-md-7">
             @foreach($foto as $f)
                 <div class="col-md-6 col-sm-6 col-xs-6">
-                    <img id="myImg" onclick='gambar("{{ asset($f->foto) }}")' src="{{ asset($f->foto) }}" alt="" height="200px" width="100%">
+                    <img id="myImg" onclick='gambar("{{ asset($f->foto) }}", "{{ $f->keterangan_kegiatan }}")' src="{{ asset($f->foto) }}" alt="{{ $f->keterangan_kegiatan }}" height="200px" width="100%">
                 </div>
             @endforeach
             </div>
@@ -381,10 +381,11 @@
         var img = document.getElementById('myImg');
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
-        function gambar(src){
+        function gambar(src, deskripsi){
             modal.style.display = "block";
             modalImg.src = src;
-            captionText.innerHTML = this.alt;
+            captionText.innerHTML = deskripsi;
+            // captionText.innerHTML = this.alt;
         }
 
         // Get the <span> element that closes the modal
