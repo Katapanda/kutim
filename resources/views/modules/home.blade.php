@@ -211,18 +211,18 @@
             <h4>DINAS PERUMAHAN DAN KAWASAN PERMUKIMAN KUTAI TIMUR</h4>
         </div>
         <div class="featured_gallery">
-            <div class="col-md-6">
+            <div class="col-md-7">
             @foreach($foto as $f)
                 <div class="col-md-6 col-sm-6 col-xs-6">
                     <img id="myImg" onclick='gambar("{{ asset($f->foto) }}")' src="{{ asset($f->foto) }}" alt="" height="200px" width="100%">
                 </div>
             @endforeach
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 @foreach($video as $vd)
                         <div class="col-md-12 col-sm-12">
                             <div class="renovation">
-                                <iframe width="100%" height="500"
+                                <iframe width="100%" height="400"
                                 src="{!! $vd->link_video !!}" allowfullscreen="allowfullscreen"></iframe>
                                 <div class="renovation_content">
                                     <a class="clipboard" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
