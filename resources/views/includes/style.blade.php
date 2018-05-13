@@ -12,3 +12,5 @@
 <!--Theme Styles CSS-->
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/orgchart/orgchart.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets_frontend/css/style.css') }}" media="all" />
+
+ <link rel="stylesheet" href="{{ asset('assets_frontend/css/superslides.css') }}">

@@ -99,24 +99,9 @@
     
     <!-- Slider area -->
 
-    <section class="slider_area ">
-        <div class="">
-            <!-- <img src="{{ asset('upload/slider/banner.png') }}" width="100%" height="500px"> -->
-
-            <div id="slides">
-                <div class="slides-container">
-                  <img src="{{ asset('upload/slider/banner.png') }}" class="img-responsive" alt="Cinelli">
-                  <img src="{{ asset('upload/slider/banner.png') }}" class="img-responsive" alt="Surly">
-                  <img src="{{ asset('upload/slider/banner.png') }}" class="img-responsive" alt="Cinelli">
-                  <img src="{{ asset('upload/slider/banner.png') }}" class="img-responsive" alt="Affinity">
-                </div>
-
-                <nav class="slides-navigation">
-                  <a href="#" class="next"><i class="fa fa-chevron-right fa-2x" style="color: #333333"></i></a>
-                  <a href="#" class="prev"><i class="fa fa-chevron-left fa-2x" style="color: #333333"></i></a>
-                </nav>
-            </div>
-
+    <section class="slider_area row m0">
+        <div class="slider">
+            <img src="{{ asset('upload/slider/banner.png') }}" width="100%" height="500px">
             <!-- <div data-thumb="{{ asset('upload/slider/banner_1.png') }}" data-src="{{ asset('upload/slider/banner_1.png') }}">
                 <div class="camera_caption">
                    <div class="container">

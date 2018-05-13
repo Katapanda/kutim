@@ -147,3 +147,28 @@ $(function() {
         });
     }
 </script>
+
+@if(Route::current()->getName() == 'beranda')
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+@endif
+
+<script src="{{ asset('assets_frontend/js/slider/jquery.easing.1.3.js') }}"></script>
+<script src="{{ asset('assets_frontend/js/slider/jquery.animate-enhanced.min.js') }}"></script>
+<script src="{{ asset('assets_frontend/js/slider/jquery.superslides.js') }}" type="text/javascript" charset="utf-8"></script>
+<script>
+  $(function() {
+    $('#slides').superslides({
+      hashchange: true,
+      play: 2000
+    });
+
+    $('#slides').on('mouseenter', function() {
+      $(this).superslides('stop');
+      console.log('Stopped')
+    });
+    $('#slides').on('mouseleave', function() {
+      $(this).superslides('start');
+      console.log('Started')
+    });
+  });
+</script>
